@@ -18,7 +18,6 @@
     .p{
         margin: 14px auto auto auto;
         text-align: center;
-        font-family: 'Romanesco', cursive;
         font-size: 35px;
     }
     .imagen {
@@ -36,7 +35,6 @@
         margin: 50px 10px;
         flex: 1 1 auto;
         font-size: 35px;
-        font-family: 'Romanesco', cursive;
         text-align: left;
     }
     .contenido{
