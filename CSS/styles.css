@@ -165,13 +165,6 @@ a {
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    background: var(--colorgeneral);
-}
-a {
-    text-decoration: none;
-}
 .color {
     background:var(--colorcuadros);
 }
