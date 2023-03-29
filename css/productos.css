@@ -1,0 +1,77 @@
+
+/*  FABRICIO */
+            .nav-enlace{
+display: inline-block;
+background: orange;
+color: azure;
+padding: 10px 5px 5px 5px;
+text-decoration: none;
+margin: 10px 1000px 10px 30px;
+border: 2px solid #000;
+
+
+            }
+            .nav-enlace:hover{
+                background: rgb(199, 140, 13); 
+            }
+            .aña2{
+                background: var(--colorgeneral);
+padding: 10px;
+display: flex;
+justify-content: space-around;
+flex-direction: column;
+            }
+            .boton{
+                background:orange;
+                color: aliceblue;
+                padding: 10px 5px 5px 5px;
+                margin: 10px 1000px 10px 30px;
+                
+            }
+            .sarampion{
+                background-color: var(--colorgeneral);
+            }
+            .desaparece{
+                display: none;
+            }
+            .imagen-pan{
+                width: 15px;
+                height: 100%;
+                left: -100%;
+                right: -100;
+                
+            }
+            .aña{
+                display: inline-block;
+background: orange;
+color: azure;
+padding: 10px 5px 5px 5px;
+text-decoration: none;
+margin: 10px 1000px 10px 30px;
+            }
+            .pan-ayuda{
+                display: inline-block;
+background: orange;
+color: azure;
+padding: 10px 5px 5px 5px;
+text-decoration: none;
+margin: 10px 1500px 10px 30px;
+border: 2px solid #000;
+
+
+
+            }
+            .desfuma{
+                display:none;
+            }
+           
+            
+        
+
+
+
+
+            
+            
+                
+            

@@ -1,0 +1,42 @@
+
+     .nosotros2{
+    background: url(../IMG/pan.jpng.webp);
+    background-position: center;
+    background-size: cover;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      margin: 0px 50px 0px 50px;
+     }
+    .pq{
+        font-size: 60px;
+        color: rgb(27, 19, 19);
+        font-family: 'Abril Fatface', cursive;
+        padding: 10px 10px 40px 10px;
+    }
+     
+    .p{
+        margin: 14px auto auto auto;
+        text-align: center;
+        font-size: 35px;
+    }
+    .imagen {
+        flex: 1 1 auto;
+        margin: 110px 40px 50px 50px;
+    }
+    .imagen img{
+        object-fit: contain;
+        border-radius: 2px;
+        box-shadow: 20px 16px 16px 2px #888;
+        height: auto;
+        width: 80%;
+    }
+    .panaderia{
+        margin: 50px 10px;
+        flex: 1 1 auto;
+        font-size: 35px;
+        text-align: left;
+    }
+    .contenido{
+        display: flex;
+    }
