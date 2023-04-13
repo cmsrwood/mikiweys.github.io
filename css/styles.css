@@ -43,11 +43,15 @@
 .textwhite:hover{
     color: white;
 }
+/* FUENTES */
 .abril{
     font-family: 'Abril Fatface', cursive;
 }
 .simoneta{
     font-family: 'Simonetta', cursive;
+}
+.poppins{
+    font-family: 'Poppins', cursive;
 }
 .cafe {
     color: var(--cafe);
