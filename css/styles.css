@@ -10,7 +10,7 @@
     padding:0px;
     box-sizing: border-box;
 }
-
+/* COLORES */
 .color {
     background:var(--colorcuadros);
 }
@@ -22,10 +22,6 @@
 }
 .bordenaranja {
     border: solid 1px var(--naranja);
-}
-.padre {
-    display: flex;
-    flex-flow: column nowrap
 }
 .hovernaranja:hover{
     color: orange;   
@@ -43,6 +39,15 @@
 .textwhite:hover{
     color: white;
 }
+.cafe {
+    color: var(--cafe);
+}
+/*  */
+.padre {
+    display: flex;
+    flex-flow: column nowrap
+}
+
 /* FUENTES */
 .abril{
     font-family: 'Abril Fatface', cursive;
@@ -53,9 +58,7 @@
 .poppins{
     font-family: 'Poppins', cursive;
 }
-.cafe {
-    color: var(--cafe);
-}
+
 .footer {
     display: grid;
     font-size: 10px;
@@ -114,7 +117,17 @@
     .icon:hover{
         opacity: 0.8;
     }
-
+    .zoomhover:hover {
+        transform: scale(1.2);
+    }
+    .zoomhover2:hover {
+        transform: scale(1.1);
+    }
+    
+    .containerzoom{
+        overflow: hidden;
+        transition: all 500ms;
+    }
 
 /* MEDIA  */
         
