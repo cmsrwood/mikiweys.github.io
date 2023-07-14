@@ -58,6 +58,9 @@
 .poppins{
     font-family: 'Poppins', cursive;
 }
+. {
+    font-family: 'Ysabeau Infant', sans-serif;
+}
 
 .footer {
     display: grid;
