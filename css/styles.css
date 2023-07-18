@@ -10,6 +10,10 @@
     padding:0px;
     box-sizing: border-box;
 }
+.padre {
+    display: flex;
+    flex-flow: column nowrap
+}
 /* COLORES */
 .color {
     background:var(--colorcuadros);
@@ -24,6 +28,12 @@
     border: solid 1px var(--naranja);
 }
 .hovernaranja:hover{
+    color: orange;   
+}
+.actnaranja:active{
+    color: orange;   
+}
+.focnaranja:focus{
     color: orange;   
 }
 .bhovernaranja:hover{
@@ -43,10 +53,7 @@
     color: var(--cafe);
 }
 /*  */
-.padre {
-    display: flex;
-    flex-flow: column nowrap
-}
+
 
 /* FUENTES */
 .abril{
@@ -132,5 +139,10 @@
         transition: all 500ms;
     }
 
+.bg-foto{
+    background: url(../IMG/pan.jpng.webp);
+    background-size: cover;
+    background-position: center;
+}
 /* MEDIA  */
         
