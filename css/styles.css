@@ -42,12 +42,16 @@
 }
 .hovercafe:hover{
     background-color: var(--cafe);   
+    color: white;
 }
 .hoverrojo:hover{
    background: rgb(255, 0, 0);   
 }
-.textwhite:hover{
-    color: white;
+.cfacebook{
+    background: rgb(50, 80, 142);
+}
+.ctwitter{
+    background: rgb(85, 172, 238);
 }
 .cafe {
     color: var(--cafe);
@@ -67,6 +71,9 @@
 }
 .infant {
     font-family: 'Ysabeau Infant', sans-serif;
+}
+.notosans{
+    font-family: "Noto Sans", sans-serif;
 }
 
 .footer {
