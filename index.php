@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<?php
-include('controller/conexion.php')
+<?php 
+  include('controller/conexion.php');
+  $query = "select * from usuario";
 ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
