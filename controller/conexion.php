@@ -1,5 +1,5 @@
 <?php 
-$link = 'mysql:host=localhost;dbname=noname';
+$link = 'mysql:host=localhost;dbname=mikiweys';
 $usuario = 'root';
 $pass = '';
 
