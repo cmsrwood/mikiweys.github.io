@@ -21,9 +21,15 @@ if (toastTrigger) {
 var body = document.querySelector('body');
 var itoggle = document.getElementById('itema');
 var btoggle = document.getElementById('btntema');
+
 var navbar = document.getElementById('navbar')
 var logo = document.getElementById('logo')
+/* RESPONSIVE */
+var brtoggle = document.getElementById('btnrtema');
+var irtoggle = document.getElementById('irtema');
+var logor = document.getElementById('logor')
 
+/* FUNCION */
     function tema(){
       if (body.getAttribute("data-bs-theme") == "light") {
         body.setAttribute("data-bs-theme", "dark");
@@ -31,7 +37,10 @@ var logo = document.getElementById('logo')
         btoggle.setAttribute("class","btn text-white");
         navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-dark text-center align-items-center shadow");
         logo.setAttribute("src","IMG/todo/logodark.png");
-
+        /* responsive */
+        irtoggle.setAttribute("class"," bi bi-sun-fill");
+        brtoggle.setAttribute("class","btn text-white");
+        logor.setAttribute("src","IMG/todo/logodark.png");
       }
       else {
         body.setAttribute("data-bs-theme", "light");
@@ -39,5 +48,9 @@ var logo = document.getElementById('logo')
         btoggle.setAttribute("class","btn");
         navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-light text-center align-items-center shadow");
         logo.setAttribute("src","IMG/todo/logo.png");
+        /* RESPONSIVE */
+        irtoggle.setAttribute("class"," bi bi-moon-fill");
+        brtoggle.setAttribute("class","btn");
+        logor.setAttribute("src","IMG/todo/logo.png");
       }
   }
