@@ -112,15 +112,52 @@
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
   <div class="offcanvas-header border border-bottom">
     <a class="navbar-brand containerzoom giroi " href="index.html">
-      <img src="IMG/todo/logo.png" alt="" class="img-fluid " width="100">
+      <img src="IMG/todo/logo.png" alt="" class="img-fluid " width="65">
     </a>
     <h5 class="offcanvas-title">
       Menú
     </h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
-  <div class="offcanvas-body">
-
+  <div class="offcanvas-body d-flex flex-column">
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a href="" class="nav-link active bg-warning" aria-current="page">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a class="nav-link cafe hovernaranja" href="view/nosotros.html">
+            <i class="bi bi-people"></i>
+            <span class="off ">Nosotros</span>
+        </a>
+        </li>
+        <li>
+          <a class="nav-link cafe hovernaranja" href="view/contacto.html">
+            <i class="bi bi-telephone"></i>
+            <span class="off">Contacto</span> 
+        </a>
+        </li>
+        <li>
+          <a class="nav-link cafe hovernaranja" href="view/productos.html">
+            <i class="bi bi-shop"></i>
+              <span class="off">Productos</span> 
+          </a>
+        </li> 
+      </ul>
+      <hr>
+      <div class="dropdown">
+        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle cafe hovernaranja" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="IMG/todo/client.png" alt="" width="32" height="32" class="rounded-circle me-2">
+          <strong>Cliente</strong>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-white text-small shadow">
+          <li><a class="dropdown-item" href="#">Configuración</a></li>
+          <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+        </ul>
+      </div>
     </div>
 </div>
 </header>
