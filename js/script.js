@@ -19,18 +19,25 @@ if (toastTrigger) {
 
 /* TEMA OSCURO */
 var body = document.querySelector('body');
-var toggle = document.getElementById('btntema');
+var itoggle = document.getElementById('itema');
+var btoggle = document.getElementById('btntema');
+var navbar = document.getElementById('navbar')
+var logo = document.getElementById('logo')
 
-    function dark(){
-      body.setAttribute("data-bs-theme", "dark");
-      toggle.setAttribute("class","bi bi-sun-fill");
-    }
-    function light(){
-      body.setAttribute("data-bs-theme", "light");
-      toggle.setAttribute("class","bi bi-moon-fill");
-    }
     function tema(){
-      while (body.getAttribute("data-bs-theme") == "light") {
+      if (body.getAttribute("data-bs-theme") == "light") {
         body.setAttribute("data-bs-theme", "dark");
-    }
+        itoggle.setAttribute("class"," bi bi-sun-fill");
+        btoggle.setAttribute("class","btn text-white");
+        navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-dark text-center align-items-center shadow");
+        logo.setAttribute("src","IMG/todo/logodark.png");
+
+      }
+      else {
+        body.setAttribute("data-bs-theme", "light");
+        itoggle.setAttribute("class"," bi bi-moon-fill");
+        btoggle.setAttribute("class","btn");
+        navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-light text-center align-items-center shadow");
+        logo.setAttribute("src","IMG/todo/logo.png");
+      }
   }
