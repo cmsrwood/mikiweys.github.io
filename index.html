@@ -225,53 +225,19 @@
                       <p class="card-text">precio</p>
                     </div>
                     <div class="w-50 text-end">
-                      <a href="#inicio" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Agregado al carrito" class="btn bordenaranja naranja bhovernaranja"><i class="bi bi-cart"></i></a>
+                      <a href="#inicio" id="liveToastBtn" class="btn bordenaranja naranja bhovernaranja">
+                        <i class="bi bi-cart"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-              
+     
               <!--  -->
               <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
                 <div class="card m-auto ">
-                  <div class="position-relative ">
-                    <img src="IMG/index/pan.jpg" class="card-img-top" alt="...">
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99%</span>
-                  </div>
-                  <div class="card-body row align-items-center ">
-                    <div class="w-50">
-                      <h5 class="card-title">Pan</h5>
-                      <p class="card-text">precio</p>
-                    </div>
-                    <div class="w-50 text-end">
-                      <a href="#" class="btn bordenaranja naranja bhovernaranja"><i class="bi bi-cart"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--  -->
-              <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
-                <div class="card m-auto">
                   <div class="position-relative">
-                    <img src="IMG/index/pan.jpg" class="card-img-top" alt="...">
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99%</span>
-                  </div>
-                  <div class="card-body row align-items-center ">
-                    <div class="w-50">
-                      <h5 class="card-title">Pan</h5>
-                      <p class="card-text">precio</p>
-                    </div>
-                    <div class="w-50 text-end">
-                      <a href="#" class="btn bordenaranja naranja bhovernaranja"><i class="bi bi-cart"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--  -->
-              <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
-                <div class="card m-auto">
-                  <div class="position-relative">
-                    <img src="IMG/index/pan.jpg" class="card-img-top" alt="...">
+                    <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">99%</span>
                   </div>
                   <div class="card-body row align-items-center ">
@@ -280,16 +246,56 @@
                       <p class="card-text">precio</p>
                     </div>
                     <div class="w-50 text-end">
-                      <a href="#"  class="btn bordenaranja naranja bhovernaranja" ><i class="bi bi-cart"></i></a>
-                      
+                      <a href="#inicio" id="liveToastBtn" class="btn bordenaranja naranja bhovernaranja">
+                        <i class="bi bi-cart"></i>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+              <!--  -->
+              <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
+                <div class="card m-auto ">
+                  <div class="position-relative">
+                    <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">99%</span>
+                  </div>
+                  <div class="card-body row align-items-center ">
+                    <div class="w-50">
+                      <h5 class="card-title">Pan</h5>
+                      <p class="card-text">precio</p>
+                    </div>
+                    <div class="w-50 text-end">
+                      <a href="#inicio" id="liveToastBtn" class="btn bordenaranja naranja bhovernaranja">
+                        <i class="bi bi-cart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--  -->
+              <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
+                <div class="card m-auto ">
+                  <div class="position-relative">
+                    <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">99%</span>
+                  </div>
+                  <div class="card-body row align-items-center ">
+                    <div class="w-50">
+                      <h5 class="card-title">Pan</h5>
+                      <p class="card-text">precio</p>
+                    </div>
+                    <div class="w-50 text-end">
+                      <a href="#inicio" id="liveToastBtn" class="btn bordenaranja naranja bhovernaranja">
+                        <i class="bi bi-cart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <!-- NUEVOS -->
             <div class="row align-items-start mb-5">
-                <h2 class="naranja simoneta border-bottom border-warning border-2 mb-3">Promociones</h2>   
+                <h2 class="naranja simoneta border-bottom border-warning border-2 mb-3">Nuevos</h2>   
                 <!--  -->
                 <div class="col-6 col-xl-3 mb-3">
                   <div class="card m-auto">
@@ -358,7 +364,6 @@
                       </div>
                       <div class="w-50 text-end">
                         <a href="#"  class="btn bordenaranja naranja bhovernaranja" ><i class="bi bi-cart"></i></a>
-                        
                       </div>
                     </div>
                   </div>
@@ -368,8 +373,16 @@
           </div>
         </main>
 
-<!-- COSAS -->
-
+<!-- TOAST-->
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header shadow bg-white align-items-center">
+      <img src="IMG/index/pan.jpg" class="rounded me-2 img-fluid" alt="..." width="60" height="60">
+      <strong class="me-auto fs-6 cafe">Añadido al carrito <i class="bi bi-check text-success"></i></strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div> 
 <!-- FOOTER -->
 
 <footer class="bnaranja text-center text-white ">
