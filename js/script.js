@@ -16,10 +16,21 @@ if (toastTrigger) {
     toastBootstrap.show()
   })
 }
-/* MODAL */
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
 
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
+/* TEMA OSCURO */
+var body = document.querySelector('body');
+var toggle = document.getElementById('btntema');
+
+    function dark(){
+      body.setAttribute("data-bs-theme", "dark");
+      toggle.setAttribute("class","bi bi-sun-fill");
+    }
+    function light(){
+      body.setAttribute("data-bs-theme", "light");
+      toggle.setAttribute("class","bi bi-moon-fill");
+    }
+    function tema(){
+      while (body.getAttribute("data-bs-theme") == "light") {
+        body.setAttribute("data-bs-theme", "dark");
+    }
+  }
