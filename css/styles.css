@@ -20,10 +20,6 @@
     color: var(--naranja);   
 }
 
-
-.hovernaranja:hover{
-    color: orange;   
-}
 .actnaranja:active{
     color: orange;   
 }
@@ -32,6 +28,12 @@
 }
 .cafe {
     color: var(--cafe);
+}
+.hoverwhite:hover{
+    color: white;
+}
+.hovernaranja:hover{
+    color: var(--naranja);   
 }
 
 /* FUENTES */
@@ -95,7 +97,7 @@
     border-bottom: solid 2px var(--cafe);
 }
 
-/*  BACKGROUNDS*/
+/*  BG COLORES*/
 .bg-foto{
     background: url(../IMG/pan.jpng.webp);
     background-size: cover;
@@ -105,6 +107,16 @@
     background:var(--colorcuadros);
 }
 .bnaranja {
+    background: var(--naranja);   
+}
+
+.cfacebook{
+    background: rgb(50, 80, 142);
+}
+.ctwitter{
+    background: rgb(85, 172, 238);
+}
+.bnaranjahover:hover {
     background: var(--naranja);   
 }
 .bhovernaranja:hover{
@@ -117,11 +129,4 @@
 }
 .hoverrojo:hover{
    background: rgb(255, 0, 0);   
-}
-.cfacebook{
-    background: rgb(50, 80, 142);
-}
-.ctwitter{
-    background: rgb(85, 172, 238);
-}
-        
+}       

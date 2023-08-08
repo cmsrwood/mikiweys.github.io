@@ -14,10 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@1&display=swap" rel="stylesheet">
 
     <!-- LIBRERÍAS CSS -->  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="css/imagehover.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- LOGO ICON -->
@@ -109,7 +108,7 @@
   </div>
 </nav>
 <!-- OFFCANVAS -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
+<div class="offcanvas offcanvas-start w-75" tabindex="-1" id="offcanvasExample">
   <div class="offcanvas-header border border-bottom">
     <a class="navbar-brand containerzoom giroi " href="index.html">
       <img src="IMG/todo/logo.png" alt="" class="img-fluid " width="65">
@@ -127,9 +126,9 @@
           </a>
         </li>
         <li>
-          <a class="nav-link cafe hovernaranja" href="view/nosotros.html">
+          <a class="nav-link cafe hoverwhite bhovernaranja" href="view/nosotros.html">
             <i class="bi bi-people"></i>
-            <span class="off ">Nosotros</span>
+            <span class="">Nosotros</span>
         </a>
         </li>
         <li>
@@ -207,12 +206,12 @@
                     </button>
                   </div>
 <!-- PRESENTACIÓN -->
-<main>
-        <div class="p-5 container color shadow">   
+<main id="inicio">
+        <div class="p-5 container color shadow " >   
           <!-- PROMOCIONES -->
             <div class="row align-items-start mb-5">
-            <h1 class="text-center mb-3 cafe pb-3">Nuestros productos</h1>
-              <h2 class="naranja simoneta border-bottom border-warning border-2 mb-3">Promociones</h2>   
+            <h1 class="text-center mb-3 cafe pb-3" >Nuestros productos</h1>
+              <h2 class="naranja simoneta border-bottom border-warning border-2 mb-3" id="promociones">Promociones</h2>   
               <!--  -->
               <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
                 <div class="card m-auto ">
@@ -226,11 +225,12 @@
                       <p class="card-text">precio</p>
                     </div>
                     <div class="w-50 text-end">
-                      <a href="#" class="btn bordenaranja naranja bhovernaranja"><i class="bi bi-cart"></i></a>
+                      <a href="#inicio" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Agregado al carrito" class="btn bordenaranja naranja bhovernaranja"><i class="bi bi-cart"></i></a>
                     </div>
                   </div>
                 </div>
               </div>
+              
               <!--  -->
               <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
                 <div class="card m-auto ">
@@ -403,8 +403,7 @@
 </html>
 
     <!-- scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
           <script>
           new WOW().init();
