@@ -50,20 +50,25 @@
         </a>
     <!-- BUSCAR -->
     <form class="d-none d-xl-flex">
-        <input class="form-control me-2 " type="search" placeholder="Busca tu producto" id="search"/>
+        <input class="form-control me-2" type="search" placeholder="Busca tu producto" id="search"/>
         <button class="btn bordenaranja naranja bhovernaranja" type="submit">BUSCAR</button>
     </form>
     <!-- BOTON SEARCH -->
-      <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidth" aria-expanded="false" aria-controls="collapseWidth">
+    <div class="collapse collapse-horizontal" id="collapseWidth">
+      <div class="d-flex">
+        <input class="form-control me-2 " type="search" placeholder="Busca tu producto" id="search"/>
+        <button class="btn bordenaranja naranja bhovernaranja" type="submit"><i class="bi bi-search"></i>
+        </button>
+      </div>
+    </div>
+      <button class="btn btn-outline-warning d-none d-sm-flex d-xl-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidth" aria-expanded="false" aria-controls="collapseWidth">
         <i class="bi bi-search"></i>
       </button>
-      <div class="collapse collapse-horizontal " id="collapseWidth">
-        <div class="d-flex">
-          <input class="form-control me-2 " type="search" placeholder="Busca tu producto" id="search"/>
-          <button class="btn bordenaranja naranja bhovernaranja" type="submit">BUSCAR</button>
-        </div>
-      </div>
+      
+   <!-- SEARCH CEL -->
+
    
+
     <div class="collapse navbar-collapse container text-center justify-content-end lg-justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav px-5 mx-5 ">
         <li class="  col-3 align-self-center text-center">
@@ -119,6 +124,9 @@
     </div>
 </div>
 </header>
+
+
+
 <!-- ACOMODAR RESPONSIVE -->
 <br class="d-flex d-xl-none">
 <br class="d-flex d-xl-none">
