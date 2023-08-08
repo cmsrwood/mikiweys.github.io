@@ -37,7 +37,7 @@
 <div class="padre">  
 <!-- HEADER -->
 <header>
-<nav id="navbar" class="navbar navbar-expand-xl fixed-top navbar-light bg-white text-center align-items-center shadow">
+<nav id="navbar" class="navbar navbar-expand-xl fixed-top text-center align-items-center shadow">
   <div class="container-fluid d-flex ">
      <!-- OFFCANVAS BTN -->
      <a class="d-flex d-xl-none btn btn-outline-warning" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
@@ -103,13 +103,30 @@
               <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesión </a></li>
             </ul> 
           </li>
-          <li>
-              <button id="btntema" onclick="tema()" class="btn" ><i id="itema" class="bi bi-moon-fill"></i></button>
-          </li>
+          <div class="btn-group">
+            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+              <i id="itoggle" class="bi bi-moon-fill"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-end">
+              <li>
+                <button id="btnlight" onclick="light()" class="btn">
+                  <i id="ilight" class="bi bi-moon-fill">Light</i>
+                </button>
+              </li>
+              <li>
+                <button id="btndark" onclick="dark()" class="btn">
+                  <i id="idark" class="bi bi-sun-fill"> Dark</i>
+                </button>
+              </li>
+            </ul>
+          </div>
+          </div>
       </ul>
     </div>
   </div>
 </nav>
+  
+</button>
 <!-- OFFCANVAS -->
 <div class="offcanvas offcanvas-start w-75 " tabindex="-1" id="offcanvasExample">
   <div class="offcanvas-header border border-bottom ">
