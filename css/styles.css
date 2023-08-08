@@ -15,18 +15,12 @@
     flex-flow: column nowrap
 }
 /* COLORES */
-.color {
-    background:var(--colorcuadros);
-}
+
 .naranja {
     color: var(--naranja);   
 }
-.bnaranja {
-    background: var(--naranja);   
-}
-.bordenaranja {
-    border: solid 1px var(--naranja);
-}
+
+
 .hovernaranja:hover{
     color: orange;   
 }
@@ -36,29 +30,9 @@
 .focnaranja:focus{
     color: orange;   
 }
-.bhovernaranja:hover{
-    background-color: var(--naranja);
-    color: white;
-}
-.hovercafe:hover{
-    background-color: var(--cafe);   
-    color: white;
-}
-.hoverrojo:hover{
-   background: rgb(255, 0, 0);   
-}
-.cfacebook{
-    background: rgb(50, 80, 142);
-}
-.ctwitter{
-    background: rgb(85, 172, 238);
-}
-
 .cafe {
     color: var(--cafe);
 }
-/* WOW */
-
 
 /* FUENTES */
 .abril{
@@ -73,7 +47,7 @@
 .notosans{
     font-family: "Noto Sans", sans-serif;
 }
-/*  */
+/* FOOTER */
 
 .footer {
     display: grid;
@@ -90,46 +64,7 @@
     .navfooter a:hover{
         color: white;
     }
-
-    
-    .containerpassword{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 40px;
-        width: 300px;
-        background-color: white;
-        position: relative;
-        box-shadow: 3px 3px 3px rgb(0 0 0 / 5%);
-    }
-    
-    .passw{
-        outline: none;
-        width: 100%;
-        background-color: white;
-        color: #121212;
-        border: none;
-        position: absolute;
-        top: 8px;
-        left: 0;
-        right: 0;
-        bottom: 8px;
-        padding-left: .5rem;
-        box-sizing: border-box;
-        font-size: 20px;
-    }
-    
-    .icon{
-        position: absolute;
-        height: 60%;
-        position: absolute;
-        top: 50%;
-        right: 8px;
-        transform: translateY(-50%);
-        opacity: 0.3;
-        cursor: pointer;
-    }
-    
+    /* ANIMACIONES */
     .icon:hover{
         opacity: 0.8;
     }
@@ -151,10 +86,44 @@
         transition: all 500ms;
     }
 
+/* BORDERS */
+.bordenaranja {
+    border: solid 1px var(--naranja);
+}
+.bordecafe {
+    border-bottom: solid 1px var(--cafe);
+}
+.bordecafe2 {
+    border-bottom: solid 2px var(--cafe);
+}
+
+/*  BACKGROUNDS*/
 .bg-foto{
     background: url(../IMG/pan.jpng.webp);
     background-size: cover;
     background-position: center;
 }
-/* MEDIA  */
+.color {
+    background:var(--colorcuadros);
+}
+.bnaranja {
+    background: var(--naranja);   
+}
+.bhovernaranja:hover{
+    background-color: var(--naranja);
+    color: white;
+}
+.hovercafe:hover{
+    background-color: var(--cafe);   
+    color: white;
+}
+.hoverrojo:hover{
+   background: rgb(255, 0, 0);   
+}
+.cfacebook{
+    background: rgb(50, 80, 142);
+}
+.ctwitter{
+    background: rgb(85, 172, 238);
+}
         
