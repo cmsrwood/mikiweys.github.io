@@ -24,6 +24,10 @@ var btndark = document.getElementById('btndark');
 var btnlight = document.getElementById('btnlight');
 var navbar = document.getElementById('navbar');
 var logo = document.getElementById('logo');
+/* responsive */
+var itoggle = document.getElementById('irtema');
+var btoggle = document.getElementById('btnrtema');
+var ltoggle = document.getElementById('logor');
 
     function dark(){
       body.setAttribute("data-bs-theme", "dark");
@@ -43,10 +47,22 @@ var logo = document.getElementById('logo');
       logo.setAttribute("src","IMG/todo/logo.png");
       /* RESPONSIVE */
     }
-if (body.getAttribute('data-bs-theme')== "light"){
-  light()
-}
-else {
-  dark()
-}
+    function tema(){
+      if (body.getAttribute("data-bs-theme") == "light") {
+        body.setAttribute("data-bs-theme", "dark");
+        itoggle.setAttribute("class"," bi bi-moon-fill");
+        btoggle.setAttribute("class","btn text-white");
+        navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-dark text-center align-items-center shadow");
+        ltoggle.setAttribute("src","IMG/todo/logodark.png");
+        logo.setAttribute("src","IMG/todo/logodark.png");
+      }
+      else {
+        body.setAttribute("data-bs-theme", "light");
+        itoggle.setAttribute("class"," bi bi-sun-fill");
+        btoggle.setAttribute("class","btn");
+        navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-light text-center align-items-center shadow");
+        ltoggle.setAttribute("src","IMG/todo/logo.png");
+        logo.setAttribute("src","IMG/todo/logo.png");
+      }
+    }
         
