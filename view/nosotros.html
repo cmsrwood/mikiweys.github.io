@@ -1,130 +1,33 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros - MIKIWEY'S APP</title>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&family=Simonetta&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/nosotros.css">  
-    <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js">
-    </script>
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/nosotros.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link rel="shortcut icon" href="../IMG/todo/logo2.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empleados | MIKIWEY'S APP</title>
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&family=Simonetta&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&family=Simonetta&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@1&display=swap" rel="stylesheet">
+
+  <!-- LIBRERÍAS CSS -->  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- LOGO ICON -->
+  <link rel="shortcut icon" href="../IMG/todo/logo2.ico">
+  <link rel="icon" sizes="192x192" href="../IMG/todo/logo2.ico">
+  <link rel="favicon" href="../IMG/todo/logo2.ico">
+  <link rel="apple-touch-icon" href="../IMG/todo/logo2.ico">
+
+  <!-- META  -->
+  <meta name="description" content="Panadería Mikiweys">
 </head>
 <body>
-  <div class="padre"></div>
-<!-- HEADER -->
-<header>
-<nav class="navbar navbar-expand-xl navbar-light fixed-top bg-white text-center align-items-center shadow">
-  <div class="container-fluid">
-        <a class="navbar-brand me-5 pe-5" href="../index.html">
-          <img src="../IMG/todo/logo.png" alt="" class="img-fluid " width="100">
-        </a>
-    <form class="d-flex">
-        <input class="form-control me-2 " type="search" placeholder="Busca tu producto" id="search"/>
-        <button class="btn bordenaranja naranja bhovernaranja" type="submit">BUSCAR</button>
-    </form>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse container text-center justify-content-end lg-justify-content-center" id="navbarSupportedContent">
-      <ul class="navbar-nav px-5 mx-5 ">
-        <li class="  col-3 align-self-center text-center">
-            <a class="nav-link  hovernaranja" href="nosotros.html">
-                <i class="bi bi-people"></i>
-                <span class="off ">Nosotros</span>
-            </a>
-        </li>
-        <li class="  col-3 align-self-center text-center">
-            <a class="nav-link  hovernaranja" href="contacto.html">
-                <i class="bi bi-telephone"></i>
-                <span class="off">Contacto</span> 
-            </a>
-        </li>
-        <li class=" mx-2 col-3 align-self-center text-center">
-          <a class="nav-link hovernaranja" href="productos.html">
-            <i class="bi bi-shop"></i>
-              <span class="off">Productos</span> 
-          </a>
-      </li>
-
-        <li class=" dropdown  col-3 align-self-center text-center">
-            <a class="nav-link dropdown-toggle hovernaranja" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person-circle  naranja"></i>
-              <span class="off">Mi cuenta</span>  
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="login.html">Ingresa</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="login.html">Tu perfil</a></li>
-              <li><a class="dropdown-item" href="login.html">Tu carrito</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesión </a></li>
-            </ul> 
-          </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-</header>
-        <!-- PAGINA -->
-<div class="padre">
-    <!-- WHY --> 
-            <div class="container-fluid text-dark nosotros2">
-              <h1 class="display-5 abril m-5 p-3">¿POR QUÉ MIKIWEY?</h1>
-            </div>
-    </header>
-   <!-- DISPONEMOS DE... -->
-    <div class="p"> <p> Disponemos de una gran variedad de productos en panadería con la máxima calidad, auténtico sabor y frescura </p></div>
-<!-- CONTENIDO -->
-    <div class="contenido">
-        <div class="imagen">
-            <img src="../IMG/pn.jpng.jpg" alt="">
-        </div>
-        <div class="panaderia">
-          <p>MIKIWEY es una compañía familiar, entendemos la </p>
-          <p>importancia de la familia y sabemos que la mejor </p>
-          <p> forma de pasar un momento en familia es disfrutando</p>
-          <p> de una buena comida.</p>
-          <p></p>
-          <p></p>
-          <p>Asi que sin extendernos mucho en el tema,</p>
-          <p>esperamos con ancia su pedido y les deseamos </p>
-          <p> lo mejor.</p>
-        </div>
-</div>
-<!-- FOOTER -->
-
-<footer class="bnaranja text-center text-white ">
-  <!-- Grid container -->
-  <div class="container p-4 pb-0">
-    <!-- Section: Social media -->
-    <section class="mb-4">
-      <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1 rounded-circle" href="#!" role="button">
-        <i class="bi bi-facebook"></i>
-      </a>
-      <!-- Twitter -->
-      <a class="btn btn-outline-light btn-floating m-1 rounded-circle" href="#!" role="button">
-        <i class="bi bi-twitter"></i>
-      </a>
-      <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1 rounded-circle" href="" role="button">
-        <i class="bi bi-instagram"></i>
-      </a>
-      <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-1 rounded-circle" href="https://github.com/mikiweys/mikiweys.github.io" role="button">
-        <i class="bi bi-github"></i>
-      </a>
-    </section>
-    <!-- Section: Social media -->
-  </div>
-</footer>
-</div>
-</html>
+  
+</body>
+  </html>
