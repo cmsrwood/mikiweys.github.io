@@ -19,16 +19,22 @@ if (toastTrigger) {
 
 /* TEMA OSCURO */
 var body = document.querySelector('body');
+var cafe = document.querySelector('cafe');
 var itoggle = document.getElementById('itoggle');
 var btndark = document.getElementById('btndark');
 var btnlight = document.getElementById('btnlight');
 var navbar = document.getElementById('navbar');
 var logo = document.getElementById('logo');
+var lmain = document.getElementById('main');
+
+card.className = 'cafe';
 /* responsive */
 var irtoggle = document.getElementById('irtema');
 var btoggle = document.getElementById('btnrtema');
 var ltoggle = document.getElementById('logor');
 
+
+/* FUNCIONES TEMAS */
     function dark(){
       body.setAttribute("data-bs-theme", "dark");
       btndark.setAttribute("class","btn text-white");
@@ -36,8 +42,7 @@ var ltoggle = document.getElementById('logor');
       itoggle.setAttribute("class","bi bi-moon text-white");
       navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-dark bg-dark text-center align-items-center shadow text-white");
       logo.setAttribute("src","IMG/todo/logodark.png");
-
-      /* RESPONSIVE */
+      main.setAttribute("class", "p-5 container bg-dark shadow");
     }
     function light(){
       body.setAttribute("data-bs-theme", "light");
@@ -46,7 +51,11 @@ var ltoggle = document.getElementById('logor');
       itoggle.setAttribute("class","bi bi-sun");
       navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-white text-center align-items-center shadow");
       logo.setAttribute("src","IMG/todo/logo.png");
-      /* RESPONSIVE */
+      main.setAttribute("class", "p-5 container color shadow");
+
+
+
+/* RESPONSIVE */
     }
     function tema(){
       if (body.getAttribute("data-bs-theme") == "light") {
