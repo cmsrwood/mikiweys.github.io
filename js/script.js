@@ -65,6 +65,7 @@ var ltoggle = document.getElementById('logor');
         navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-dark text-center align-items-center shadow");
         ltoggle.setAttribute("src","IMG/todo/logodark.png");
         logo.setAttribute("src","IMG/todo/logodark.png");
+        main.setAttribute("class", "p-5 container bg-dark shadow");
       }
       else {
         body.setAttribute("data-bs-theme", "light");
@@ -73,6 +74,7 @@ var ltoggle = document.getElementById('logor');
         navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-light text-center align-items-center shadow");
         ltoggle.setAttribute("src","IMG/todo/logo.png");
         logo.setAttribute("src","IMG/todo/logo.png");
+        main.setAttribute("class", "p-5 container color shadow");
       }
     }
         
