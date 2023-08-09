@@ -25,7 +25,7 @@ var btnlight = document.getElementById('btnlight');
 var navbar = document.getElementById('navbar');
 var logo = document.getElementById('logo');
 /* responsive */
-var itoggle = document.getElementById('irtema');
+var irtoggle = document.getElementById('irtema');
 var btoggle = document.getElementById('btnrtema');
 var ltoggle = document.getElementById('logor');
 
@@ -33,16 +33,17 @@ var ltoggle = document.getElementById('logor');
       body.setAttribute("data-bs-theme", "dark");
       btndark.setAttribute("class","btn text-white");
       btnlight.setAttribute("class","btn text-white");
-      itoggle.setAttribute("class","bi bi-moon-fill text-white");
+      itoggle.setAttribute("class","bi bi-moon text-white");
       navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-dark bg-dark text-center align-items-center shadow text-white");
       logo.setAttribute("src","IMG/todo/logodark.png");
+
       /* RESPONSIVE */
     }
     function light(){
       body.setAttribute("data-bs-theme", "light");
       btnlight.setAttribute("class","btn");
       btndark.setAttribute("class","btn");
-      itoggle.setAttribute("class","bi bi-sun-fill");
+      itoggle.setAttribute("class","bi bi-sun");
       navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-white text-center align-items-center shadow");
       logo.setAttribute("src","IMG/todo/logo.png");
       /* RESPONSIVE */
@@ -50,7 +51,7 @@ var ltoggle = document.getElementById('logor');
     function tema(){
       if (body.getAttribute("data-bs-theme") == "light") {
         body.setAttribute("data-bs-theme", "dark");
-        itoggle.setAttribute("class"," bi bi-moon-fill");
+        irtoggle.setAttribute("class"," bi bi-moon");
         btoggle.setAttribute("class","btn text-white");
         navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-dark text-center align-items-center shadow");
         ltoggle.setAttribute("src","IMG/todo/logodark.png");
@@ -58,7 +59,7 @@ var ltoggle = document.getElementById('logor');
       }
       else {
         body.setAttribute("data-bs-theme", "light");
-        itoggle.setAttribute("class"," bi bi-sun-fill");
+        irtoggle.setAttribute("class"," bi bi-sun");
         btoggle.setAttribute("class","btn");
         navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-light text-center align-items-center shadow");
         ltoggle.setAttribute("src","IMG/todo/logo.png");
