@@ -63,18 +63,18 @@
             </ul> 
           </li>
           <div class="btn-group">
-            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-              <i id="itoggle" class="bi bi-moon-fill"></i>
+            <button type="button" class="btn dropdown-toggle " data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+              <small id="itoggle" class="bi bi-sun "> Tema</small>
             </button>
             <ul class="dropdown-menu dropdown-menu-end dropdown-menu-end">
               <li>
                 <button id="btnlight" onclick="light()" class="btn">
-                  <i id="ilight" class="bi bi-moon-fill">Light</i>
+                  <i id="ilight" class="bi bi-sun"> Claro</i>
                 </button>
               </li>
               <li>
                 <button id="btndark" onclick="dark()" class="btn">
-                  <i id="idark" class="bi bi-sun-fill"> Dark</i>
+                  <i id="idark" class="bi bi-moon "> Oscuro</i>
                 </button>
               </li>
             </ul>
@@ -129,7 +129,7 @@
           <img src="IMG/todo/client.png" alt="" width="32" height="32" class="rounded-circle me-2">
           <strong>Cliente</strong>
         </a>
-        <button id="btnrtema" onclick="tema()" class="btn" ><i id="irtema" class="bi bi-moon-fill"></i></button>
+        <button id="btnrtema" onclick="tema()" class="btn" ><i id="irtema" class="bi bi-sun"></i></button>
         <ul class="dropdown-menu dropdown-menu-white text-small shadow">
           <li><a class="dropdown-item" href="#">Configuración</a></li>
           <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
