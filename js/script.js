@@ -71,7 +71,7 @@ var ltoggle = document.getElementById('logor');
         body.setAttribute("data-bs-theme", "light");
         irtoggle.setAttribute("class"," bi bi-sun");
         btoggle.setAttribute("class","btn");
-        navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-light text-center align-items-center shadow");
+        navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-white text-center align-items-center shadow");
         ltoggle.setAttribute("src","IMG/todo/logo.png");
         logo.setAttribute("src","IMG/todo/logo.png");
         main.setAttribute("class", "p-5 container color shadow");
