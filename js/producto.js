@@ -1,15 +1,18 @@
 /* idk */
 var imagenp = document.getElementById('img');
-var imagenbtn = document.querySelectorAll('#imgb');
-var idimg = imagenbtn.getAttribute("id");
-console.log(imagenbtn);
-
+var imagenc = document.querySelectorAll('#imgb'); //ARRAY
+var imagenb = document.querySelectorAll('#btnc'); //ARRAY
+console.log(imagenc);
+console.log(imagenb);
 
 function cambiar(){
-  var i=0;
-  if (idimg =="imgb1") {
-    imagenbtn = imagenbtn.getAttribute("src");
-    imagenp.setAttribute("src",imagenbtn);
+  let id=0;
+      if (imagenb[id].hasAttribute("class",id)=id) {
+        imagenc = imagenc[id].getAttribute("src");
+        imagenp.setAttribute("src",imagenc);
   }
-
+    else{
+      id++
+      return id
+    }
 }
