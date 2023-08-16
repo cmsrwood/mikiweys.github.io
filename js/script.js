@@ -35,12 +35,12 @@ var ltoggle = document.getElementById('logor');
 /* FUNCIONES TEMAS */
     function dark(){
       body.setAttribute("data-bs-theme", "dark");
+      main.setAttribute("class", "container p-5 shadow d-flex color");
       btndark.setAttribute("class","btn text-white");
       btnlight.setAttribute("class","btn text-white");
       itoggle.setAttribute("class","bi bi-moon text-white");
       navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-dark bg-dark text-center align-items-center shadow text-white");
       logo.setAttribute("src","../../IMG/todo/logodark.png");
-      main.setAttribute("class", "container p-5 shadow d-flex color");
     }
     function light(){
       body.setAttribute("data-bs-theme", "light");
