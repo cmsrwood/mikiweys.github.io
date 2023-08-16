@@ -88,6 +88,19 @@ a {
 .containerzoom{
     transition: all 500ms;
 }
+.aparecer:active{
+    animation-name: aparecer;
+    animation-duration: 3s;
+}
+@keyframes aparecer {
+    from{
+
+    }
+    to {
+
+    }
+}
+
 /* BORDERS */
 .bordenaranja {
     border: solid 1px var(--naranja);

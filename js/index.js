@@ -41,7 +41,7 @@ var ltoggle = document.getElementById('logor');
       btnlight.setAttribute("class","btn text-white");
       itoggle.setAttribute("class","bi bi-moon text-white");
       navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-dark bg-dark text-center align-items-center shadow text-white");
-      logo.setAttribute("src","../../IMG/todo/logodark.png");
+      logo.setAttribute("src","IMG/todo/logodark.png");
       main.setAttribute("class", "p-5 container bg-dark shadow");
     }
     function light(){
@@ -50,7 +50,7 @@ var ltoggle = document.getElementById('logor');
       btndark.setAttribute("class","btn");
       itoggle.setAttribute("class","bi bi-sun");
       navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-white text-center align-items-center shadow");
-      logo.setAttribute("src","../../img/todo/logo.png");
+      logo.setAttribute("src","IMG/todo/logo.png");
       main.setAttribute("class", "p-5 container color shadow");
 
 
@@ -63,8 +63,8 @@ var ltoggle = document.getElementById('logor');
         irtoggle.setAttribute("class"," bi bi-moon");
         btoggle.setAttribute("class","btn text-white");
         navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-dark text-center align-items-center shadow");
-        ltoggle.setAttribute("src","../../IMG/todo/logodark.png");
-        logo.setAttribute("src","../../IMG/todo/logodark.png");
+        ltoggle.setAttribute("src","IMG/todo/logodark.png");
+        logo.setAttribute("src","IMG/todo/logodark.png");
         main.setAttribute("class", "p-5 container bg-dark shadow");
       }
       else {
@@ -72,9 +72,9 @@ var ltoggle = document.getElementById('logor');
         irtoggle.setAttribute("class"," bi bi-sun");
         btoggle.setAttribute("class","btn");
         navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-white text-center align-items-center shadow");
-        ltoggle.setAttribute("src","../../img/todo/logo.png");
-        logo.setAttribute("src","../../img/todo/logo.png");
+        ltoggle.setAttribute("src","IMG/todo/logo.png");
+        logo.setAttribute("src","IMG/todo/logo.png");
         main.setAttribute("class", "p-5 container color shadow");
       }
     }
-  
+        
