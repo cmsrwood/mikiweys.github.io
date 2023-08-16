@@ -88,7 +88,19 @@ a {
 .containerzoom{
     transition: all 500ms;
 }
-
+.imagentext:active{
+    animation-name: slidetop ;
+    animation-duration: 3s;
+}
+@keyframes slidetop {
+    from {
+        display: flex;
+    }
+  
+    to {
+        display: none;
+    }
+  }
 /* BORDERS */
 .bordenaranja {
     border: solid 1px var(--naranja);
