@@ -41,7 +41,7 @@
     <div class="col p-3 simoneta">
       <div class="row ">
         <div class="col-12"><h1 class="my-4  fs-2">Regístrate</h1></div>
-      <form action="registrar.php" method="POST">
+      <form action="../../backend/registrar.php" method="post">
         <div class="mb-2 col-12">
           <label class="form-label">Nombres</label>
           <input type="text" class="form-control  cafe" name="name_user">
@@ -70,7 +70,7 @@
         </div>
         <div class="mb-2 col-12">
           <label class="form-label">Teléfono</label>
-          <input type="tel" class="form-control " maxlength="13" value="+57" name="tel_user">
+          <input type="tel" class="form-control " maxlength="13" value="" name="tel_user">
         </div>
         <div class="mb-2 col-12">
           <label class="form-label">Dirección</label>
@@ -79,6 +79,18 @@
         <div class="mb-2 col-12">
           <label class="form-label">Contraseña</label>
           <input type="password" class="form-control cafe" name="pass_user">
+        </div>
+        <div class="mb-2 col-12">
+          <label class="form-label">Confirmar contraseña</label>
+          <input type="password" class="form-control  cafe">
+        </div>
+        <div class="mb-2 d-flex col-12">
+          <input type="checkbox" class=" me-2">
+          <label for="" class="">Acepto que soy mayor de 18 años</label>
+        </div>
+        <div class="mb-2 d-flex col-12">
+          <input type="checkbox" class=" me-2">
+          <label for="" class="">Acepto los <a href="">Términos y condiciones</a>  y <a href="">Políticas de privacidad</a> </label>
         </div>
         <div class="mb-2 col-12">
           <input type="submit" class="form-control hovercafe bnaranja" >
@@ -90,7 +102,7 @@
     <div class="col-12 col-sm-6 text-center">
       <div class="row">
         <a class="my-5 col-12 pt-5" href="../../../index.html">
-          <img src="../../../IMG/todo/logo.png" alt="" class="img-fluid w-50 mt-5">
+          <img src="../../../IMG/todo/logo.png" alt="" class="img-fluid w-50">
         </a>
           <div class="facebook my-3">
             <button class="btn btn-primary w-100"><i class="bi bi-facebook pe-1"></i> Ingresa con facebook</button>
@@ -140,6 +152,7 @@
           <script>
           new WOW().init();
           </script>
+    <script src="../../../js/script.js"></script>
 
 
 <!-- http://127.0.0.1:5500/index.html -->
