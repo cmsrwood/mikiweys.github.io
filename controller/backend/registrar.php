@@ -21,14 +21,14 @@
 
         $sql = "INSERT INTO usuario(name_user,apel_user,pass_user,tel_user,id_doc,num_documento_user,email_user,dir_user) VALUES(:nom,:apell,:pass,:tel,:doc,:num_doc,:email,:dir)";
         $stmt =$conn->prepare($sql);
-        $stmt ->bindParam(":nom",$name);
-        $stmt ->bindParam(":apell",$apel);
-        $stmt ->bindParam(":pass",$pass);
-        $stmt ->bindParam(":tel",$tel);
-        $stmt ->bindParam(":doc",$id_doc);
-        $stmt ->bindParam(":num_doc",$num_doc);
-        $stmt ->bindParam(":email",$email);
-        $stmt ->bindParam(":dir",$dir);
+        $stmt->bindParam(":nom",$name);
+        $stmt->bindParam(":apell",$apel);
+        $stmt->bindParam(":pass",$pass);
+        $stmt->bindParam(":tel",$tel);
+        $stmt->bindParam(":doc",$id_doc);
+        $stmt->bindParam(":num_doc",$num_doc);
+        $stmt->bindParam(":email",$email);
+        $stmt->bindParam(":dir",$dir);
 
         if ($stmt->execute()){
             header("location: login.php");
