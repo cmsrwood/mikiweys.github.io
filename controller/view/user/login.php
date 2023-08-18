@@ -81,18 +81,6 @@
           <input type="password" class="form-control cafe" name="pass_user">
         </div>
         <div class="mb-2 col-12">
-          <label class="form-label">Confirmar contraseña</label>
-          <input type="password" class="form-control  cafe">
-        </div>
-        <div class="mb-2 d-flex col-12">
-          <input type="checkbox" class=" me-2">
-          <label for="" class="">Acepto que soy mayor de 18 años</label>
-        </div>
-        <div class="mb-2 d-flex col-12">
-          <input type="checkbox" class=" me-2">
-          <label for="" class="">Acepto los <a href="">Términos y condiciones</a>  y <a href="">Políticas de privacidad</a> </label>
-        </div>
-        <div class="mb-2 col-12">
           <input type="submit" class="form-control hovercafe bnaranja" >
         </div>
       </div>
@@ -152,7 +140,6 @@
           <script>
           new WOW().init();
           </script>
-    <script src="../../../js/script.js"></script>
 
 
 <!-- http://127.0.0.1:5500/index.html -->
