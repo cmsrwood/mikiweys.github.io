@@ -1,5 +1,5 @@
 <?php
-    include_once("../../conexion.php");
+    include_once("../conexion.php");
 
     if ( !empty ($_POST ['name_user']) && !empty ($_POST ['apel_user'])  && !empty ($_POST ['pass_user'])  && !empty ($_POST ['tel_user'])  && !empty ($_POST ['id_doc']) && !empty ($_POST ['num_documento_user']) && !empty ($_POST ['email_user']) && !empty ($_POST ['dir_user']) ) {
         //si
@@ -31,7 +31,7 @@
         $stmt->bindParam(":dir",$dir);
 
         if ($stmt->execute()){
-            header("location: login.php");
+            header("location: ../login.php");
         }
         else print("Error en la consulta");
     }else{
