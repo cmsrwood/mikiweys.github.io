@@ -1,11 +1,14 @@
-<?php 
-$link = 'mysql:host=localhost;dbname=mikiweys';
-$usuario = 'root';
-$pass = '';
-try{
-    $pdo = new PDO($link,$usuario,$pass);
-}  
-catch (PDOException $e) {
-    print "¡Error!: " . $e->getMessage() . "<br/>";
-    die();
+
+<?php
+$servername = "localhost";
+$database = "mikiweys";
+$username = "root";
+$password = '';
+// Create connection
+$con = mysqli_connect($servername, $username, $password, $database);
+// Check connection
+if (!$con) {
+    die("Connection failed:" . mysqli_connect_error());
 }
+mysqli_close($con);
+?>
