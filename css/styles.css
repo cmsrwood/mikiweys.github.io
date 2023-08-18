@@ -114,7 +114,7 @@ a {
 
 /*  BG COLORES*/
 .bg-foto{
-    background: url(../IMG/pan.jpng.webp);
+    background: url(../IMG/index/pan.jpg);
     background-size: cover;
     background-position: center;
 }
