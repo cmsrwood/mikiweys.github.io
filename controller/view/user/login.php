@@ -42,7 +42,7 @@
     <div class="col p-3 simoneta">
       <div class="row ">
         <div class="col-12"><h1 class="my-4  fs-2">Regístrate</h1></div>
-      <form action="../../backend/registrar.php" method="post">
+      <form action="../../backend/registrar.php" method="POST">
         <div class="mb-2 col-12">
           <label class="form-label">Nombres</label>
           <input type="text" class="form-control  cafe" name="name_user">
@@ -78,7 +78,23 @@
           <input type="text" class="form-control " name="dir_user">
         </div>
         <div class="mb-2 col-12">
-          <input type="submit" class="form-control hovercafe bnaranja" >
+          <label class="form-label">Contraseña</label>
+          <input type="password" class="form-control  cafe" name="pass_user">
+        </div>
+        <div class="mb-2 col-12">
+          <label class="form-label">Confirmar contraseña</label>
+          <input type="password" class="form-control  cafe">
+        </div>
+        <div class="mb-2 d-flex col-12">
+          <input type="checkbox" class=" me-2">
+          <label for="" class="">Acepto que soy mayor de 18 años</label>
+        </div>
+        <div class="mb-2 d-flex col-12">
+          <input type="checkbox" class=" me-2">
+          <label for="" class="">Acepto los <a href="">Términos y condiciones</a>  y <a href="">Políticas de privacidad</a> </label>
+        </div>
+        <div class="mb-2 col-12">
+          <input type="submit" class="form-control hovercafe bnaranja">
         </div>
       </div>
       </form>

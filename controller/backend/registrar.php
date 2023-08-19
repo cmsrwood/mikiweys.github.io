@@ -32,10 +32,10 @@ include_once("conexion.php");
         $stmt->bindParam(":dir",$dir);
 
         if ($stmt->execute()){
-            header("location: ../../login.php");
+            header("location: login.php");
         }
         else print("Error en la consulta");
     }else{
-        print("Debe completar todos los campos del formulario");
+        echo'<h1> LLENE ESO </h1> ';
     }
     ?>
