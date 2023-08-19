@@ -26,10 +26,10 @@ include_once("conexion.php");
         $stmt->bindParam(":dir",$dir);
 
         if ($stmt->execute()){
-            header("location: login.php");
+            header("location: ../view/user/login.php");
         }
         else print("Error en la consulta");
     }else{
-        echo'<h1> LLENE ESO </h1> ';
+    print("Debe llenar las cosas de consulta");
     }
     ?>
