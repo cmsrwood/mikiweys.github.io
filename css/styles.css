@@ -114,9 +114,11 @@ a {
 
 /*  BG COLORES*/
 .bg-foto{
-    background: url(../IMG/index/pan.jpg);
+    background: url(../IMG/index/1\ carrusel.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
 }
 .color {
     background:var(--colorcuadros);
