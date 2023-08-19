@@ -29,11 +29,12 @@
     <!-- META  -->
     <meta name="description" content="Panadería Mikiweys">
 </head>
+
+<body> 
+<!-- Father -->
     <?php
     include("../../backend/registrar.php");
     ?>
-<body> 
-<!-- Father -->
 <div class="padre bg-foto">  
 <!-- LOGIN -->
 <div class="container shadow px-5 py-3 bg-white my-5 w-75">
