@@ -56,8 +56,8 @@
           <label class="form-label">Tipo de documento</label>
           <br>
           <select name="id_doc" id="documento" class="form-select">
-            <option value="Cédula de ciudadania" class="form-select">Cédula de ciudadanía</option>
-            <option value="Tarjeta de Identidad" class="form-select">Tarjeta de Identidad</option>
+            <option value="Cédula de Ciudadanía" class="form-select">Cédula de ciudadanía</option>
+            <option value="Cédula de Extranjería" class="form-select">Cédula de Extranjería</option>
             <option value="Tarjeta de Identidad" class="form-select">Tarjeta de Identidad</option>
             <option value="Pasaporte" class="form-select">Pasaporte</option>
           </select>
