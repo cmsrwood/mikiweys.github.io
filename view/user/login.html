@@ -19,28 +19,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../css/imagehover.css">
+    <link rel="stylesheet" href="../../css/styles.css">
 
     <!-- LOGO ICON -->
-    <link rel="sahortcut icon" href="../../../IMG/todo/logo2.ico">
-    <link rel="icon" sizes="192x192" href="../../../IMG/todo/logo2.ico">
-    <link rel="favicon" href="../../../IMG/todo/logo2.ico">
-    <link rel="apple-touch-icon" href="../../../IMG/todo/logo2.ico">
+    <link rel="shortcut icon" href="../../IMG/todo/logo2.ico">
+    <link rel="icon" sizes="192x192" href="../../IMG/todo/logo2.ico">
+    <link rel="favicon" href="../../IMG/todo/logo2.ico">
+    <link rel="apple-touch-icon" href="../../IMG/todo/logo2.ico">
     <!-- META  -->
     <meta name="description" content="Panadería Mikiweys">
 </head>
-
-<body class=""> 
+    <?php
+    include("../../backend/registrar.php");
+    ?>
+<body> 
 <!-- Father -->
-
 <div class="padre bg-foto">  
 <!-- LOGIN -->
 <div class="container shadow px-5 py-3 bg-white my-5 w-75">
   <div class="row">
-    <div class="col p-3 simoneta ">
+    <div class="col p-3 simoneta">
       <div class="row ">
         <div class="col-12"><h1 class="my-4  fs-2">Regístrate</h1></div>
-      <form action="../../backend/registrar.php" method="POST">
+      <form action="registrar.php" method="post">
         <div class="mb-2 col-12">
           <label class="form-label">Nombres</label>
           <input type="text" class="form-control  cafe" name="name_user">
@@ -53,10 +55,10 @@
           <label class="form-label">Tipo de documento</label>
           <br>
           <select name="id_doc" id="documento" class="form-select">
-            <option value="Cédula de ciudadania" class="form-select">Cédula de ciudadanía</option>
-            <option value="Tarjeta de Identidad" class="form-select">Tarjeta de Identidad</option>
-            <option value="Tarjeta de Identidad" class="form-select">Tarjeta de Identidad</option>
-            <option value="Pasaporte" class="form-select">Pasaporte</option>
+            <option value="1" class="form-select">Cédula de ciudadanía</option>
+            <option value="2" class="form-select">Tarjeta de Identidad</option>
+            <option value="3" class="form-select">Cédula de extranjería</option>
+            <option value="4" class="form-select">Pasaporte</option>
           </select>
         </div>
         <div class="mb-2 col-12">
@@ -77,11 +79,11 @@
         </div>
         <div class="mb-2 col-12">
           <label class="form-label">Contraseña</label>
-          <input type="password" class="form-control  cafe" name="pass_user" autocomplete="on">
+          <input type="password" class="form-control cafe" name="pass_user">
         </div>
         <div class="mb-2 col-12">
           <label class="form-label">Confirmar contraseña</label>
-          <input type="password" class="form-control  cafe" autocomplete="on">
+          <input type="password" class="form-control  cafe">
         </div>
         <div class="mb-2 d-flex col-12">
           <input type="checkbox" class=" me-2">
@@ -92,7 +94,7 @@
           <label for="" class="">Acepto los <a href="">Términos y condiciones</a>  y <a href="">Políticas de privacidad</a> </label>
         </div>
         <div class="mb-2 col-12">
-          <input type="submit" class="form-control hovercafe bnaranja">
+          <input type="submit" class="form-control hovercafe bnaranja" >
         </div>
       </div>
       </form>
@@ -100,8 +102,8 @@
     <!-- o -->
     <div class="col-12 col-sm-6 text-center">
       <div class="row">
-        <a class="my-5 col-12 pt-5" href="../../../index.html">
-          <img src="../../../IMG/todo/logo.png" alt="" class="img-fluid w-50">
+        <a class="my-5 col-12" href="../../index.html">
+          <img src="../../IMG/todo/logo.png" alt="" class="img-fluid w-50">
         </a>
           <div class="facebook my-3">
             <button class="btn btn-primary w-100"><i class="bi bi-facebook pe-1"></i> Ingresa con facebook</button>
@@ -151,7 +153,8 @@
           <script>
           new WOW().init();
           </script>
-    <script src="../../../js/script.js"></script>
+    <script  src="../../js/script2.js"></script>
+    <script src="../../js/script.js"></script>
 
 
 <!-- http://127.0.0.1:5500/index.html -->
