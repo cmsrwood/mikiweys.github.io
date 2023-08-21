@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <?php
-    include ('controller/conexion.php')
+    include ('controller/backend/conexion.php')
     ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,7 +43,7 @@
 <div class="padre">  
 <!-- HEADER -->
   <?php
-    include ('controller/view/header.php')
+    include ('controller/view/reciclaje/header.php')
   ?>
 <!-- CAROUSEL -->
                 <div id="carouselExampleCaptions" class="carousel slide w-100 mt-5" data-bs-ride="carousel">
@@ -143,34 +143,8 @@
 <!-- FOOTER -->
 
 <?php
-    include ('controller/view/footer.php')
+    include ('controller/view/reciclaje/footer.php')
   ?>
-</div>
-<!-- WhatsApp -->
-<div class="nav-bottom animate__animated animate__bounce animate__delay-5s">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-rel="stylesheet">
-   <div class="popup-whatsapp ">
-       <div class="content-whatsapp -top"><button type="button" class="closePopup">
-             <i class="material-icons icon-font-color">close</i>
-           </button> 
-         
-          <p>  <img src="IMG/secretary.png" width="50">  Hola ¿En que podemos ayudarte? </p>
-          
-       </div>
-       <div class="content-whatsapp -bottom ">
-         <input class="whats-input text-dark" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
-           <button class="send-msPopup" id="send-btn" type="button">
-               <i class="material-icons icon-font-color--black">send</i>
-           </button>
-
-       </div>
-   </div>
-   <button type="button" id="whats-openPopup" class="whatsapp-button animate__animated animate__fadeIn">
-       <div class="float" >
-        <i class="bi bi-whatsapp"></i></div>
-   </button>
-   <div class="circle-anime"></div>
 </div>
 </body>
 </html>
@@ -182,8 +156,7 @@ rel="stylesheet">
           <script>
           new WOW().init();
           </script>
-    <script  src="js/script2.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
 
 
 <!-- http://127.0.0.1:5500/index.html -->
