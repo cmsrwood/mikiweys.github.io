@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <?php
+    include("../../backend/registrar.php");
+    ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +25,7 @@
     <link rel="stylesheet" href="../../../css/styles.css">
 
     <!-- LOGO ICON -->
-    <link rel="shortcut icon" href="../../../IMG/todo/logo2.ico">
+    <link rel="sahortcut icon" href="../../../IMG/todo/logo2.ico">
     <link rel="icon" sizes="192x192" href="../../../IMG/todo/logo2.ico">
     <link rel="favicon" href="../../../IMG/todo/logo2.ico">
     <link rel="apple-touch-icon" href="../../../IMG/todo/logo2.ico">
@@ -30,16 +33,14 @@
     <meta name="description" content="Panadería Mikiweys">
 </head>
 
-<body> 
+<body class=""> 
 <!-- Father -->
-    <?php
-    include("../../backend/registrar.php");
-    ?>
+
 <div class="padre bg-foto">  
 <!-- LOGIN -->
 <div class="container shadow px-5 py-3 bg-white my-5 w-75">
   <div class="row">
-    <div class="col p-3 simoneta">
+    <div class="col p-3 simoneta ">
       <div class="row ">
         <div class="col-12"><h1 class="my-4  fs-2">Regístrate</h1></div>
       <form action="../../backend/registrar.php" method="POST">
@@ -79,11 +80,11 @@
         </div>
         <div class="mb-2 col-12">
           <label class="form-label">Contraseña</label>
-          <input type="password" class="form-control  cafe" name="pass_user">
+          <input type="password" class="form-control  cafe" name="pass_user" autocomplete="on">
         </div>
         <div class="mb-2 col-12">
           <label class="form-label">Confirmar contraseña</label>
-          <input type="password" class="form-control  cafe">
+          <input type="password" class="form-control  cafe" autocomplete="on">
         </div>
         <div class="mb-2 d-flex col-12">
           <input type="checkbox" class=" me-2">

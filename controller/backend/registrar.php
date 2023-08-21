@@ -1,5 +1,10 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
 <?php
-include_once("conexion.php");
+include("conexion.php");
 
 
     if ( !empty ($_POST ['name_user']) && !empty ($_POST ['apel_user'])  && !empty ($_POST ['pass_user'])  && !empty ($_POST ['tel_user'])  && !empty ($_POST ['id_doc']) && !empty ($_POST ['num_documento_user']) && !empty ($_POST ['email_user']) && !empty ($_POST ['dir_user']) ) {
@@ -30,6 +35,10 @@ include_once("conexion.php");
         }
         else print("Error en la consulta");
     }else{
-    print("Debe llenar las cosas de consulta");
+    $alerta=' <div class="alert alert-danger text-center" role="alert">
+    <h1>DEBES COMPLETAR TODOS LOS CAMPOS</h1>
+        </div>';
+    echo($alerta);
     }
     ?>
+   

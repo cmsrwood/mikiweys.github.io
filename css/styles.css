@@ -114,7 +114,14 @@ a {
 
 /*  BG COLORES*/
 .bg-foto{
-    background: url(../IMG/index/1carrusel.jpg);
+    background: url(../IMG/index/2carrusel.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+.bgfotologin{
+    background: url(../../../IMG/index/1carrusel.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
