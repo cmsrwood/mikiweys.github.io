@@ -1,8 +1,4 @@
-<head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-</head>
+
 <?php
 include("conexion.php");
 
@@ -35,8 +31,8 @@ include("conexion.php");
         }
         else print("Error en la consulta");
     }else{
-    $alerta=' <div class="alert alert-danger text-center" role="alert">
-    <h1>DEBES COMPLETAR TODOS LOS CAMPOS</h1>
+    $alerta=' <div class="alert alert-danger text-center my-3">
+    <p>DEBES COMPLETAR TODOS LOS CAMPOS</p>
         </div>';
     echo($alerta);
     }

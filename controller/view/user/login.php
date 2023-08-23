@@ -53,6 +53,7 @@
           <label class="form-label">Tipo de documento</label>
           <br>
           <select name="id_doc" id="documento" class="form-select">
+            <option value="0" class="form-select">Tipo de documento...</option>
             <option value="1" class="form-select">Cédula de ciudadanía</option>
             <option value="2" class="form-select">Cédula de Extranjería</option>
             <option value="3" class="form-select">Tarjeta de Identidad</option>
@@ -93,13 +94,15 @@
         </div>
         <div class="mb-2 col-12">
           <input type="submit" class="form-control hovercafe bnaranja">
+          <?php include('../../backend/registrar.php')?>
+
         </div>
       </div>
       </form>
     </div>
     <!-- o -->
     <div class="col-12 col-sm-6 text-center">
-      <div class="row">
+      <div class="row text-center align-items-center text-center justify-content-center">
         <a class="my-5 col-12 pt-5" href="../../../index.html">
           <img src="../../../IMG/todo/logo.png" alt="" class="img-fluid w-50">
         </a>
@@ -109,7 +112,6 @@
           <div class="google my-3">
             <button class="btn btn-danger w-100"><i class="bi bi-google pe-2"></i> Ingresa con Google</button>
           </div>
-        <?php include('../../backend/registrar.php') ?>
       </div>
     </div>
   </div>
