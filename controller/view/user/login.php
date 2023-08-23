@@ -42,6 +42,8 @@
         <div class="col-12"><h1 class="my-4  fs-2">Regístrate</h1></div>
       <form action="../../backend/registrar.php" method="POST">
         <div class="mb-2 col-12">
+          <?php include('../../backend/registrar.php')?>
+
           <label class="form-label">Nombres</label>
           <input type="text" class="form-control  cafe" name="name_user">
         </div>
@@ -53,7 +55,7 @@
           <label class="form-label">Tipo de documento</label>
           <br>
           <select name="id_doc" id="documento" class="form-select">
-            <option value="0" class="form-select">Tipo de documento...</option>
+            <option disabled selected class="form-select">Tipo de documento...</option>
             <option value="1" class="form-select">Cédula de ciudadanía</option>
             <option value="2" class="form-select">Cédula de Extranjería</option>
             <option value="3" class="form-select">Tarjeta de Identidad</option>
@@ -94,8 +96,6 @@
         </div>
         <div class="mb-2 col-12">
           <input type="submit" class="form-control hovercafe bnaranja">
-          <?php include('../../backend/registrar.php')?>
-
         </div>
       </div>
       </form>
