@@ -14,6 +14,13 @@ include("conexion.php");
         $email = $_POST['email_user'];
         $dir = $_POST['dir_user'];
 
+
+        $query = $PDO->prepare("SELECT * FROM usuarios WHERE email_user=:email");
+        $query->bindParam("email", $email, PDO::PARAM_STR);
+        $query->execute();
+        if ($query->rowCount() > 0) {
+            echo '<p class="error">The email address is already registered!</p>';
+        }
         $sql = 'INSERT INTO usuarios(name_user,apel_user,pass_user,tel_user,id_doc,num_documento_user,email_user,dir_user) VALUES(:nom,:apell,:pass,:tel,:doc,:num_doc,:email,:dir) ';
         
         $stmt = $PDO->prepare($sql);
