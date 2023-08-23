@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <?php
-    include("../../backend/registrar.php");
-    ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -112,6 +109,7 @@
           <div class="google my-3">
             <button class="btn btn-danger w-100"><i class="bi bi-google pe-2"></i> Ingresa con Google</button>
           </div>
+        <?php include('../../backend/registrar.php') ?>
       </div>
     </div>
   </div>
