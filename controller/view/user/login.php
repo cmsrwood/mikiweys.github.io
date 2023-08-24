@@ -40,10 +40,14 @@
     <div class="col p-3 simoneta ">
       <div class="row ">
         <div class="col-12"><h1 class="my-4  fs-2">Regístrate</h1></div>
-      <form action="../../backend/registrar.php" method="POST">
+        <?php include('../../backend/registrar.php');
+      if (isset($_SESSION['mailr'])) {
+        echo '<div class="alert alert-danger text-center my-3">' . $_SESSION['mailr'] . '</div>';
+        unset($_SESSION['mailr']); 
+    }
+        ?>
+      <form action="../../backend/registrar.php" method="post">
         <div class="mb-2 col-12">
-          <?php include('../../backend/registrar.php')?>
-
           <label class="form-label">Nombres</label>
           <input type="text" class="form-control  cafe" name="name_user">
         </div>
@@ -144,9 +148,6 @@
   </div>
 </footer>
 </div>
-</body>
-</html>
-
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"></script>
@@ -155,6 +156,10 @@
           new WOW().init();
           </script>
     <script src="../../../js/script.js"></script>
+</body>
+</html>
+
+
 
 
 <!-- http://127.0.0.1:5500/index.html -->
