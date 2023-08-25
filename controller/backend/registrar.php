@@ -19,9 +19,7 @@ session_start();
         if ($query->rowCount() > 0) {
                 header("location: ../view/user/login.php");
                 $_SESSION['mailr'] = "El correo electrónico ya ha sido registrado. Intente iniciar sesión"; 
-
         }
-
         if ($query->rowCount() == 0) {
         $sql = 'INSERT INTO usuarios(name_user,apel_user,pass_user,tel_user,id_doc,num_documento_user,email_user,dir_user) VALUES(:nom,:apell,:pass,:tel,:doc,:num_doc,:email,:dir) ';
         
