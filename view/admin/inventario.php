@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" >
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../../css/styles.css">
 
   <!-- LOGO ICON -->
   <link rel="shortcut icon" href="../IMG/todo/logo2.ico">
@@ -28,8 +28,8 @@
   <meta name="description" content="Panadería Mikiweys">
 </head>
 <body>
-  <div class="container my-5 ">
-    <nav class="navbar navbar-light color d-flex">
+  <div class="container my-5 p-5 shadow color">
+    <nav class="navbar navbar-light X d-flex">
       <h1>Inventario</h1>
       <form class="form-inline d-flex">
         <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
@@ -38,7 +38,7 @@
    
     </nav>
 
-<table class="table table-bordered border-1">
+<table class="table table-bordered border-1 bg-white">
     <thead>
       <tr class="bnaranja" >
         <th scope="col">id</th>
