@@ -1,8 +1,9 @@
 {
     "livePreview.defaultPreviewPath": "/view/reciclaje.html",
-    "cSpell.language": "en,es-ES",
+    "cSpell.language": "es-ES",
     "cSpell.words": [
         "conexion",
+        "mailr",
         "MIKIWEY",
         "Mikiweys"
     ]
