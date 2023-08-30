@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" >
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../../css/styles.css">
 
   <!-- LOGO ICON -->
   <link rel="shortcut icon" href="../IMG/todo/logo2.ico">
@@ -28,5 +28,25 @@
   <meta name="description" content="Panadería Mikiweys">
 </head>
 <body>
+  <?php
+  include('../include/header.php')
+  include('../include/footer.php')
+  ?>
+
+
+
+
+
+
+<!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- WOW -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <!-- MY JS -->
+    <script src="../../js/index.js"></script>
+</body>
   <div>
   </html>
