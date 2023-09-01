@@ -1,34 +1,33 @@
 <?php
-// Iniciar sesión
-session_start();
- 
-// Conexión a la base de datos
-$db = mysqli_connect('localhost', 'root', '', 'mikiweys');
-$errors = [];
+    session_start();
+//conexion
+    include('conexion.php');
+//inicio por
+    if(isset($_SESSION['rol'])){
+        include('../view/user/login.php');
 
-// Si se ha enviado el formulario
-if (isset($_POST['iniciar'])) {
-  $mail = mysqli_real_escape_string($db, $_POST['mail']);
-  $pass = mysqli_real_escape_string($db, $_POST['pass']);
- 
-  // Comprobar si el nombre de usuario es válido
-  $query = "SELECT * FROM usuarios WHERE email_user='$mail'";
-  $results = mysqli_query($db, $query);
- 
-  if (mysqli_num_rows($results) == 1) {
-    // Nombre de usuario válido, verificar contraseña
-    $row = mysqli_fetch_assoc($results);
-    if (password_verify($pass, $row['pass_user'])) {
-      // Inicio de sesión válido
-      $_SESSION['mail'] = $mail;
-      header('location: ../index.php');
-    } else {
-      // Contraseña inválida
-      $errors[] = "Nombre de usuario/contraseña inválidos";
+        if($_POST['mail']!='' && $_POST['pass']!=''){
+            $mensaje='';
+            $dni = $_POST['mail'];
+            $clave = $_POST['pass'];
+            $rs = $mysqli->query("SELECT * FROM /*tabla*/", MYSQLI_USE_RESULT);
+            $fila = mysqli_fetch_row($rs);
+            switch ($_SESSION['rol']){
+                case '1':
+                    //administrador
+                    echo 'view/admin/administrador.php';
+                    break;
+                case '2':
+                    //empleado
+                    echo 'view/empleado/empleado.php';
+                    break;
+                case '3':
+                    //clientes
+                    echo 'view/cliente/cliente.php';
+                    break;
+        }
+        }else{
+            $mensaje = 'Usuario y/o clave incorrecta';
+        }
     }
-  } else {
-    // Nombre de usuario inválido
-    $errors[] = "Nombre de usuario/contraseña inválidos";
-  }
-}
 ?>

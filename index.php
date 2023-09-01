@@ -1,3 +1,3 @@
 <?php
-include('view/index.html')
+include('view/user/index.html')
 ?>
