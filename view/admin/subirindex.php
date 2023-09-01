@@ -29,31 +29,11 @@
 <body>
 
 <!--  -->
-<nav class="navbar navbar-expand-lg text-center shadow">
-  <div class="container-fluid">
-    <a class="navbar-brand rojo blanco fuente1 px-5" href="../index.html">Galeria de mi novia</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link text-white" href="../index.html">Te amo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="../html/1.html">1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="../html/2.html">2</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+
 <!--  -->
   <div class="container p-5 text-center">
     <div class="row">
-       <div class="col-lg-4">
+       <div class="col">
          <form action="../../controller/subir.php" method="post" enctype="multipart/form-data">
           <div class="form-group my-5">
               <label for="my-input" class="fs-2 fuente1 pb-5">Selecciona una Imagen</label>
@@ -74,8 +54,8 @@
           <input type="submit" value="Guardar" class="btn btn-danger mb-5" name="Guardar">
          </form>
        </div>
-       <div class="col-lg-8 pt-5 mt-5">
-           <h1 class=" display-5 text-center mano p-5">Galeria de Imagenes</h1>
+       <div class="col pt-5 mt-5">
+           <h1 class=" display-5 text-center mano p-5">Productos</h1>
            <div class="card-columns">
                <?php foreach($resultado as $row){ ?>
          <div class="card">
