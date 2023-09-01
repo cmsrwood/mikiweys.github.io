@@ -39,12 +39,8 @@
   <div class="row">
     <div class="col p-3 simoneta ">
       <div class="row ">
-        <div class="col-12"><h1 class="my-4  fs-2">Regístrate</h1></div>
+        <div class="col-12"><h1 class="my-4  fs-2">Inicio de sesión</h1></div>
         <?php include('../../controller/login.php');
-      if (isset($_SESSION['mailr'])) {
-        echo '<div class="alert alert-danger text-center my-3">' . $_SESSION['mailr'] . '</div>';
-        unset($_SESSION['mailr']); 
-    }
         ?>
       <form action="../../controller/login.php" method="post">
         <div class="mb-2 col-12">
@@ -62,6 +58,7 @@
       </div>
       </form>
     </div>
+    </div>
     <!-- o -->
     <div class="col-12 col-sm-6 text-center">
       <div class="row text-center align-items-center text-center justify-content-center">
@@ -76,9 +73,8 @@
           </div>
       </div>
     </div>
-  </div>
 </div>
-
+</div>
 <!-- FOOTER -->
 <footer class="bnaranja text-center text-white ">
   <!-- Grid container -->
