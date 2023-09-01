@@ -1,7 +1,8 @@
 <?php 
   include('../../controller/conexion.php');
-  $query = "select * from imagenes";
-  $resultado = mysqli_query($PDO,$query);
+  $query = $PDO->prepare("SELECT * from imagenes");
+  $query->execute();
+  $resultado = $query;
 ?>
 <!DOCTYPE html>
 <html lang="en">

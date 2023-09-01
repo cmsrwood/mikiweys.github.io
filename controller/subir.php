@@ -14,8 +14,9 @@ if(isset($_POST['Guardar'])){
           $_SESSION['tipo'] = 'danger';
           header('location:../view/admin/subirindex.php');
        }else{
-        $query = $PDO->prepare("INSERT INTO imagenes(imagen,nombre) values('$imagen','$nombre')");
-         $resultado= $query;
+         $query = $PDO->prepare("INSERT INTO imagenes(imagen,nombre) values('$imagen','$nombre')");
+         $query->execute();
+         $resultado = $query;
          if($resultado){
               move_uploaded_file($temp,'../IMG/productos/'.$imagen);   
              $_SESSION['mensaje'] = 'Producto subido exitosamente!';
