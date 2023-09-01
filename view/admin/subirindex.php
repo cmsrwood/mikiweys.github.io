@@ -1,7 +1,7 @@
 <?php 
   include('../../controller/conexion.php');
-  $query = "select * from imagenes";
-  $resultado = mysqli_query($PDO,$query);
+  $query = $PDO->prepare('SELECT * from imagenes');
+  $resultado= $query;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,34 +19,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
     <!--  -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>PAGINA PARA APRECIAR LO HERMOSA QUE ES LA BABOSA DE MI NOVIA Y OTRAS COSAS, ash t amo mucho</title>
-    <!--  -->
-    <link rel="apple-touch-icon" href="../img/logo.ico">
-    <link rel="shortcut icon" href="../img/logo.ico">
-    <link rel="icon" sizes="192x192" href="../img/logo.ico">
+    <title>MIKIWEY'S APP | Inventario</title>
+    <!-- LOGO ICON -->
+    <link rel="shortcut icon" href="../../IMG/todo/logo2.ico">
+    <link rel="icon" sizes="192x192" href="../../IMG/todo/logo2.ico">
+    <link rel="favicon" href="../../IMG/todo/logo2.ico">
+    <link rel="apple-touch-icon" href="../../IMG/todo/logo2.ico">
 </head>
 <body>
 
 <!--  -->
 <nav class="navbar navbar-expand-lg text-center shadow">
   <div class="container-fluid">
-    <a class="navbar-brand rojo blanco fuente1 px-5" href="../index.html">Galeria de mi novia</a>
+    <a class="navbar-brand rojo blanco fuente1 px-5" href="../../index.php">Galeria de mi novia</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link text-white" href="../index.html">Te amo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="../html/1.html">1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="../html/2.html">2</a>
-        </li>
-      </ul>
-    </div>
   </div>
 </nav>
 <!--  -->

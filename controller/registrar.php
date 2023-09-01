@@ -17,7 +17,7 @@ session_start();
         $query->execute();
         
         if ($query->rowCount() > 0) {
-                header("location: ../view/user/login.php");
+                header("location: ../view/user/registro.php");
                 $_SESSION['mailr'] = "El correo electrónico ya ha sido registrado. Intente iniciar sesión"; 
         }
         if ($query->rowCount() == 0) {
@@ -34,7 +34,7 @@ session_start();
         $stmt->bindParam(":dir",$dir);
         
         if ($stmt->execute()){
-                header("location: ../view/user/login.php");
+                header("location: ../view/user/registro.php");
         }
     }
     }else{

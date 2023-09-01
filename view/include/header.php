@@ -7,7 +7,7 @@
     </a>
     <!-- LOGO -->
         <a class="navbar-brand containerzoom giroi " href="index.html">
-          <img id="logo" src="IMG/todo/logo.png" alt="" class="img-fluid " width="100">
+          <img id="logo" src="../../IMG/todo/logo.png" alt="" class="img-fluid " width="100">
         </a>
     <!-- BUSCAR -->
     <form class="d-none d-xl-flex">

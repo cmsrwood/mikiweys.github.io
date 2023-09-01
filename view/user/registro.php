@@ -46,7 +46,7 @@
         unset($_SESSION['mailr']); 
     }
         ?>
-      <form action="../../backend/registrar.php" method="post">
+      <form action="../../controller/registrar.php" method="post">
         <div class="mb-2 col-12">
           <label class="form-label">Nombres</label>
           <input type="text" class="form-control  cafe" name="name_user">
