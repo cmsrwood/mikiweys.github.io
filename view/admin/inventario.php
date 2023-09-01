@@ -67,7 +67,7 @@
   <div class="col justify-content-center row p-3"><button type="button" class="btn btn-warning w-25"><i class="bi bi-pen"></i></button></div>
 </div>
 
-  </div>
+</div>
   
 
 </body>
