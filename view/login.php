@@ -43,7 +43,7 @@
         <?php include('../controller/login.php');
         ?>
 
-      <form action="../../controller/login.php" method="POST">
+      <form action="../controller/login.php" method="POST">
         <div class="mb-2 col-12">
         <div class="mb-2 col-12">
           <label class="form-label">Correo electrónico</label>

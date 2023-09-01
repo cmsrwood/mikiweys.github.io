@@ -1,8 +1,7 @@
 <?php
-    session_start();
 //conexion
     include('conexion.php');
-
+    session_start();
 //inicio por
     if(isset($_SESSION['rol'])){
         if($_POST['mail']!='' && $_POST['pass']!=''){
@@ -14,15 +13,15 @@
             switch ($_SESSION['rol']){
                 case '1':
                     //administrador
-                    echo '../view/admin/administrador.php';
+                    header("location: ../view/user/registro.php");
                     break;
                 case '2':
                     //empleado
-                    echo '../view/empleado/empleado.php';
+                    header("location: ../view/user/registro.php");
                     break;
                 case '3':
                     //clientes
-                    echo '../view/cliente/cliente.php';
+                    header("location: ../view/user/registro.php");
                     break;
         }
         }else{
