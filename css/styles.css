@@ -121,13 +121,6 @@ a {
     background-repeat: repeat;
 }
 
-.bg-foto2{
-    background: url(../IMG/index/2carrusel.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: repeat;
-}
 .color {
     background:var(--colorcuadros);
 }
@@ -156,12 +149,3 @@ a {
    background: rgb(255, 0, 0);   
 }       
 
-
-.bg-pan{
-    background: url(../IMG/index/pan.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: repeat;
-}
-/* FONDOS */
