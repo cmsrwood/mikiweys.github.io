@@ -17,11 +17,11 @@
                     break;
                 case '2':
                     //empleado
-                    header("location: ../view/user/registro.php");
+                    header("location: empleado/Ventas.php");
                     break;
                 case '3':
                     //clientes
-                    header("location: ../view/user/registro.php");
+                    header("location: user/registro.php");
                     break;
         }
         }else{
