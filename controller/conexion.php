@@ -1,4 +1,4 @@
 <?php
-$PDO = new mysqli('localhost','root','','mikiweys');
+$PDO = mysqli_connect('localhost','root','','mikiweys');
 session_start();
 ?>
