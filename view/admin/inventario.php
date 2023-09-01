@@ -27,7 +27,7 @@
   <!-- META  -->
   <meta name="description" content="Panadería Mikiweys">
 </head>
-<body>
+<body class="">
   <div class="container my-5 p-5 shadow color">
     <nav class="navbar navbar-light X d-flex">
       <h1>Inventario</h1>
@@ -63,13 +63,33 @@
   </table>
 
 <div class="row justify-content-center">
-  <div class="col justify-content-center row p-3"> <button type="button" class="btn btn-success w-25"><i class="bi bi-arrow-bar-up"></i></button> </div>
+
+  <div class="col justify-content-center row p-3"> <button type="button" class="btn btn-success w-25"  type="button" data-bs-toggle="collapse" data-bs-target="#subir" aria-expanded="false" aria-controls="collapseExample"><i class="bi bi-arrow-bar-up"></i></button> </div>
   <div class="col justify-content-center row p-3"><button type="button" class="btn btn-danger w-25"><i class="bi bi-trash"></i></button></div>
   <div class="col justify-content-center row p-3"><button type="button" class="btn btn-warning w-25"><i class="bi bi-pen"></i></button></div>
+
+  <div class="collapse" id="subir">
+  <div class="card card-body row color">
+    <form action="../../controller/subir.php" method="post">
+      <input type="file" class="col-12 form-control">
+      <input type="text" class="col-12 form-control my-3">
+      <input type="text" class="col-12 form-control my-3">
+      <input type="text" class="col-12 form-control my-3">
+      <input type="text" class="col-12 form-control my-3">
+    </form>
+  </div>
+</div>
 </div>
 
 </div>
-  
+
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- WOW -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 
 </body>
   </html>

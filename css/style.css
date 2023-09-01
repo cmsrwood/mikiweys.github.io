@@ -1,6 +1,6 @@
 :root{
     --cafe:#5b281d;
-    --colorcuadros:#FEF8E7;
+    --colorcuadros:#ffbb00;
     --colorgeneral:#FFFAF4;
     --naranja:orange ;
 }
@@ -120,8 +120,9 @@ a {
     background-attachment: fixed;
     background-repeat: repeat;
 }
-.bgfotologin{
-    background: url(../../../IMG/index/1carrusel.jpg);
+
+.bg-foto2{
+    background: url(../IMG/index/2carrusel.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -155,4 +156,12 @@ a {
    background: rgb(255, 0, 0);   
 }       
 
+
+.bg-pan{
+    background: url(../IMG/index/pan.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
 /* FONDOS */
