@@ -33,7 +33,7 @@
 <!--  -->
   <div class="container p-5 text-center">
     <div class="row">
-       <div class="col">
+       <div class="col row">
          <form action="../../controller/subir.php" method="post" enctype="multipart/form-data">
           <div class="form-group my-5">
               <label for="my-input" class="fs-2 fuente1 pb-5">Selecciona una Imagen</label>
@@ -54,7 +54,7 @@
           <input type="submit" value="Guardar" class="btn btn-danger mb-5" name="Guardar">
          </form>
        </div>
-       <div class="col pt-5 mt-5">
+       <div class="col pt-5 mt-5 row">
            <h1 class=" display-5 text-center mano p-5">Productos</h1>
            <div class="card-columns">
                <?php foreach($resultado as $row){ ?>
