@@ -40,18 +40,10 @@
     <div class="col p-3 simoneta ">
       <div class="row ">
         <div class="col-12"><h1 class="my-4  fs-2">Inicio de sesión</h1></div>
-        <?php include('../../controller/login.php');
+        <?php include('../controller/login.php');
         ?>
-         <?php
-              if (count($errors) > 0) {
-                echo "<div class='alert alert-danger' role='alert'>";
-                foreach ($errors as $error) {
-                    echo $error . "<br>";
-                }
-                echo "</div>";
-              }
-              ?>
-      <form action="../../controller/login.php" method="POST">
+
+      <form action="../controller/login.php" method="POST">
         <div class="mb-2 col-12">
         <div class="mb-2 col-12">
           <label class="form-label">Correo electrónico</label>
