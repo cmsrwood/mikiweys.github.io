@@ -13,7 +13,7 @@
             switch ($_SESSION['rol']){
                 case '1':
                     //administrador
-                    header("location: ../view/user/registro.php");
+                    header("location: admin/empleados.php");
                     break;
                 case '2':
                     //empleado
