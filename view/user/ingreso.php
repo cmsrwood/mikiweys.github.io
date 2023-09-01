@@ -42,7 +42,7 @@
         <div class="col-12"><h1 class="my-4  fs-2">Inicio de sesión</h1></div>
         <?php include('../../controller/login.php');
         ?>
-      <form action="../../controller/login.php" method="post">
+      <form action="../../controller/login.php" method="POST">
         <div class="mb-2 col-12">
         <div class="mb-2 col-12">
           <label class="form-label">Correo electrónico</label>
@@ -53,7 +53,7 @@
           <input type="password" class="form-control  cafe" name="pass" autocomplete="on">
         </div>
         <div class="mb-2 col-12">
-          <input type="submit" class="form-control hovercafe bnaranja" value="Iniciar sesión">
+          <input type="submit" class="form-control hovercafe bnaranja" value="Iniciar sesión" name="iniciar">
         </div>
       </div>
       </form>
