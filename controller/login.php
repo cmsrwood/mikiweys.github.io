@@ -18,9 +18,9 @@ if (isset($_POST['iniciar'])) {
   if (mysqli_num_rows($results) == 1) {
     // Nombre de usuario válido, verificar contraseña
     $row = mysqli_fetch_assoc($results);
-    if (password_verify($pass, $row['pass'])) {
+    if (password_verify($pass, $row['pass_user'])) {
       // Inicio de sesión válido
-      $_SESSION['username'] = $mail;
+      $_SESSION['mail'] = $mail;
       header('location: ../index.php');
     } else {
       // Contraseña inválida
