@@ -61,7 +61,7 @@
     </tbody>
   </table>
 
-  <div class="row justify-content-between">
+  <div class="row justify-content-center">
   <div class="col"> <button type="button" class="btn btn-success"><i class="bi bi-arrow-bar-up"></i></button> </div>
   <div class="col"><button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button></div>
   <div class="col"><button type="button" class="btn btn-warning"><i class="bi bi-pen"></i></button></div>
