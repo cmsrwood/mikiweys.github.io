@@ -42,6 +42,7 @@
     <thead>
       <tr class="bnaranja" >
         <th scope="col">id</th>
+        <th scope="col" class="" >Imagen</th>
         <th scope="col" class="" >Producto</th>
         <th scope="col">Precio por unidad</th>
         <th scope="col">Tipo</th>
