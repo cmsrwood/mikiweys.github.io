@@ -5,12 +5,16 @@
 //inicio por
     if(isset($_SESSION['iniciar'])){
         if($_POST['mail']!='' && $_POST['pass']!=''){
-            $mensaje='';
-            $dni = $_POST['mail'];
-            $clave = $_POST['pass'];
-            $rs = $mysqli->query("SELECT * FROM usuarios", MYSQLI_USE_RESULT);
-            $fila = mysqli_fetch_row($rs);
-            switch ($_SESSION['iniciar']){
+            $mail = $_POST['mail'];
+            $pass = $_POST['pass'];
+            $query = $PDO->prepare("SELECT * FROM usuarios");
+            $query->execute();
+            $resultado = $query;
+            $rol = $PDO->prepare("SELECT * FROM `usuarios` WHERE rol=1");
+            $rol->execute();
+            $resulrol = $rol;
+            if ($query->rowCount() == 0){
+            switch ($resultado){
                 case '1':
                     //administrador
                     header("location: admin/empleados.php");
@@ -24,8 +28,11 @@
                     header("location: user/registro.php");
                     break;
         }
-        }else{
+        }
+        else{
             $mensaje = 'Usuario y/o clave incorrecta';
         }
     }
+  }
 ?>
+
