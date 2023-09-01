@@ -3,14 +3,14 @@
     include('conexion.php');
     session_start();
 //inicio por
-    if(isset($_SESSION['rol'])){
+    if(isset($_SESSION['iniciar'])){
         if($_POST['mail']!='' && $_POST['pass']!=''){
             $mensaje='';
             $dni = $_POST['mail'];
             $clave = $_POST['pass'];
             $rs = $mysqli->query("SELECT * FROM usuarios", MYSQLI_USE_RESULT);
             $fila = mysqli_fetch_row($rs);
-            switch ($_SESSION['rol']){
+            switch ($_SESSION['iniciar']){
                 case '1':
                     //administrador
                     header("location: admin/empleados.php");
