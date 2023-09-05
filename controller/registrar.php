@@ -24,8 +24,6 @@ if (!empty($_POST['name_user']) && !empty($_POST['apel_user']) && !empty($_POST[
 
         if ($db->query($insertar)) {
             header('location: ../index.php');
-        } else {
-            echo "Error: " . $db->error;
         }
     }
 } else {
