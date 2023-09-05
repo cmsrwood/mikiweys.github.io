@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIKIWEY'S APP | Registro</title>
+    <title>MIKIWEY'S APP | Login</title>
     <!-- LINKS -->
 
     <!-- fonts -->
@@ -41,8 +41,11 @@
       <div class="row ">
         <div class="col-12"><h1 class="my-4  fs-2">Inicio de sesión</h1></div>
         <?php include('../controller/login.php');
+        if (isset($_SESSION['maile'])) {
+          echo '<div class="alert alert-danger text-center my-3">' . $_SESSION['maile'] . '</div>';
+          unset($_SESSION['maile']); 
+      }
         ?>
-
       <form action="../controller/login.php" method="POST">
         <div class="mb-2 col-12">
         <div class="mb-2 col-12">

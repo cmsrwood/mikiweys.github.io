@@ -16,7 +16,7 @@ if (!empty($_POST['name_user']) && !empty($_POST['apel_user']) && !empty($_POST[
     $ssql = "SELECT * FROM usuarios WHERE email_user='$email'";
     $result = $db->query($ssql);
 
-    if ($result && $result->num_rows > 0) {
+    if ($result->num_rows > 0) {
         $_SESSION['mailr'] = "El correo electrónico ya ha sido registrado. Intente iniciar sesión";
         header("location: ../view/user/registro.php");
     } else {

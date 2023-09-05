@@ -1,38 +1,27 @@
 <?php
 //conexion
     include('conexion.php');
+    //
     session_start();
-//inicio por
-    if(isset($_SESSION['iniciar'])){
-        if($_POST['mail']!='' && $_POST['pass']!=''){
+        if(!empty($_POST['mail']) && !empty($_POST['pass'])){
             $mail = $_POST['mail'];
             $pass = $_POST['pass'];
-            $query = $PDO->prepare("SELECT * FROM usuarios");
-            $query->execute();
-            $resultado = $query;
-            $rol = $PDO->prepare("SELECT * FROM `usuarios` WHERE rol='1'");
-            $rol->execute();
-            $resulrol = $rol;
-            if ($query->rowCount() == 0){
-            switch ($resultado){
-                case '1':
-                    //administrador
-                    header("location: admin/empleados.php");
-                    break;
-                case '2':
-                    //empleado
-                    header("location: empleado/Ventas.php");
-                    break;
-                case '3':
-                    //clientes
-                    header("location: user/registro.php");
-                    break;
+            $query = $db->query("SELECT * FROM usuarios WHERE email_user='$mail' AND pass_user='$pass'");
+            $result = $query;
+            if ($result && $result->num_rows > 0) {
+              $_SESSION['mailr'] = "El correo electrónico ya ha sido registrado. Intente iniciar sesión";
+              header("location: ../view/user/registro.php");
+          } 
+          
+          else {
+              $insertar = "INSERT INTO usuarios (name_user, apel_user, pass_user, tel_user, id_doc, num_documento_user, email_user, dir_user,rol_user)VALUES ('$name', '$apel', '$pass', '$tel', '$id_doc', '$num_doc', '$email', '$dir','3')";
+      
+              if ($db->query($insertar)) {
+              } 
+          }
+          }
+          else {
+            echo "Error: " . $db->error;
         }
-        }
-        else{
-            $mensaje = 'Usuario y/o clave incorrecta';
-        }
-    }
-  }
 ?>
 
