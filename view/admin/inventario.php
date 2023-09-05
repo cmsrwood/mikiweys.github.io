@@ -1,3 +1,9 @@
+<?php 
+  include('../../controller/conexion.php');
+  $query = $db->query("SELECT * from inventario");
+  $resultado = $query;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +57,7 @@
     </thead>
     <tbody>
       <tr>
-        <th scope="row">1</th>
+        <th>1</th>
         <td></td>
         <td></td>
         <td></td>
@@ -62,6 +68,25 @@
     </tbody>
   </table>
 
+  <div class="col pt-5 mt-5 row">
+           <h1 class=" display-5 text-center mano p-5">Productos</h1>
+           <div class="card-columns">
+               <?php foreach($resultado as $row){ ?>
+         <div class="card">
+      <img src="../../IMG/inventario/<?php echo $row['imagen']; ?>" class="card-img-top" alt="...">
+       <div class="card-body">
+      <h5 class="card-title"><strong><?php echo $row['producto']; ?></strong></h5>
+      <h5 class="card-title"><strong><?php echo $row['preuni']; ?></strong></h5>
+      <h5 class="card-title"><strong><?php echo $row['cat']; ?></strong></h5>
+      <h5 class="card-title"><strong><?php echo $row['cantidad']; ?></strong></h5>
+    </div>
+               
+  </div>
+  <?php }?>
+       </div>
+    </div>
+
+
 <div class="row justify-content-center">
 
   <div class="col justify-content-center row p-3"> <button type="button" class="btn btn-success w-25"  type="button" data-bs-toggle="collapse" data-bs-target="#subir" aria-expanded="false" aria-controls="collapseExample"><i class="bi bi-arrow-bar-up"></i></button> </div>
@@ -69,14 +94,45 @@
   <div class="col justify-content-center row p-3"><button type="button" class="btn btn-warning w-25"><i class="bi bi-pen"></i></button></div>
 
   <div class="collapse" id="subir">
-  <div class="card card-body row color">
-    <form action="../../controller/subir.php" method="post">
-      <input type="file" class="col-12 form-control">
-      <input type="text" class="col-12 form-control my-3">
-      <input type="text" class="col-12 form-control my-3">
-      <input type="text" class="col-12 form-control my-3">
-      <input type="text" class="col-12 form-control my-3">
-    </form>
+  <div class="container p-5 text-center">
+    <div class="row">
+       <div class="col row">
+         <form action="../../controller/invsubir.php" method="post" enctype="multipart/form-data">
+          <div class="form-group my-5">
+              <label for="my-input" class="fs-2  pb-5">Selecciona una Imagen</label>
+              <input id="my-input" type="file" name="imagen" class="">
+          </div>
+          <div class="form-group row">
+            <div class="col-6">
+              <label for="my-input" class="fs-2 py-1 ">Producto</label>
+              <input id="my-input" class="form-control" type="text" name="producto">
+            </div>
+            <div class="col-6">
+              <label for="my-input" class="fs-2 py-1  ">Precio. unidad</label>
+              <input id="my-input" class="form-control" type="number" name="preuni">
+            </div>
+            <div class="col-6">
+              <label for="my-input" class="fs-2 py-1 ">Categoria</label>
+              <input id="my-input" class="form-control" type="text" name="cat">
+            </div>
+            <div class="col-6">
+              <label for="my-input" class="fs-2 py-1 ">Cantidad</label>
+              <input id="my-input" class="form-control" type="number" name="cant" placeholder="Cantidad">
+            </div>
+
+          </div>
+          <?php if(isset($_SESSION['mensaje'])){ ?>
+          <div class="alert alert-<?php echo $_SESSION['tipo'] ?> alert-dismissible fade show" role="alert">
+         <strong><?php echo $_SESSION['mensaje']; ?></strong> 
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+     </button>
+       </div>
+          <?php session_unset(); } ?>
+          <input type="submit" value="Guardar" class="btn btn-danger my-5" name="Guardar">
+         </form>
+       </div>
+       
   </div>
 </div>
 </div>

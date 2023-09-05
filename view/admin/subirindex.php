@@ -1,7 +1,6 @@
 <?php 
   include('../../controller/conexion.php');
-  $query = $PDO->prepare("SELECT * from imagenes");
-  $query->execute();
+  $query = $db->query("SELECT * from imagenes");
   $resultado = $query;
 ?>
 <!DOCTYPE html>
@@ -35,7 +34,7 @@
   <div class="container p-5 text-center">
     <div class="row">
        <div class="col row">
-         <form action="../../controller/subir.php" method="post" enctype="multipart/form-data">
+         <form action="../../controller/invsubir.php" method="post" enctype="multipart/form-data">
           <div class="form-group my-5">
               <label for="my-input" class="fs-2 fuente1 pb-5">Selecciona una Imagen</label>
               <input id="my-input" type="file" name="imagen" class="fuente1">
