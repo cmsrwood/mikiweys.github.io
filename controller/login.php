@@ -10,7 +10,7 @@
             $query = $PDO->prepare("SELECT * FROM usuarios");
             $query->execute();
             $resultado = $query;
-            $rol = $PDO->prepare("SELECT * FROM `usuarios` WHERE rol=1");
+            $rol = $PDO->prepare("SELECT * FROM `usuarios` WHERE rol='1'");
             $rol->execute();
             $resulrol = $rol;
             if ($query->rowCount() == 0){
