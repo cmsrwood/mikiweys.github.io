@@ -76,7 +76,7 @@
         </div>
         <div class="mb-2 col-12">
           <label class="form-label">Teléfono</label>
-          <input type="tel" class="form-control " maxlength="13" value="+57" name="tel_user">
+          <input type="tel" class="form-control " maxlength="13" name="tel_user">
         </div>
         <div class="mb-2 col-12">
           <label class="form-label">Dirección</label>
