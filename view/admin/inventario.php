@@ -56,35 +56,19 @@
       </tr>
     </thead>
     <tbody>
+    <?php foreach($resultado as $row){ ?>
       <tr>
-        <th>1</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <th><?php echo $row['id_inv']; ?></th>
+        <td class="text-center"><img src="../../IMG/inventario/<?php echo $row['imagen']; ?>" width="100" alt="..."></td>
+        <td><?php echo $row['producto']; ?></td>
+        <td><?php echo $row['preuni']; ?></td>
+        <td><?php echo $row['cat']; ?></td>
+        <td><?php echo $row['cat']; ?></td>
       </tr>
-      <tr>
-
+  <?php }?>
     </tbody>
   </table>
 
-  <div class="col pt-5 mt-5 row">
-           <h1 class=" display-5 text-center mano p-5">Productos</h1>
-           <div class="card-columns">
-               <?php foreach($resultado as $row){ ?>
-         <div class="card">
-      <img src="../../IMG/inventario/<?php echo $row['imagen']; ?>" class="card-img-top" alt="...">
-       <div class="card-body">
-      <h5 class="card-title"><strong><?php echo $row['producto']; ?></strong></h5>
-      <h5 class="card-title"><strong><?php echo $row['preuni']; ?></strong></h5>
-      <h5 class="card-title"><strong><?php echo $row['cat']; ?></strong></h5>
-      <h5 class="card-title"><strong><?php echo $row['cantidad']; ?></strong></h5>
-    </div>
-               
-  </div>
-  <?php }?>
-       </div>
-    </div>
 
 
 <div class="row justify-content-center">
