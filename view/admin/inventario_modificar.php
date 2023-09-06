@@ -40,12 +40,6 @@ $producto = $resultado->fetch_assoc();
     <hr>
         <div class="row text-center">
          <form action="../../controller/inv_editar.php" method="post" enctype="multipart/form-data">
-          <div class="form-group">
-              <label  class="fs-5 pb-2">Selecciona una Imagen</label>
-              <div class="input-group">
-                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagen">
-              </div>
-          </div>
           <div class="form-group row">
             <div class="">
               <label  class="fs-5 py-1 ">Nombre del producto</label>
@@ -61,7 +55,7 @@ $producto = $resultado->fetch_assoc();
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Cantidad</label>
-              <input  class="form-control" type="number" name="cantm" placeholder="Cantidad" value="<?php echo $producto['cantidad'] ?>">
+              <input  class="form-control" type="number" name="cantm" value="<?php echo $producto['cantidad'] ?>">
             </div>
           </div>
         </div>
