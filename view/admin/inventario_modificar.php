@@ -1,6 +1,7 @@
 <?php 
 include('../../controller/conexion.php');
 $id_inv=$_GET["id"];
+echo($id_inv);
 $query = "SELECT * FROM inventario WHERE id_inv='$id_inv'";
 $resultado = $db->query ($query);
 include('../../controller/inv_editar.php');
