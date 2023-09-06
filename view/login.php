@@ -30,10 +30,10 @@
     <meta name="description" content="Panadería Mikiweys">
 </head>
 
-<body class=""> 
+<body class="bg-foto"> 
 <!-- Father -->
 
-<div class="padre bg-foto">  
+<div class="padre ">  
 <!-- LOGIN -->
 <div class="container shadow px-5 py-3 bg-white my-5 w-75">
   <div class="row">
@@ -80,7 +80,7 @@
 </div>
 </div>
 <!-- FOOTER -->
-<footer class="bnaranja text-center text-white ">
+<footer class="bnaranja text-center text-white fixed-bottom">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
