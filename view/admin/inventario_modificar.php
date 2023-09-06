@@ -49,19 +49,19 @@ $producto = $resultado->fetch_assoc();
           <div class="form-group row">
             <div class="">
               <label  class="fs-5 py-1 ">Nombre del producto</label>
-              <input class="form-control" type="text" name="producto" value="<?php echo $producto['producto'] ?>">
+              <input class="form-control" type="text" name="productom" value="<?php echo $producto['producto'] ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1" >Precio. unidad</label>
-              <input  class="form-control" type="number" name="preuni" value="<?php echo $producto['preuni'] ?>">
+              <input  class="form-control" type="number" name="preunim" value="<?php echo $producto['preuni'] ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Categoria</label>
-              <input  class="form-control" type="text" name="cat" value="<?php echo $producto['cat'] ?>">
+              <input  class="form-control" type="text" name="catm" value="<?php echo $producto['cat'] ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Cantidad</label>
-              <input  class="form-control" type="number" name="cant" placeholder="Cantidad" value="<?php echo $producto['cantidad'] ?>">
+              <input  class="form-control" type="number" name="cantm" placeholder="Cantidad" value="<?php echo $producto['cantidad'] ?>">
             </div>
           </div>
         </div>
