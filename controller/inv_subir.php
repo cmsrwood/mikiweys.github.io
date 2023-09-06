@@ -1,6 +1,5 @@
 <?php
 include('conexion.php');
-session_start();
 if(isset($_POST['guardar'])){
     $imagen = $_FILES['imagen']['name'];
     $producto = $_POST['producto'];
@@ -17,8 +16,8 @@ if(isset($_POST['guardar'])){
           $_SESSION['tipo'] = 'danger';
           header('location: ../view/admin/inventario.php');
        }else{
-        $query = $db->query("INSERT INTO inventario(imagen,producto,preuni,cat,cantidad) values('$imagen','$producto','$preuni','$cat','$cant')");
-         $resultado = $query;
+        $query = "INSERT INTO inventario(imagen,producto,preuni,cat,cantidad) values('$imagen','$producto','$preuni','$cat','$cant')";
+        $resultado = mysqli_query($db,$query);
          if($resultado){
             move_uploaded_file($temp,'../IMG/inventario/'.$imagen);   
             $_SESSION['mensaje'] = 'Producto subido exitosamente!';
@@ -27,10 +26,13 @@ if(isset($_POST['guardar'])){
          }else{
             $_SESSION['mensaje'] = 'ocurrio un error en el servidor';
             $_SESSION['tipo'] = 'danger';
-            header('location: ../view/admin/inventario.php');
          }
        }
     }
+      else {
+         $_SESSION['mensaje'] = 'ocurrio un error en el servidor';
+         $_SESSION['tipo'] = 'danger';
+      }
 }
 
 

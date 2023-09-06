@@ -1,5 +1,5 @@
 <?php 
-  include('../../controller/conexion.php');
+  include('../../controller/inv_subir.php');
   $query = $db->query("SELECT * from inventario");
   $resultado = $query;
 ?>
@@ -76,7 +76,10 @@
   <div class="col justify-content-center row p-3"> <button type="button" class="btn btn-success w-25" data-bs-toggle="modal" data-bs-target="#subir"><i class="bi bi-arrow-bar-up"></i></button> </div>
   <div class="col justify-content-center row p-3"><button type="button" class="btn btn-warning w-25"><i class="bi bi-pen"></i></button></div>
   <div class="col justify-content-center row p-3"><button type="button" class="btn btn-danger w-25"><i class="bi bi-trash"></i></button></div>
-
+  <?php if (isset($_SESSION['mensaje'])) {
+        echo '<div class="alert alert-danger text-center my-3 col justify-content-center p-3">' . $_SESSION['mensaje'] . '</div>';
+        unset($_SESSION['mensaje']); 
+    } ?>
 <!-- Modal -->
 <div class="modal fade" id="subir" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
@@ -115,11 +118,7 @@
             </div>
 
           </div>
-          <?php if(isset($_SESSION['mensaje'])){ ?>
-          <div class="alert alert-<?php echo $_SESSION['tipo'] ?> alert-dismissible fade show" role="alert">
-         <strong><?php echo $_SESSION['mensaje']; ?></strong> 
-       </div>
-          <?php session_unset(); } ?>
+          
        </div>
        
   </div>
