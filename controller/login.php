@@ -10,9 +10,7 @@
             $resultado = $query;
             if ($resultado->num_rows == 1) {
             $usuario = $resultado->fetch_assoc();
-    
             /*  */
-
                 $_SESSION['id'] = $usuario['id_user'];
                 $_SESSION['nom'] = $usuario['name_user'];
                 $_SESSION['apel'] = $usuario['apel_user'];
