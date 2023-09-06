@@ -1,6 +1,5 @@
 <?php 
 $id=$_GET["id"];
-echo ($id);
 include('../../controller/conexion.php');
 $query = "SELECT * FROM inventario WHERE id_inv='$id'";
 $resultado = $db->query ($query);
@@ -40,7 +39,7 @@ $producto = $resultado->fetch_assoc();
     <h1 class=" fs-4 mb">Modificar producto</h1>
     <hr>
         <div class="row text-center">
-         <form action="../../controller/inv_subir.php" method="post" enctype="multipart/form-data">
+         <form action="../../controller/inv_editar.php" method="post" enctype="multipart/form-data">
           <div class="form-group">
               <label  class="fs-5 pb-2">Selecciona una Imagen</label>
               <div class="input-group">
@@ -50,26 +49,26 @@ $producto = $resultado->fetch_assoc();
           <div class="form-group row">
             <div class="">
               <label  class="fs-5 py-1 ">Nombre del producto</label>
-              <input class="form-control" type="text" name="producto" value="">
+              <input class="form-control" type="text" name="producto" value="<?php echo $producto['producto'] ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1" >Precio. unidad</label>
-              <input  class="form-control" type="number" name="preuni" >
+              <input  class="form-control" type="number" name="preuni" value="<?php echo $producto['preuni'] ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Categoria</label>
-              <input  class="form-control" type="text" name="cat">
+              <input  class="form-control" type="text" name="cat" value="<?php echo $producto['cat'] ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Cantidad</label>
-              <input  class="form-control" type="number" name="cant" placeholder="Cantidad">
+              <input  class="form-control" type="number" name="cant" placeholder="Cantidad" value="<?php echo $producto['cantidad'] ?>">
             </div>
           </div>
         </div>
        </div>
       <div class="modal-footer align-items-center justify-content-around">
         <a type="button" href="inventario.php" class="btn btn-secondary">Cancelar</a>
-        <input type="submit" value="Guardar" class="btn btn-danger my-5" name="agregar">
+        <input type="submit" value="Guardar" class="btn btn-danger my-5" name="modificar">
       </div>
       </form>
     </div>
