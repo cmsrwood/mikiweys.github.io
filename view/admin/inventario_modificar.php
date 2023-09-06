@@ -47,6 +47,7 @@ include('../../controller/inv_editar.php');
               <div class="input-group">
                 <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagenm">
               </div>
+              
           </div>
           <div class="form-group row">
             <div class="">
