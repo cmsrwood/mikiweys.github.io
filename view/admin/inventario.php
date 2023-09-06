@@ -130,7 +130,7 @@
       </div>
       <div class="modal-footer align-items-center justify-content-around">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <input type="submit" value="Guardar" class="btn btn-danger my-5" name="guardar">
+        <input type="submit" value="Guardar" class="btn btn-danger my-5" name="agregar">
       </div>
       </form>
     </div>
