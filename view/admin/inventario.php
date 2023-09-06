@@ -69,15 +69,13 @@
     </tbody>
   </table>
 
-DELETE FROM `inventario` WHERE `inventario`.`id_inv` = 1
+<!-- DELETE FROM `inventario` WHERE `inventario`.`id_inv` = 1 -->
 
 <div class="row justify-content-center">
 
   <div class="col justify-content-center row p-3"> <button type="button" class="btn btn-success w-25" data-bs-toggle="modal" data-bs-target="#subir"><i class="bi bi-arrow-bar-up"></i></button> </div>
   <div class="col justify-content-center row p-3"><button type="button" class="btn btn-warning w-25"><i class="bi bi-pen"></i></button></div>
   <div class="col justify-content-center row p-3"><button type="button" class="btn btn-danger w-25"><i class="bi bi-trash"></i></button></div>
-
-  <!-- Button trigger modal -->
 
 <!-- Modal -->
 <div class="modal fade" id="subir" tabindex="-1" aria-hidden="true">
