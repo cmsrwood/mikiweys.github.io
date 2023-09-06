@@ -44,7 +44,7 @@
       if (isset($_SESSION['mailr'])) {
         echo '<div class="alert alert-danger text-center my-3">' . $_SESSION['mailr'] . '</div>';
         unset($_SESSION['mailr']); 
-    }
+      }
         ?>
       <form action="../../controller/registrar.php" method="post">
         <div class="mb-2 col-12">
