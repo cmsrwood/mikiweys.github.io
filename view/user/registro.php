@@ -44,7 +44,7 @@
       if (isset($_SESSION['mailr'])) {
         echo '<div class="alert alert-danger text-center my-3">' . $_SESSION['mailr'] . '</div>';
         unset($_SESSION['mailr']); 
-    }
+      }
         ?>
       <form action="../../controller/registrar.php" method="post">
         <div class="mb-2 col-12">
@@ -76,7 +76,7 @@
         </div>
         <div class="mb-2 col-12">
           <label class="form-label">Teléfono</label>
-          <input type="tel" class="form-control " maxlength="13" value="+57" name="tel_user">
+          <input type="tel" class="form-control " maxlength="13" name="tel_user">
         </div>
         <div class="mb-2 col-12">
           <label class="form-label">Dirección</label>

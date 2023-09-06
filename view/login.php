@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIKIWEY'S APP | Registro</title>
+    <title>MIKIWEY'S APP | Login</title>
     <!-- LINKS -->
 
     <!-- fonts -->
@@ -19,21 +19,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 
     <!-- LOGO ICON -->
-    <link rel="sahortcut icon" href="../../IMG/todo/logo2.ico">
-    <link rel="icon" sizes="192x192" href="../../IMG/todo/logo2.ico">
-    <link rel="favicon" href="../../IMG/todo/logo2.ico">
-    <link rel="apple-touch-icon" href="../../IMG/todo/logo2.ico">
+    <link rel="sahortcut icon" href="../IMG/todo/logo2.ico">
+    <link rel="icon" sizes="192x192" href="../IMG/todo/logo2.ico">
+    <link rel="favicon" href="../IMG/todo/logo2.ico">
+    <link rel="apple-touch-icon" href="../IMG/todo/logo2.ico">
     <!-- META  -->
     <meta name="description" content="Panadería Mikiweys">
 </head>
 
-<body class=""> 
+<body class="bg-foto"> 
 <!-- Father -->
 
-<div class="padre bg-foto">  
+<div class="padre ">  
 <!-- LOGIN -->
 <div class="container shadow px-5 py-3 bg-white my-5 w-75">
   <div class="row">
@@ -41,8 +41,11 @@
       <div class="row ">
         <div class="col-12"><h1 class="my-4  fs-2">Inicio de sesión</h1></div>
         <?php include('../controller/login.php');
+        if (isset($_SESSION['maile'])) {
+          echo '<div class="alert alert-danger text-center my-3">' . $_SESSION['maile'] . '</div>';
+          unset($_SESSION['maile']); 
+      }
         ?>
-
       <form action="../controller/login.php" method="POST">
         <div class="mb-2 col-12">
         <div class="mb-2 col-12">
@@ -63,8 +66,8 @@
     <!-- o -->
     <div class="col-12 col-sm-6 text-center">
       <div class="row text-center align-items-center text-center justify-content-center">
-        <a class="my-5 col-12 pt-5" href="../../index.php">
-          <img src="../../IMG/todo/logo.png" alt="" class="img-fluid w-50">
+        <a class="my-5 col-12 pt-5 w-75" href="../index.php">
+          <img src="../IMG/todo/logo.png" alt="" class="img-fluid w-50">
         </a>
           <div class="facebook my-3">
             <button class="btn btn-primary w-100"><i class="bi bi-facebook pe-1"></i> Ingresa con facebook</button>
@@ -77,7 +80,7 @@
 </div>
 </div>
 <!-- FOOTER -->
-<footer class="bnaranja text-center text-white ">
+<footer class="bnaranja text-center text-white fixed-bottom">
   <!-- Grid container -->
   <div class="container p-4 pb-0">
     <!-- Section: Social media -->
