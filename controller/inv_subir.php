@@ -1,5 +1,6 @@
 <?php
 include('conexion.php');
+session_start();
 if(isset($_POST['agregar'])){
     $imagen = $_FILES['imagen']['name'];
     $producto = $_POST['producto'];

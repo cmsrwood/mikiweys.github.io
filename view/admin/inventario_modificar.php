@@ -1,8 +1,7 @@
 <?php 
-  include('../../controller/inv_subir.php');
-  include('../../model/inventario_select_all.php')
+$id=$_GET["id"];
+echo ($id);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,70 +31,11 @@
   <!-- META  -->
   <meta name="description" content="Panadería Mikiweys">
 </head>
-<body class="">
-  <div class="container my-5 p-5 shadow">
-    <nav class="navbar navbar-light d-flex">
-      <img src="../../IMG/todo/logo.png" alt="" class="" width="120">
-      <h1>Inventario</h1>
-      <form class="form-inline d-flex">
-        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn mx-3"><i class="bi bi-search"></i></button>
-   </form>
-    </nav>
-
-<table class="table table-bordered border-1 bg-white">
-    <thead>
-      <tr class="bnaranja" >
-        <th scope="col">id</th>
-        <th scope="col" class="" >Imagen</th>
-        <th scope="col" class="" >Producto</th>
-        <th scope="col">Precio por unidad</th>
-        <th scope="col">Tipo</th>
-        <th scope="col">Cantidad</th>
-      </tr>
-    </thead>
-    <tbody>
-    <?php foreach($resultado as $producto){ ?>
-      <tr>
-        <th><?php echo $producto['id_inv']; ?></th>
-        <td class="text-center"><img src="../../IMG/inventario/<?php echo $producto['imagen']; ?>" width="120" alt="..."></td>
-        <td><?php echo $producto['producto']; ?></td>
-        <td><?php echo $producto['preuni']; ?></td>
-        <td><?php echo $producto['cat']; ?></td>
-        <td><?php echo $producto['cantidad']; ?></td>
-        <td><a href="inventario_modificar.php?id=<?=$producto['id_inv']?>" type="button" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a></td>
-      </tr>
-  <?php }?>
-    </tbody>
-  </table>
-
-<!-- DELETE FROM `inventario` WHERE `inventario`.`id_inv` = 1 -->
-
-<div class="row justify-content-center">
-
-  <div class="col justify-content-center row p-3"> <button type="button" class="btn btn-success w-25" data-bs-toggle="modal" data-bs-target="#subir"><i class="bi bi-arrow-bar-up"></i></button> </div>
-  <div class="col justify-content-center row p-3"><button type="button" class="btn btn-danger w-25"><i class="bi bi-trash"></i></button></div>
-  <?php if(isset($_SESSION['mensaje'])){ ?>
-    <div class="row justify-content-end fixed-bottom">
-          <div class="alert alert-<?php echo $_SESSION['tipo'] ?> alert-dismissible fade show  w-25 " role="alert">
-         <strong><?php echo $_SESSION['mensaje']; ?></strong> 
-         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-     </button>
-       </div>
-          <?php session_unset(); } ?>
-          </div>
-<!-- Modal -->
-<div class="modal fade" id="subir" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Subir producto</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <div class="container p-5 text-center">
-    <div class="row">
-       <div class="col row">
+<body>
+<div class=" justify-content-center  color container shadow p-5 w-50" id="subir" tabindex="-1" aria-hidden="true">
+    <h1 class=" fs-4 mb">Modificar producto</h1>
+    <hr>
+        <div class="row text-center">
          <form action="../../controller/inv_subir.php" method="post" enctype="multipart/form-data">
           <div class="form-group">
               <label  class="fs-5 pb-2">Selecciona una Imagen</label>
@@ -120,25 +60,16 @@
               <label  class="fs-5 py-1 ">Cantidad</label>
               <input  class="form-control" type="number" name="cant" placeholder="Cantidad">
             </div>
-
           </div>
-          
+        </div>
        </div>
-       
-  </div>
-</div>
-      </div>
       <div class="modal-footer align-items-center justify-content-around">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <a type="button" href="inventario.php" class="btn btn-secondary">Cancelar</a>
         <input type="submit" value="Guardar" class="btn btn-danger my-5" name="agregar">
       </div>
       </form>
     </div>
   </div>
-</div>
-</div>
-</div>
-
 </div>
 
   <!-- scripts -->
@@ -149,6 +80,5 @@
       new WOW().init();
     </script>
     <script src="../../js/script.js"></script>
-
 </body>
   </html>
