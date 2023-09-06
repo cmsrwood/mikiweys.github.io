@@ -1,6 +1,10 @@
 <?php 
 $id=$_GET["id"];
 echo ($id);
+include('../../controller/conexion.php');
+$query = "SELECT * FROM inventario WHERE id_inv='$id'";
+$resultado = $db->query ($query);
+$producto = $resultado->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +50,7 @@ echo ($id);
           <div class="form-group row">
             <div class="">
               <label  class="fs-5 py-1 ">Nombre del producto</label>
-              <input class="form-control" type="text" name="producto">
+              <input class="form-control" type="text" name="producto" value="">
             </div>
             <div class="">
               <label  class="fs-5 py-1" >Precio. unidad</label>
