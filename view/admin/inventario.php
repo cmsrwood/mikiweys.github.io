@@ -33,9 +33,8 @@
   <meta name="description" content="Panadería Mikiweys">
 </head>
 <body class="">
-  <div class="container my-5 p-5 shadow">
+  <div class="container my-5 p-5 shadow color">
     <nav class="navbar navbar-light d-flex">
-      <img src="../../IMG/todo/logo.png" alt="" class="" width="120">
       <h1>Inventario</h1>
       <form class="form-inline d-flex">
         <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
