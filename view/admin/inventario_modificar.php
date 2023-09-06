@@ -31,7 +31,7 @@ echo ($id);
   <!-- META  -->
   <meta name="description" content="Panadería Mikiweys">
 </head>
-<body>
+<body class="bg-foto">
 <div class=" justify-content-center  color container shadow p-5 w-50" id="subir" tabindex="-1" aria-hidden="true">
     <h1 class=" fs-4 mb">Modificar producto</h1>
     <hr>
