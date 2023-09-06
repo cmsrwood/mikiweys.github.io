@@ -1,11 +1,12 @@
 <?php
 include('conexion.php');
-if(isset($_POST['agregar'])){
-    $imagen = $_FILES['imagen']['name'];
-    $producto = $_POST['producto'];
-    $preuni = $_POST['preuni'];
-    $cat = $_POST['cat'];
-    $cant = $_POST['cant'];
+session_start();
+if(isset($_POST['modificar'])){
+    $imagen = $_FILES['imagenm']['name'];
+    $producto = $_POST['productom'];
+    $preuni = $_POST['preunim'];
+    $cat = $_POST['catm'];
+    $cant = $_POST['cantm'];
 
     if(isset($imagen) && $imagen != "" && !empty($_POST['producto']) && !empty($_POST['preuni']) && !empty($_POST['cat']) && !empty($_POST['cant'])){
         $tipo = $_FILES['imagen']['type'];
@@ -16,10 +17,10 @@ if(isset($_POST['agregar'])){
           $_SESSION['tipo'] = 'danger';
           header('location: ../view/admin/inventario.php');
        }else{
-        include_once('../model/producto_insertar.php');
+        include_once('../model/producto_editar.php');
          if($resultado){
             move_uploaded_file($temp,'../IMG/inventario/'.$imagen);   
-            $_SESSION['mensaje'] = 'Producto subido exitosamente!';
+            $_SESSION['mensaje'] = 'Producto modificado exitosamente!';
             $_SESSION['tipo'] = 'success';
             header('location:../view/admin/inventario.php');
          }else{

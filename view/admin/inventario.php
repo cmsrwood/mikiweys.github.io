@@ -1,7 +1,6 @@
 <?php 
   include('../../controller/inv_subir.php');
-  $query = $db->query("SELECT * from inventario");
-  $resultado = $query;
+  include('../../model/inventario_select_all.php')
 ?>
 
 <!DOCTYPE html>
@@ -64,6 +63,7 @@
         <td><?php echo $row['preuni']; ?></td>
         <td><?php echo $row['cat']; ?></td>
         <td><?php echo $row['cantidad']; ?></td>
+        <td><a type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#subir"><i class="bi bi-pencil-square"></i></a></td>
       </tr>
   <?php }?>
     </tbody>
@@ -74,7 +74,6 @@
 <div class="row justify-content-center">
 
   <div class="col justify-content-center row p-3"> <button type="button" class="btn btn-success w-25" data-bs-toggle="modal" data-bs-target="#subir"><i class="bi bi-arrow-bar-up"></i></button> </div>
-  <div class="col justify-content-center row p-3"><button type="button" class="btn btn-warning w-25"><i class="bi bi-pen"></i></button></div>
   <div class="col justify-content-center row p-3"><button type="button" class="btn btn-danger w-25"><i class="bi bi-trash"></i></button></div>
   <?php if(isset($_SESSION['mensaje'])){ ?>
     <div class="row justify-content-end fixed-bottom">
@@ -99,27 +98,27 @@
        <div class="col row">
          <form action="../../controller/inv_subir.php" method="post" enctype="multipart/form-data">
           <div class="form-group">
-              <label for="my-input" class="fs-5 pb-2">Selecciona una Imagen</label>
+              <label  class="fs-5 pb-2">Selecciona una Imagen</label>
               <div class="input-group">
                 <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagen">
               </div>
           </div>
           <div class="form-group row">
             <div class="">
-              <label for="my-input" class="fs-5 py-1 ">Nombre del producto</label>
-              <input id="my-input" class="form-control" type="text" name="producto">
+              <label  class="fs-5 py-1 ">Nombre del producto</label>
+              <input class="form-control" type="text" name="producto">
             </div>
             <div class="">
-              <label for="my-input" class="fs-5 py-1" >Precio. unidad</label>
-              <input id="my-input" class="form-control" type="number" name="preuni" >
+              <label  class="fs-5 py-1" >Precio. unidad</label>
+              <input  class="form-control" type="number" name="preuni" >
             </div>
             <div class="">
-              <label for="my-input" class="fs-5 py-1 ">Categoria</label>
-              <input id="my-input" class="form-control" type="text" name="cat">
+              <label  class="fs-5 py-1 ">Categoria</label>
+              <input  class="form-control" type="text" name="cat">
             </div>
             <div class="">
-              <label for="my-input" class="fs-5 py-1 ">Cantidad</label>
-              <input id="my-input" class="form-control" type="number" name="cant" placeholder="Cantidad">
+              <label  class="fs-5 py-1 ">Cantidad</label>
+              <input  class="form-control" type="number" name="cant" placeholder="Cantidad">
             </div>
 
           </div>
@@ -129,8 +128,8 @@
   </div>
 </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      <div class="modal-footer align-items-center justify-content-around">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
         <input type="submit" value="Guardar" class="btn btn-danger my-5" name="guardar">
       </div>
       </form>
