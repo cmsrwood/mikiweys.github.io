@@ -39,6 +39,7 @@ a {
     color: var(--naranja);   
 }
 
+
 /* FUENTES */
 .abril{
     font-family: 'Abril Fatface', cursive;
@@ -135,5 +136,8 @@ a {
 }
 .hoverrojo:hover{
    background: rgb(255, 0, 0);   
-}       
+}   
+.cc{
+    background-color: var(--colorgeneral);
+}    
 
