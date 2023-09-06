@@ -59,48 +59,60 @@
     <?php foreach($resultado as $row){ ?>
       <tr>
         <th><?php echo $row['id_inv']; ?></th>
-        <td class="text-center"><img src="../../IMG/inventario/<?php echo $row['imagen']; ?>" width="100" alt="..."></td>
+        <td class="text-center"><img src="../../IMG/inventario/<?php echo $row['imagen']; ?>" width="120" alt="..."></td>
         <td><?php echo $row['producto']; ?></td>
         <td><?php echo $row['preuni']; ?></td>
         <td><?php echo $row['cat']; ?></td>
-        <td><?php echo $row['cat']; ?></td>
+        <td><?php echo $row['cantidad']; ?></td>
       </tr>
   <?php }?>
     </tbody>
   </table>
 
-
+DELETE FROM `inventario` WHERE `inventario`.`id_inv` = 1
 
 <div class="row justify-content-center">
 
-  <div class="col justify-content-center row p-3"> <button type="button" class="btn btn-success w-25"  type="button" data-bs-toggle="collapse" data-bs-target="#subir" aria-expanded="false" aria-controls="collapseExample"><i class="bi bi-arrow-bar-up"></i></button> </div>
-  <div class="col justify-content-center row p-3"><button type="button" class="btn btn-danger w-25"><i class="bi bi-trash"></i></button></div>
+  <div class="col justify-content-center row p-3"> <button type="button" class="btn btn-success w-25" data-bs-toggle="modal" data-bs-target="#subir"><i class="bi bi-arrow-bar-up"></i></button> </div>
   <div class="col justify-content-center row p-3"><button type="button" class="btn btn-warning w-25"><i class="bi bi-pen"></i></button></div>
+  <div class="col justify-content-center row p-3"><button type="button" class="btn btn-danger w-25"><i class="bi bi-trash"></i></button></div>
 
-  <div class="collapse" id="subir">
-  <div class="container p-5 text-center">
+  <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="subir" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Subir producto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <div class="container p-5 text-center">
     <div class="row">
        <div class="col row">
-         <form action="../../controller/invsubir.php" method="post" enctype="multipart/form-data">
-          <div class="form-group my-5">
-              <label for="my-input" class="fs-2  pb-5">Selecciona una Imagen</label>
-              <input id="my-input" type="file" name="imagen" class="">
+         <form action="../../controller/inv_subir.php" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+              <label for="my-input" class="fs-5 pb-2">Selecciona una Imagen</label>
+              <div class="input-group">
+                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagen">
+              </div>
           </div>
           <div class="form-group row">
-            <div class="col-6">
-              <label for="my-input" class="fs-2 py-1 ">Producto</label>
+            <div class="">
+              <label for="my-input" class="fs-5 py-1 ">Nombre del producto</label>
               <input id="my-input" class="form-control" type="text" name="producto">
             </div>
-            <div class="col-6">
-              <label for="my-input" class="fs-2 py-1  ">Precio. unidad</label>
-              <input id="my-input" class="form-control" type="number" name="preuni">
+            <div class="">
+              <label for="my-input" class="fs-5 py-1" >Precio. unidad</label>
+              <input id="my-input" class="form-control" type="number" name="preuni" >
             </div>
-            <div class="col-6">
-              <label for="my-input" class="fs-2 py-1 ">Categoria</label>
+            <div class="">
+              <label for="my-input" class="fs-5 py-1 ">Categoria</label>
               <input id="my-input" class="form-control" type="text" name="cat">
             </div>
-            <div class="col-6">
-              <label for="my-input" class="fs-2 py-1 ">Cantidad</label>
+            <div class="">
+              <label for="my-input" class="fs-5 py-1 ">Cantidad</label>
               <input id="my-input" class="form-control" type="number" name="cant" placeholder="Cantidad">
             </div>
 
@@ -108,16 +120,21 @@
           <?php if(isset($_SESSION['mensaje'])){ ?>
           <div class="alert alert-<?php echo $_SESSION['tipo'] ?> alert-dismissible fade show" role="alert">
          <strong><?php echo $_SESSION['mensaje']; ?></strong> 
-       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-     </button>
        </div>
           <?php session_unset(); } ?>
-          <input type="submit" value="Guardar" class="btn btn-danger my-5" name="Guardar">
-         </form>
        </div>
        
   </div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <input type="submit" value="Guardar" class="btn btn-danger my-5" name="guardar">
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
 </div>
 </div>
 
