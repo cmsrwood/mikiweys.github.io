@@ -18,7 +18,7 @@ if(isset($_POST['modificar'])){
     }else{
         require("conexion.php");
         //MODIFICAR
-        $modificar = "UPDATE empleados SET nom = '$nombre', apel = '$apellido',fecing = '$fecing', cont = $contrato, tel = $tel, sal = $salario  WHERE id_emp = $id";
+        $modificar = "UPDATE empleados SET nom = '$nombre', apel = '$apellido',fecing = '$fecing', cont = '$contrato', tel = '$tel', sal = '$salario'  WHERE id_emp = '$id'";
         $resultado = mysqli_query($db,$modificar); 
         /* SUBIDO */
         if ($resultado){

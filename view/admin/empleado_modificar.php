@@ -61,19 +61,19 @@ if ($empleado= mysqli_fetch_array($result)){
             </div>
             <div class="">
               <label  class="fs-5 py-1" >Apellidos</label>
-              <input  class="form-control" type="number" name="apel" value="<?php echo $empleado['apel'] ?>">
+              <input  class="form-control" type="text" name="apel" value="<?php echo $empleado['apel'] ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Fecha de ingreso</label>
-              <input  class="form-control" type="text" name="fecing" value="<?php echo $empleado['fecing'] ?>">
+              <input  class="form-control" type="date" name="fecing" value="<?php echo $empleado['fecing'] ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Contrato</label>
-              <input  class="form-control" type="number" name="cont" value="<?php echo $empleado['cont'] ?>">
+              <input  class="form-control" type="text" name="cont" value="<?php echo $empleado['cont'] ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Teléfono</label>
-              <input  class="form-control" type="number" name="tel" value="<?php echo $empleado['tel'] ?>">
+              <input  class="form-control" type="text" name="tel" value="<?php echo $empleado['tel'] ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Salario</label>
