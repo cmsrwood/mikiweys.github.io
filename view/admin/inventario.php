@@ -62,7 +62,8 @@
         <td><?php echo $producto['preuni']; ?></td>
         <td><?php echo $producto['cat']; ?></td>
         <td><?php echo $producto['cantidad']; ?></td>
-        <td><a href="inventario_modificar.php?id=<?=$producto['id_inv']?>" type="button" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a></td>
+        <td><a href="inventario_modificar.php?id=<?=$producto['id_inv']?>" type="button" class="btn btn-warning" target="_blank"><i class="bi bi-pencil-square"></i></a></td>
+        <td><a href="inventario_modificar.php?id=<?=$producto['id_inv']?>" type="button" class="btn btn-danger" target="_blank"><i class="bi bi-trash"></i></a></td>
       </tr>
   <?php }?>
     </tbody>
@@ -72,8 +73,7 @@
 
 <div class="row justify-content-center">
 
-  <div class="col justify-content-center row p-3"> <button type="button" class="btn btn-success w-25" data-bs-toggle="modal" data-bs-target="#subir"><i class="bi bi-arrow-bar-up"></i></button> </div>
-  <div class="col justify-content-center row p-3"><button type="button" class="btn btn-danger w-25"><i class="bi bi-trash"></i></button></div>
+  <div class="col row p-3"> <button type="button" class="btn btn-success w-25" data-bs-toggle="modal" data-bs-target="#subir"><i class="bi bi-arrow-bar-up pe-2"></i>Subir</button> </div>
   <?php if(isset($_SESSION['mensaje'])){ ?>
     <div class="row justify-content-end fixed-bottom">
           <div class="alert alert-<?php echo $_SESSION['tipo'] ?> alert-dismissible fade show  w-25 " role="alert">
@@ -117,7 +117,7 @@
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Cantidad</label>
-              <input  class="form-control" type="number" name="cant" placeholder="Cantidad">
+              <input  class="form-control" type="number" name="cant">
             </div>
 
           </div>

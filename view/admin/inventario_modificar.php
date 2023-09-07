@@ -1,10 +1,9 @@
 <?php 
-include('../../controller/conexion.php');
+include('../../controller/inv_editar.php');
 $id_inv=$_GET["id"];
 echo($id_inv);
 $query = "SELECT * FROM inventario WHERE id_inv='$id_inv'";
 $resultado = $db->query ($query);
-include('../../controller/inv_editar.php');
 
 ?>
 <!DOCTYPE html>
@@ -42,7 +41,7 @@ include('../../controller/inv_editar.php');
     <hr>
         <div class="row text-center">
          <form action="../../controller/inv_editar.php" method="post" enctype="multipart/form-data">
-          <?php while ($producto=$resultado->fetch_object() ){ ?>
+          <?php while ($producto=$resultado->objec() ){ ?>
           <div class="form-group">
               <label  class="fs-5 pb-2">Selecciona una imagen</label>
               <div class="input-group">
@@ -67,8 +66,7 @@ include('../../controller/inv_editar.php');
               <label  class="fs-5 py-1 ">Cantidad</label>
               <input  class="form-control" type="number" name="cantm" value="<?php echo $producto['cantidad'] ?>">
             </div>
-            <?php }
-            ?>
+            
           </div>
         </div>
       
@@ -77,6 +75,8 @@ include('../../controller/inv_editar.php');
         <a type="button" href="inventario.php" class="btn btn-secondary">Cancelar</a>
         <input type="submit" value="Guardar" class="btn btn-danger my-5" name="modificar">
       </div>
+      <?php }
+            ?>
       </form>
     </div>
   </div>
