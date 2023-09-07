@@ -41,7 +41,7 @@
 require('../../controller/conexion.php');
 $id=$_GET["id"];
 
-$mostrarEmp = "SELECT * FROM empleados WHERE id_inv='$id'";
+$mostrarEmp = "SELECT * FROM empleados WHERE id_emp='$id'";
 $result = $db->query($mostrarEmp);
 
 if ($empleado= mysqli_fetch_array($result)){

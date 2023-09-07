@@ -2,7 +2,6 @@
 include('conexion.php');
 session_start();
 if(isset($_POST['agregar'])){
-    $id=$_POST['id']; 
     $nombre = $_POST['nom'];
     $apellido = $_POST['apel'];
     $fecing = $_POST['fecing'];
@@ -12,6 +11,7 @@ if(isset($_POST['agregar'])){
 
     if(!empty($_POST['nom']) && !empty($_POST['apel']) && !empty($_POST['fecing']) && !empty($_POST['cont']) && !empty($_POST['tel']) && !empty($_POST['sal'])){
         include_once('../model/empleado_nuevo.php');
+
          if($resultado){
             $_SESSION['mensaje'] = 'Empleado agregado exitosamente!';
             $_SESSION['tipo'] = 'success';

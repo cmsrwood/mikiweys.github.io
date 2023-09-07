@@ -2,7 +2,7 @@
 include ('conexion.php');
 session_start();
     $id =$_GET['id'];
-    $eliminar = "DELETE FROM empleados WHERE id_inv='$id'";
+    $eliminar = "DELETE FROM empleados WHERE id_emp='$id'";
     $resultado = mysqli_query($db,$eliminar); 
     /* ELIMINADO */
     if ($resultado){

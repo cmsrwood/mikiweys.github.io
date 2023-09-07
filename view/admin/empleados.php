@@ -99,27 +99,27 @@
       <div class="container p-5 text-center">
     <div class="row">
        <div class="col row">
-         <form action="../../controller/empleado_subir.php" method="post">
+         <form action="../../controller/empleado_subir.php" method="POST">
           <div class="form-group row">
             <div class="">
               <label  class="fs-5 py-1 ">Nombre</label>
-              <input class="form-control" type="text" name="name">
+              <input class="form-control" type="text" name="nom">
             </div>
             <div class="">
               <label  class="fs-5 py-1" >Apellidos</label>
-              <input  class="form-control" type="number" name="apel" >
+              <input  class="form-control" type="text" name="apel" >
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Fecha de Ingreso</label>
-              <input  class="form-control" type="text" name="fecing">
+              <input  class="form-control" type="date" name="fecing">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Contrato</label>
-              <input  class="form-control" type="number" name="cont">
+              <input  class="form-control" type="text" name="cont">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Teléfono</label>
-              <input  class="form-control" type="number" name="tel" maxlength="10">
+              <input  class="form-control" type="text" name="tel" maxlength="10">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Salario</label>
