@@ -75,4 +75,13 @@ var ltoggle = document.getElementById('logor');
         main.setAttribute("class", "p-5 container color shadow");
       }
     }
+
+
+
+    /* CERRAR VENTANA */
+
+    function closed() { 
+      window.open('','_parent',''); 
+      window.close(); 
+   } 
   

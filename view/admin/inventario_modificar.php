@@ -1,11 +1,4 @@
-<?php 
-include('../../controller/inv_editar.php');
-$id_inv=$_GET["id"];
-echo($id_inv);
-$query = "SELECT * FROM inventario WHERE id_inv='$id_inv'";
-$resultado = $db->query ($query);
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,8 +33,28 @@ $resultado = $db->query ($query);
     <h1 class=" fs-4 mb">Modificar producto</h1>
     <hr>
         <div class="row text-center">
+
+        <!-- PHP  -->
+
+<?php 
+require('../../controller/conexion.php');
+$id=$_GET["id"];
+echo($id);
+
+$mostrarArticulo = "SELECT * FROM inventario WHERE id_inv='$id'";
+$result = $db->query($mostrarArticulo);
+
+if ($producto= mysqli_fetch_array($result)){
+
+}
+?>
+<script language="javascript" type="text/javascript"> 
+    
+    </script>
+
+
+<a href="javascript:closed();">Cerrar Pestaña</a>
          <form action="../../controller/inv_editar.php" method="post" enctype="multipart/form-data">
-          <?php while ($producto=$resultado->objec() ){ ?>
           <div class="form-group">
               <label  class="fs-5 pb-2">Selecciona una imagen</label>
               <div class="input-group">
@@ -75,8 +88,6 @@ $resultado = $db->query ($query);
         <a type="button" href="inventario.php" class="btn btn-secondary">Cancelar</a>
         <input type="submit" value="Guardar" class="btn btn-danger my-5" name="modificar">
       </div>
-      <?php }
-            ?>
       </form>
     </div>
   </div>

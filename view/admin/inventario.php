@@ -1,6 +1,6 @@
 <?php 
   include('../../controller/inv_subir.php');
-  include('../../model/inventario_select_all.php')
+  include('../../model/inventario_select_all.php');
 ?>
 
 <!DOCTYPE html>
