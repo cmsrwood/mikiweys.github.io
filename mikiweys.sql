@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `inventario` (
   `id_inv` int(11) NOT NULL,
-  `imagen` varchar(100) DEFAULT NULL,
-  `producto` varchar(100) DEFAULT NULL,
-  `preuni` varchar(50) DEFAULT NULL,
+  `imagen` varchar(100) NOT NULL,
+  `producto` varchar(100) NOT NULL,
+  `preuni` varchar(50) NOT NULL,
   `cat` varchar(60) NOT NULL,
-  `cantidad` varchar(50) DEFAULT NULL
+  `cantidad` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
