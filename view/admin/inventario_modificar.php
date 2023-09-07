@@ -28,9 +28,10 @@
   <!-- META  -->
   <meta name="description" content="Panadería Mikiweys">
 </head>
-<body class="">
+<body class="bg-foto">
 <div class=" justify-content-center  color container shadow p-5 w-50" id="subir" tabindex="-1" aria-hidden="true">
-    <h1 class=" fs-4 mb">Modificar producto</h1>
+    <h1 class=" mb text-center">Modificar producto</h1>
+    <p class="text-center">Solo reemplace la información a actualizar</p>
     <hr>
         <div class="row text-center">
 
@@ -39,7 +40,6 @@
 <?php 
 require('../../controller/conexion.php');
 $id=$_GET["id"];
-echo($id);
 
 $mostrarArticulo = "SELECT * FROM inventario WHERE id_inv='$id'";
 $result = $db->query($mostrarArticulo);
@@ -48,13 +48,7 @@ if ($producto= mysqli_fetch_array($result)){
 
 }
 ?>
-<script language="javascript" type="text/javascript"> 
-    
-    </script>
-
-
-<a href="javascript:closed();">Cerrar Pestaña</a>
-         <form action="../../controller/inv_editar.php" method="post" enctype="multipart/form-data">
+         <form action="../../controller/inv_editar.php" method="POST">
           <div class="form-group">
               <label  class="fs-5 pb-2">Selecciona una imagen</label>
               <div class="input-group">
@@ -63,6 +57,10 @@ if ($producto= mysqli_fetch_array($result)){
               
           </div>
           <div class="form-group row">
+            <div class="col-6">
+              <label  class="fs-5 py-1 ">Id del producto</label>
+              <input class="form-control" type="text" readonly name="id" value="<?php echo $producto['id_inv'] ?>">
+            </div>
             <div class="">
               <label  class="fs-5 py-1 ">Nombre del producto</label>
               <input class="form-control" type="text" name="productom" value="<?php echo $producto['producto'] ?>">

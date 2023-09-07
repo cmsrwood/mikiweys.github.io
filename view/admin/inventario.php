@@ -63,7 +63,7 @@
         <td><?php echo $producto['cat']; ?></td>
         <td><?php echo $producto['cantidad']; ?></td>
         <td><a href="inventario_modificar.php?id=<?=$producto['id_inv']?>" type="button" class="btn btn-warning" target="_blank"><i class="bi bi-pencil-square"></i></a></td>
-        <td><a href="inventario_modificar.php?id=<?=$producto['id_inv']?>" type="button" class="btn btn-danger" target="_blank"><i class="bi bi-trash"></i></a></td>
+        <td><a href="../../controller/inv_eliminar.php?id=<?=$producto['id_inv']?>" type="button" class="btn btn-danger" target="_blank"><i class="bi bi-trash"></i></a></td>
       </tr>
   <?php }?>
     </tbody>
