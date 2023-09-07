@@ -106,8 +106,13 @@ a {
     background: url(../IMG/index/2carrusel.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+}
+.bg-fotoa{
+    background: url(../IMG/index/pan.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .color {

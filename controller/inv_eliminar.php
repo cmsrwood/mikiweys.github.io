@@ -1,12 +1,14 @@
 <?php
-
-    require("conexion.php");
+include ('conexion.php');
+session_start();
     $id =$_GET['id'];
-
     $eliminar = "DELETE FROM inventario WHERE id_inv='$id'";
-    $db->query($eliminar);
-
-    echo "<script> alert('Articulo Eliminado') </script>";
-    echo '<script> location.href="../view/admin/inventario.php" </script>';
+    $resultado = mysqli_query($db,$eliminar); 
+    /* ELIMINADO */
+    if ($resultado){
+    $_SESSION['mensaje'] = 'Producto eliminado';
+    $_SESSION['tipo'] = 'danger';
+    header('location:../view/admin/inventario.php');
+}
 
 ?>

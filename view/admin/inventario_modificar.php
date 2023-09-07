@@ -29,7 +29,7 @@
   <meta name="description" content="Panadería Mikiweys">
 </head>
 <body class="bg-foto">
-<div class=" justify-content-center  color container shadow p-5 w-50" id="subir" tabindex="-1" aria-hidden="true">
+<div class=" justify-content-center  color container shadow p-5 my-5" id="subir" tabindex="-1" aria-hidden="true">
     <h1 class=" mb text-center">Modificar producto</h1>
     <p class="text-center">Solo reemplace la información a actualizar</p>
     <hr>
@@ -77,15 +77,15 @@ if ($producto= mysqli_fetch_array($result)){
               <label  class="fs-5 py-1 ">Cantidad</label>
               <input  class="form-control" type="number" name="cantm" value="<?php echo $producto['cantidad'] ?>">
             </div>
-            
+            <div class="modal-footer align-items-center justify-content-around">
+        <a type="button" href="inventario.php" class="btn btn-secondary">Cancelar</a>
+        <input type="submit" value="Guardar" class="btn btn-danger my-5" name="modificar">
+      </div>
           </div>
         </div>
       
        </div>
-      <div class="modal-footer align-items-center justify-content-around">
-        <a type="button" href="inventario.php" class="btn btn-secondary">Cancelar</a>
-        <input type="submit" value="Guardar" class="btn btn-danger my-5" name="modificar">
-      </div>
+      
       </form>
     </div>
   </div>
