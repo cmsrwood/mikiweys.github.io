@@ -1,3 +1,8 @@
+<?php 
+  include('../../controller/empleado_subir.php');
+  include('../../model/empleados_select_all.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,97 +24,134 @@
   <link rel="stylesheet" href="../../css/styles.css">
 
   <!-- LOGO ICON -->
-  <link rel="shortcut icon" href="../IMG/todo/logo2.ico">
-  <link rel="icon" sizes="192x192" href="../IMG/todo/logo2.ico">
-  <link rel="favicon" href="../IMG/todo/logo2.ico">
-  <link rel="apple-touch-icon" href="../IMG/todo/logo2.ico">
+  <link rel="shortcut icon" href="../../IMG/todo/logo.png">
+  <link rel="icon" sizes="192x192" href="../../IMG/todo/logo2.ico">
+  <link rel="favicon" href="../../IMG/todo/logo2.ico">
+  <link rel="apple-touch-icon" href="../../IMG/todo/logo2.ico">
 
   <!-- META  -->
   <meta name="description" content="Panadería Mikiweys">
 </head>
-<body class="">
+<body class="bg-foto">
+  <div class="container my-5 p-5 shadow color">
+    <nav class="navbar navbar-light d-flex">
+      <h1>Inventario</h1>
+      <form class="form-inline d-flex">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn mx-3"><i class="bi bi-search"></i></button>
+   </form>
+    </nav>
 
-<div class="container shadow p-5 color">
-  <nav class="d-flex py-5">
-    <h1>Empleados</h1>
-    <button class="btn btn-warning mx-2">Nuevo</button>
-    <form action="" class="d-flex">
-      <input type="search" placeholder="Buscar" class="form-control">
-      <button class="btn"><i class="bi bi-search"></i></button>
-    </form>
-    <select class="form-select" name="" id=""> 
-      <option value="1">A-Z</option>
-      <option value="2">Z-A</option>
-      <option value="3">Menor Salario</option>
-      <option value="4">Mayor Salario</option>
-    </select>
-  </nav>
-  
-<table class="table bg-white table-bordered">
+<table class="table table-bordered border-1 bg-white">
     <thead>
-      <tr class="bnaranja">
+      <tr class="bnaranja" >
         <th scope="col">id</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Apellido</th>
+        <th scope="col" class="" >Nombres</th>
+        <th scope="col" class="" >Apellidos</th>
         <th scope="col">Fecha de ingreso</th>
-        <th scope="col">Contrato</th>
-        <th scope="col">Telefono</th>
+        <th scope="col">Contracto</th>
+        <th scope="col">Teléfono</th>
         <th scope="col">Salario</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row"></th>
-        <td>Carolina</td>
-        <td>Castillo</td>
-        <td>17/07/22</td>
-        <td>Fijo</td>
-        <td>3142171737</td>
-        <td>1.200.000</td>
+    <?php foreach($resultado as $empleado){ ?>
+      <tr class="text-center">
+        <th><?php echo $empleado['id_emp']; ?></th>
+        <td><?php echo $empleado['nom']; ?></td>
+        <td><?php echo $empleado['apel']; ?></td>
+        <td><?php echo $empleado['fecing']; ?></td>
+        <td><?php echo $empleado['cont']; ?></td>
+        <td><?php echo $empleado['tel']; ?></td>
+        <td><?php echo $empleado['sal']; ?></td>
+        <td><a href="inventario_modificar.php?id=<?=$empleado['id_emp']?>" type="button" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a></td>
+        <td><a href="../../controller/empleado_eliminar.php?id=<?=$empleado['id_emp']?>" type="button" class="btn btn-danger"><i class="bi bi-trash"></i></a></td>
       </tr>
-      <tr>
-        <th scope="row"></th>
-        <td>Brayan</td>
-        <td>Carmona</td>
-        <td>01/01/2022</td>
-        <td>Fijo</td>
-        <td>3112150484</td>
-        <td>1.200.000</td>
-      </tr>
-      <tr>
-        <th scope="row"></th>
-        <td>Dayana</td>
-        <td>Martinez</td>
-        <td>18/06/2022</td>
-        <td>Indefinido</td>
-        <td>3182263284</td>
-        <td>1.200.000</td>
-      </tr>
-      <tr>
-        <th scope="row"></th>
-        <td>Diana</td>
-        <td>Rojas</td>
-        <td>01/01/2022</td>
-        <td>Fijo</td>
-        <td>3106699846</td>
-        <td>2.000.000</td>
-      </tr>
-      <tr>
-        <th scope="row"></th>
-        <td>Jose</td>
-        <td>Carmona</td>
-        <td>01/01/2022</td>
-        <td>Fijo</td>
-        <td>3214778351</td>
-        <td>2.000.000</td>
-      </tr>
+  <?php }?>
     </tbody>
   </table>
+
+<!-- DELETE FROM `inventario` WHERE `inventario`.`id_emp` = 1 -->
+
 <div class="row justify-content-center">
-  <div class="col justify-content-center row p-3"> <button type="button" class="btn btn-success w-25"><i class="bi bi-arrow-bar-up"></i></button> </div>
-  <div class="col justify-content-center row p-3"><button type="button" class="btn btn-danger w-25"><i class="bi bi-trash"></i></button></div>
-<div class="col justify-content-center row p-3"><button type="button" class="btn btn-warning w-25"><i class="bi bi-pen"></i></button></div>
+
+  <div class="col row p-3"> <button type="button" class="btn btn-success w-25" data-bs-toggle="modal" data-bs-target="#subir"><i class="bi bi-arrow-bar-up pe-2"></i>Nuevo</button> </div>
+  <?php if(isset($_SESSION['mensaje'])){ ?>
+    <div class="row justify-content-end fixed-bottom">
+          <div class="alert alert-<?php echo $_SESSION['tipo'] ?> alert-dismissible fade show  w-25 " role="alert">
+         <strong><?php echo $_SESSION['mensaje']; ?></strong> 
+         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+     </button>
+       </div>
+          <?php session_unset(); } ?>
+          </div>
+<!-- Modal -->
+<div class="modal fade" id="subir" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Subir producto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <div class="container p-5 text-center">
+    <div class="row">
+       <div class="col row">
+         <form action="../../controller/inv_subir.php" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+              <label  class="fs-5 pb-2">Selecciona una Imagen</label>
+              <div class="input-group">
+                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagen">
+              </div>
+          </div>
+          <div class="form-group row">
+            <div class="">
+              <label  class="fs-5 py-1 ">Nombre del producto</label>
+              <input class="form-control" type="text" name="producto">
+            </div>
+            <div class="">
+              <label  class="fs-5 py-1" >Precio. unidad</label>
+              <input  class="form-control" type="number" name="preuni" >
+            </div>
+            <div class="">
+              <label  class="fs-5 py-1 ">Categoria</label>
+              <input  class="form-control" type="text" name="cat">
+            </div>
+            <div class="">
+              <label  class="fs-5 py-1 ">Cantidad</label>
+              <input  class="form-control" type="number" name="cant">
+            </div>
+
+          </div>
+          
+       </div>
+       
+  </div>
+</div>
+      </div>
+      <div class="modal-footer align-items-center justify-content-around">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <input type="submit" value="Guardar" class="btn btn-danger my-5" name="agregar">
+      </div>
+      </form>
+    </div>
+  </div>
 </div>
 </div>
+</div>
+
+</div>
+
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- WOW -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="../../js/script.js"></script>
+
 </body>
   </html>
