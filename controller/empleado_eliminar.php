@@ -6,7 +6,7 @@ session_start();
     $resultado = mysqli_query($db,$eliminar); 
     /* ELIMINADO */
     if ($resultado){
-    $_SESSION['mensaje'] = 'Producto eliminado';
+    $_SESSION['mensaje'] = 'Empleado eliminado';
     $_SESSION['tipo'] = 'danger';
     header('location:../view/admin/empleados.php');
 }

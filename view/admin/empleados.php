@@ -99,29 +99,31 @@
       <div class="container p-5 text-center">
     <div class="row">
        <div class="col row">
-         <form action="../../controller/inv_subir.php" method="post" enctype="multipart/form-data">
-          <div class="form-group">
-              <label  class="fs-5 pb-2">Selecciona una Imagen</label>
-              <div class="input-group">
-                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagen">
-              </div>
-          </div>
+         <form action="../../controller/empleado_subir.php" method="post">
           <div class="form-group row">
             <div class="">
-              <label  class="fs-5 py-1 ">Nombre del producto</label>
-              <input class="form-control" type="text" name="producto">
+              <label  class="fs-5 py-1 ">Nombre</label>
+              <input class="form-control" type="text" name="name">
             </div>
             <div class="">
-              <label  class="fs-5 py-1" >Precio. unidad</label>
-              <input  class="form-control" type="number" name="preuni" >
+              <label  class="fs-5 py-1" >Apellidos</label>
+              <input  class="form-control" type="number" name="apel" >
             </div>
             <div class="">
-              <label  class="fs-5 py-1 ">Categoria</label>
-              <input  class="form-control" type="text" name="cat">
+              <label  class="fs-5 py-1 ">Fecha de Ingreso</label>
+              <input  class="form-control" type="text" name="fecing">
             </div>
             <div class="">
-              <label  class="fs-5 py-1 ">Cantidad</label>
-              <input  class="form-control" type="number" name="cant">
+              <label  class="fs-5 py-1 ">Contrato</label>
+              <input  class="form-control" type="number" name="cont">
+            </div>
+            <div class="">
+              <label  class="fs-5 py-1 ">Teléfono</label>
+              <input  class="form-control" type="number" name="tel" maxlength="10">
+            </div>
+            <div class="">
+              <label  class="fs-5 py-1 ">Salario</label>
+              <input  class="form-control" type="number" name="sal">
             </div>
 
           </div>
