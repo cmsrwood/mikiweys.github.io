@@ -66,7 +66,7 @@
         <td><?php echo $empleado['cont']; ?></td>
         <td><?php echo $empleado['tel']; ?></td>
         <td><?php echo $empleado['sal']; ?></td>
-        <td><a href="inventario_modificar.php?id=<?=$empleado['id_emp']?>" type="button" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a></td>
+        <td><a href="empleado_modificar.php?id=<?=$empleado['id_emp']?>" type="button" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a></td>
         <td><a href="../../controller/empleado_eliminar.php?id=<?=$empleado['id_emp']?>" type="button" class="btn btn-danger"><i class="bi bi-trash"></i></a></td>
       </tr>
   <?php }?>

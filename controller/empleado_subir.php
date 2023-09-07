@@ -11,8 +11,6 @@ if(isset($_POST['agregar'])){
     $salario = $_POST['sal'];
 
     if(!empty($_POST['nom']) && !empty($_POST['apel']) && !empty($_POST['fecing']) && !empty($_POST['cont']) && !empty($_POST['tel']) && !empty($_POST['sal'])){
-
-       }else{
         include_once('../model/empleado_nuevo.php');
          if($resultado){
             $_SESSION['mensaje'] = 'Empleado agregado exitosamente!';
@@ -23,14 +21,10 @@ if(isset($_POST['agregar'])){
             $_SESSION['tipo'] = 'danger';
             header('location:../view/admin/empleados.php');
          }
-       }
-    }
-      else {
+      }else {
          $_SESSION['mensaje'] = 'Debes llenar todos los campos';
          $_SESSION['tipo'] = 'danger';
          header('location:../view/admin/empleados.php');
-
       }
-
-
+   }
 ?>
