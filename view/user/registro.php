@@ -99,7 +99,7 @@
           <label for="" class="">Acepto los <a href="">Términos y condiciones</a>  y <a href="">Políticas de privacidad</a> </label>
         </div>
         <div class="mb-2 col-12">
-          <input type="submit" class="form-control hovercafe bnaranja">
+          <input type="submit" class="form-control hovercafe bnaranja" name="registrar">
         </div>
       </div>
       </form>
