@@ -188,7 +188,7 @@
 <!--  -->
     <div class="col mb-3">
       <div class="card m-auto">
-        <img src="../../IMG/index/2 carrusel.jpg" class="card-img-top" alt="...">
+        <img src="../../IMG/index/2carrusel.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Nombre del producto</h5>
           <p class="card-text">(precio)</p>
@@ -200,7 +200,7 @@
 <!--  -->
 <div class="col mb-3">
   <div class="card m-auto">
-    <img src="../../IMG/index/1 carrusel.jpg" class="card-img-top" alt="...">
+    <img src="../../IMG/index/1carrusel.jpg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Nombre del producto</h5>
       <p class="card-text">(precio)</p>
@@ -212,7 +212,7 @@
 <!--  -->
 <div class="col mb-3">
   <div class="card m-auto">
-    <img src="../../IMG/index/2 carrusel.jpg" class="card-img-top" alt="...">
+    <img src="../../IMG/index/2carrusel.jpg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Nombre del producto</h5>
       <p class="card-text">(precio)</p>
@@ -224,7 +224,7 @@
 <!--  -->
 <div class="col mb-3">
   <div class="card m-auto">
-    <img src="../../IMG/index/1 carrusel.jpg" class="card-img-top" alt="...">
+    <img src="../../IMG/index/1carrusel.jpg" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Nombre del producto</h5>
       <p class="card-text">(precio)</p>
@@ -236,7 +236,7 @@
     <!--  -->
     <div class="col mb-3">
       <div class="card m-auto">
-        <img src="../../IMG/index/2 carrusel.jpg" class="card-img-top" alt="...">
+        <img src="../../IMG/index/2carrusel.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Nombre del producto</h5>
           <p class="card-text">(precio)</p>
@@ -248,7 +248,7 @@
     <!--  -->
     <div class="col mb-3">
       <div class="card m-auto">
-        <img src="../../IMG/index/1 carrusel.jpg" class="card-img-top" alt="...">
+        <img src="../../IMG/index/1carrusel.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Nombre del producto</h5>
           <p class="card-text">(precio)</p>
