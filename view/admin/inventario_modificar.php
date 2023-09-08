@@ -49,13 +49,6 @@ if ($producto= mysqli_fetch_array($result)){
 }
 ?>
          <form action="../../controller/inv_editar.php" method="POST">
-          <div class="form-group">
-              <label  class="fs-5 pb-2">Selecciona una imagen</label>
-              <div class="input-group">
-                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagenm">
-              </div>
-              
-          </div>
           <div class="form-group row">
             <div class="col-6">
               <label  class="fs-5 py-1 ">Id del producto</label>
