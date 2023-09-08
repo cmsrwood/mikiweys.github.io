@@ -41,7 +41,7 @@
 <header>
 <nav class="navbar navbar-expand-xl navbar-light fixed-top bg-white text-center align-items-center shadow">
   <div class="container-fluid">
-        <a class="navbar-brand me-5 pe-5" href="../index.html">
+        <a class="navbar-brand me-5 pe-5" href="../index.php">
           <img src="..../../IMG/todo/logo.png" alt="" class="img-fluid " width="100">
         </a>
     <form class="d-flex">
@@ -54,19 +54,19 @@
     <div class="collapse navbar-collapse container text-center justify-content-end lg-justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav px-5 mx-5 ">
         <li class="  col-3 align-self-center text-center">
-            <a class="nav-link  hovernaranja" href="nosotros.html">
+            <a class="nav-link  hovernaranja" href="nosotros.php">
                 <i class="bi bi-people"></i>
                 <span class="off ">Nosotros</span>
             </a>
         </li>
         <li class="  col-3 align-self-center text-center">
-            <a class="nav-link  hovernaranja" href="contacto.html">
+            <a class="nav-link  hovernaranja" href="contacto.php">
                 <i class="bi bi-telephone"></i>
                 <span class="off">Contacto</span> 
             </a>
         </li>
         <li class=" mx-2 col-3 align-self-center text-center">
-          <a class="nav-link hovernaranja" href="productos.html">
+          <a class="nav-link hovernaranja" href="productos.php">
             <i class="bi bi-shop"></i>
               <span class="off">Productos</span> 
           </a>
@@ -78,10 +78,10 @@
               <span class="off">Mi cuenta</span>  
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="login.html">Ingresa</a></li>
+              <li><a class="dropdown-item" href="login.php">Ingresa</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="login.html">Tu perfil</a></li>
-              <li><a class="dropdown-item" href="login.html">Tu carrito</a></li>
+              <li><a class="dropdown-item" href="login.php">Tu perfil</a></li>
+              <li><a class="dropdown-item" href="login.php">Tu carrito</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesion </a></li>
             </ul> 

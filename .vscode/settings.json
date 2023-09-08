@@ -1,5 +1,5 @@
 {
-    "livePreview.defaultPreviewPath": "/view/reciclaje.html",
+    "livePreview.defaultPreviewPath": "/view/reciclaje.php",
     "cSpell.language": "es-ES",
     "cSpell.words": [
         "conexion",

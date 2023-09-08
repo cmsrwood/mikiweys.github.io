@@ -6,7 +6,7 @@
       <i class="bi-list"></i>
     </a>
     <!-- LOGO -->
-        <a class="navbar-brand containerzoom giroi " href="index.html">
+        <a class="navbar-brand containerzoom giroi " href="index.php">
           <img id="logo" src="../../IMG/todo/logo.png" alt="" class="img-fluid " width="100">
         </a>
     <!-- BUSCAR -->
@@ -30,19 +30,19 @@
     <div class="collapse navbar-collapse container text-center justify-content-end lg-justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav px-5 mx-5 ">
         <li class="  col-3 align-self-center text-center">
-            <a class="nav-link  hovernaranja" href="view/nosotros.html">
+            <a class="nav-link  hovernaranja" href="../view/nosotros.php">
                 <i class="bi bi-people"></i>
                 <span class="off ">Nosotros</span>
             </a>
         </li>
         <li class="  col-3 align-self-center text-center">
-            <a class="nav-link  hovernaranja" href="view/contacto.html">
+            <a class="nav-link  hovernaranja" href="../view/contacto.php">
                 <i class="bi bi-telephone"></i>
                 <span class="off">Contacto</span> 
             </a>
         </li>
         <li class=" mx-2 col-3 align-self-center text-center">
-          <a class="nav-link hovernaranja" href="view/productos.html">
+          <a class="nav-link hovernaranja" href="../view/productos.php">
             <i class="bi bi-shop"></i>
               <span class="off">Productos</span> 
           </a>
@@ -54,10 +54,10 @@
               <span class="off">Mi cuenta</span>  
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="view/login.html">Ingresa</a></li>
+              <li><a class="dropdown-item" href="../view/login.php">Ingresa</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="view/login.html">Tu perfil</a></li>
-              <li><a class="dropdown-item" href="view/carrito.html">Tu carrito</a></li>
+              <li><a class="dropdown-item" href="../view/login.php">Tu perfil</a></li>
+              <li><a class="dropdown-item" href="../view/carrito.php">Tu carrito</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesión </a></li>
             </ul> 
@@ -89,7 +89,7 @@
 <!-- OFFCANVAS -->
 <div class="offcanvas offcanvas-start w-75 " tabindex="-1" id="offcanvasExample">
   <div class="offcanvas-header border border-bottom ">
-    <a class="navbar-brand containerzoom giroi " href="index.html">
+    <a class="navbar-brand containerzoom giroi " href="index.php">
       <img id="logor"  src="IMG/todo/logo.png" alt="" class="img-fluid " width="65">
     </a>
     <h5 class="offcanvas-title">
@@ -105,19 +105,19 @@
           </a>
         </li>
         <li>
-          <a class="nav-link" href="view/nosotros.html">
+          <a class="nav-link" href="view/nosotros.php">
             <i class="bi bi-people"></i>
             <span class="">Nosotros</span>
         </a>
         </li>
         <li>
-          <a class="nav-link " href="view/contacto.html">
+          <a class="nav-link " href="view/contacto.php">
             <i class="bi bi-telephone"></i>
             <span class="off">Contacto</span> 
         </a>
         </li>
         <li>
-          <a class="nav-link" href="view/productos.html">
+          <a class="nav-link" href="view/productos.php">
             <i class="bi bi-shop"></i>
               <span class="off">Productos</span> 
           </a>
