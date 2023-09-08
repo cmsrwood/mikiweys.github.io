@@ -31,8 +31,8 @@
   <?php
   include('../include/header.php')
   ?>
-  <div class="container cc p-5 shadow">
-        <h1 class="fs-1 naranja simoneta text-center">Bienvenidos a MIKIWEY'S</h1>
+  <div class="container cc p-5 shadow mt-5">
+        <h1 class="fs-1 naranja simoneta text-center my-5">Bienvenidos a MIKIWEY'S</h1>
         <div class="row align-items-center">
             
              <div class="col-7">
