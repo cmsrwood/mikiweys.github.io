@@ -33,6 +33,8 @@
   <meta name="description" content="Panadería Mikiweys">
 </head>
 <body class="bg-foto">
+<?php include('../include/header_admin.php'); ?>
+
   <div class="container my-5 p-5 shadow color">
     <nav class="navbar navbar-light d-flex">
       <h1>Inventario</h1>

@@ -33,9 +33,10 @@
   <meta name="description" content="Panadería Mikiweys">
 </head>
 <body class="bg-foto">
+<?php include('../include/header_admin.php'); ?>
   <div class="container my-5 p-5 shadow color">
     <nav class="navbar navbar-light d-flex">
-      <h1>Inventario</h1>
+      <h1>Empleados</h1>
       <form class="form-inline d-flex">
         <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
         <button class="btn mx-3"><i class="bi bi-search"></i></button>
