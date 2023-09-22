@@ -41,10 +41,7 @@
         }
         }
         else {
-            $alerta = '<div class="alert alert-danger text-center my-3">
-        <p>DEBES COMPLETAR TODOS LOS CAMPOS</p>
-        </div>';
-        echo ($alerta);
+        $_SESSION['debes'] = 'Debes completar todos los campos.';
         }
 ?>
 

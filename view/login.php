@@ -45,6 +45,10 @@
           echo '<div class="alert alert-danger text-center my-3">' . $_SESSION['maile'] . '</div>';
           unset($_SESSION['maile']); 
       }
+      if (isset($_SESSION['debes'])) {
+        echo '<div class="alert alert-danger text-center my-3">' . $_SESSION['debes'] . '</div>';
+        unset($_SESSION['debes']); 
+    }
         ?>
       <form action="../controller/login.php" method="POST">
         <div class="mb-2 col-12">
