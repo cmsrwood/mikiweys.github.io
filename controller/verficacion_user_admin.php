@@ -1,6 +1,5 @@
 <?php
 require('login.php');
-    if($_SESSION['rol']='1'){
-
-    }
+echo($_SESSION['nom']);
+    
 ?>
