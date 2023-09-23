@@ -164,21 +164,19 @@
 
 <div class="container justify-content-center mt-5 pt-5" id="main">
   <div class="row align-items-center pt-5">
-    <div class="col-8">
-      <input type="search" placeholder="Busca tu producto" class="form-control my-5">
+    <div class="col-10">
+      <input type="search" placeholder="Busca tu producto" class="form-control my-5 w-75" id="buscador">
     </div>
     <div class="col">
-      <a href="#" class="btn bnaranja hovercafe text-white">Buscar</a>
-    </div>
-    <div class="col ">
       <div class="dropdown">
         <a class="text-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Ordenar por
         </a>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item border-bottom" href="#">Mas relevante</a></li>
-          <li><a class="dropdown-item border-bottom" href="#">Mayor precio</a></li>
-          <li><a class="dropdown-item" href="#">Menor precio</a></li>
+          <li><a class="dropdown-item py-1" href="#">Mas relevante</a></li>
+          <li><a class="dropdown-item py-1" href="#">Mayor precio</a></li>
+          <li><a class="dropdown-item py-1" href="#">A-Z</a></li>
+          <li><a class="dropdown-item py-1" href="#">Z-A</a></li>
         </ul>
       </div>
     </div>
@@ -191,7 +189,7 @@
   <div class="row row-cols-1 row-cols-md-4 g-4">
     <!--  -->
     <?php foreach($resultado as $producto){ ?>
-      <div class="col mb-3">
+      <div class="col mb-3 producto">
       <div class="card m-auto">
         <img src="../../IMG/inventario/<?php echo $producto['imagen']; ?>" class="img-fluid">
         <div class="card-body">

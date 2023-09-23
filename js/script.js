@@ -75,6 +75,24 @@ var ltoggle = document.getElementById('logor');
         main.setAttribute("class", "p-5 container color shadow");
       }
     }
+/* BUSCADOR */
+    document.addEventListener("keyup", e=>{
+
+      if (e.target.matches("#buscador")){
+    
+          if (e.key ==="Escape")e.target.value = ""
+    
+          document.querySelectorAll(".producto").forEach(fruta =>{
+    
+              fruta.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                ?fruta.classList.remove("filtro")
+                :fruta.classList.add("filtro")
+          })
+    
+      }
+    
+    
+    })
 
 
 

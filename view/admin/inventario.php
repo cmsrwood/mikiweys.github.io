@@ -50,6 +50,7 @@
         <th scope="col">id</th>
         <th scope="col" class="" >Imagen</th>
         <th scope="col" class="" >Producto</th>
+        <th scope="col" class="" >Descripción</th>
         <th scope="col">Precio por unidad</th>
         <th scope="col">Tipo</th>
         <th scope="col">Cantidad</th>
@@ -63,6 +64,7 @@
         <th><?php echo $producto['id_inv']; ?></th>
         <td><img src="../../IMG/inventario/<?php echo $producto['imagen']; ?>" width="120" alt="..."></td>
         <td><?php echo $producto['producto']; ?></td>
+        <td><?php echo $producto['descrip']; ?></td>
         <td><?php echo $producto['preuni']; ?></td>
         <td><?php echo $producto['cat']; ?></td>
         <td><?php echo $producto['cantidad']; ?></td>

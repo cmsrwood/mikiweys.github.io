@@ -59,6 +59,10 @@ if ($producto= mysqli_fetch_array($result)){
               <input class="form-control" type="text" name="productom" value="<?php echo $producto['producto'] ?>">
             </div>
             <div class="">
+              <label  class="fs-5 py-1 ">Descripción</label>
+              <input class="form-control" type="text" name="descripm" value="<?php echo $producto['descrip'] ?>">
+            </div>
+            <div class="">
               <label  class="fs-5 py-1" >Precio. unidad</label>
               <input  class="form-control" type="number" name="preunim" value="<?php echo $producto['preuni'] ?>">
             </div>
@@ -72,7 +76,7 @@ if ($producto= mysqli_fetch_array($result)){
             </div>
             <div class="modal-footer align-items-center justify-content-around">
         <a type="button" href="inventario.php" class="btn btn-secondary">Cancelar</a>
-        <input type="submit" value="Guardar" class="btn btn-danger my-5" name="modificar">
+        <input type="submit" value="Guardar" class="btn btn-warning my-5" name="modificar">
       </div>
           </div>
         </div>
