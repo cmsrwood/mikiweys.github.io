@@ -76,26 +76,13 @@ var ltoggle = document.getElementById('logor');
       }
     }
 /* BUSCADOR */
-    document.addEventListener("keyup", e=>{
+          const buscador= document.querySelector('#buscador');
+          const boton= document.querySelector('#boton');
 
-      if (e.target.matches("#buscador")){
-    
-          if (e.key ==="Escape")e.target.value = ""
-    
-          document.querySelectorAll(".producto").forEach(fruta =>{
-    
-              fruta.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-                ?fruta.classList.remove("filtro")
-                :fruta.classList.add("filtro")
-          })
-    
-      }
-    
-    
-    })
-
-
-
+          const filtrar =()=>{
+          console.log(buscador.value);
+          }
+          boton.addEventListener('click', filtrar);
     /* CERRAR VENTANA */
 
     function closed() { 

@@ -146,7 +146,7 @@
         <hr>
         <div class="dropdown">
           <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="../../IMG/todo/client.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <img src="" alt="" width="32" height="32" class="rounded-circle me-2">
             <strong>Cliente</strong>
           </a>
           <button id="btnrtema" onclick="tema()" class="btn" ><i id="irtema" class="bi bi-sun"></i></button>
@@ -164,10 +164,13 @@
 
 <div class="container justify-content-center mt-5 pt-5" id="main">
   <div class="row align-items-center pt-5">
-    <div class="col-10">
-      <input type="search" placeholder="Busca tu producto" class="form-control my-5 w-75" id="buscador">
+    <div class="col-8">
+      <input type="search" placeholder="Busca tu producto" class="form-control my-5" id="buscador">
     </div>
     <div class="col">
+      <button class="btn btn-warning text-white" id="boton">Buscar</button>
+    </div>
+    <div class="col ">
       <div class="dropdown">
         <a class="text-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           Ordenar por
@@ -189,7 +192,7 @@
   <div class="row row-cols-1 row-cols-md-4 g-4">
     <!--  -->
     <?php foreach($resultado as $producto){ ?>
-      <div class="col mb-3 producto">
+      <div class="col mb-3">
       <div class="card m-auto">
         <img src="../../IMG/inventario/<?php echo $producto['imagen']; ?>" class="img-fluid">
         <div class="card-body">
