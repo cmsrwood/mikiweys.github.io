@@ -7,6 +7,7 @@ if(isset($_POST['modificar'])){
    $preuni = $_POST['preunim'];
    $cat = $_POST['catm'];
    $cant = $_POST['cantm'];
+   $desc = $_POST['descrip'];
 
     //VALIDAR QUE EL USUARIO REGISTRE TODOS LOS CAMPOS QUE SEAN OBLIGATORIOS
     if($producto== "" OR $preuni=="" OR  $cat=="" OR $cant==""){
@@ -16,7 +17,7 @@ if(isset($_POST['modificar'])){
     }else{
         require("conexion.php");
         //MODIFICAR LOS DATOS EN LA TABLA
-        $modificar = "UPDATE inventario SET producto = '$producto', preuni = '$preuni', cat = '$cat', cantidad = $cant WHERE id_inv = $id";
+        $modificar = "UPDATE inventario SET producto = '$producto', preuni = '$preuni', cat = '$cat', cantidad = $cant, descrip= '$desc' WHERE id_inv = $id";
         $resultado = mysqli_query($db,$modificar); 
         /* SUBIDO */
         if ($resultado){

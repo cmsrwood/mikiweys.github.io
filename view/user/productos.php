@@ -1,3 +1,7 @@
+<?php
+  include ('../../controller/conexion.php');
+  include('../../model/inventario_select_all.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -184,79 +188,21 @@
 
 <!-- PRODUCTOS -->
 <div class="container p-5 shadow d-flex color" id="main">
-  <div class="row row-cols-1 row-cols-md-2 g-4">
-<!--  -->
-    <div class="col mb-3">
-      <div class="card m-auto">
-        <img src="../../IMG/index/2carrusel.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Nombre del producto</h5>
-          <p class="card-text">(precio)</p>
-          <p class="card-text">Descripción del producto.</p>
-          <a href="#" class="btn bordenaranja naranja bhovernaranja">Comprar</a>
-        </div>
-      </div>
-    </div>
-<!--  -->
-<div class="col mb-3">
-  <div class="card m-auto">
-    <img src="../../IMG/index/1carrusel.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Nombre del producto</h5>
-      <p class="card-text">(precio)</p>
-      <p class="card-text">Descripción del producto.</p>
-      <a href="#" class="btn bordenaranja naranja bhovernaranja">Comprar</a>
-    </div>
-  </div>
-</div>
-<!--  -->
-<div class="col mb-3">
-  <div class="card m-auto">
-    <img src="../../IMG/index/2carrusel.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Nombre del producto</h5>
-      <p class="card-text">(precio)</p>
-      <p class="card-text">Descripción del producto.</p>
-      <a href="#" class="btn bordenaranja naranja bhovernaranja">Comprar</a>
-    </div>
-  </div>
-</div>
-<!--  -->
-<div class="col mb-3">
-  <div class="card m-auto">
-    <img src="../../IMG/index/1carrusel.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Nombre del producto</h5>
-      <p class="card-text">(precio)</p>
-      <p class="card-text">Descripción del producto.</p>
-      <a href="#" class="btn bordenaranja naranja bhovernaranja">Comprar</a>
-    </div>
-  </div>
-</div>
+  <div class="row row-cols-1 row-cols-md-4 g-4">
     <!--  -->
-    <div class="col mb-3">
+    <?php foreach($resultado as $producto){ ?>
+      <div class="col mb-3">
       <div class="card m-auto">
-        <img src="../../IMG/index/2carrusel.jpg" class="card-img-top" alt="...">
+        <img src="../../IMG/inventario/<?php echo $producto['imagen']; ?>" class="img-fluid">
         <div class="card-body">
-          <h5 class="card-title">Nombre del producto</h5>
-          <p class="card-text">(precio)</p>
+          <h5 class="card-title"><?php echo $producto['producto']; ?></h5>
+          <p class="card-text"><?php echo $producto['preuni']; ?></p>
           <p class="card-text">Descripción del producto.</p>
-          <a href="#" class="btn bordenaranja naranja bhovernaranja">Comprar</a>
+          <a href="producto.php?id=<?=$producto['id_inv']?>" class="btn bordenaranja naranja bhovernaranja">Comprar</a>
         </div>
       </div>
     </div>
-    <!--  -->
-    <div class="col mb-3">
-      <div class="card m-auto">
-        <img src="../../IMG/index/1carrusel.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Nombre del producto</h5>
-          <p class="card-text">(precio)</p>
-          <p class="card-text">Descripción del producto.</p>
-          <a href="#" class="btn bordenaranja naranja bhovernaranja">Comprar</a>
-        </div>
-      </div>
-    </div>
+  <?php }?>
 </div>  
 </div>
 

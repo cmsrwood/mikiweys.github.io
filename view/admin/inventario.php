@@ -112,6 +112,10 @@
               <input class="form-control" type="text" name="producto">
             </div>
             <div class="">
+              <label  class="fs-5 py-1 ">Descripción</label>
+              <input class="form-control" type="text" name="descrip">
+            </div>
+            <div class="">
               <label  class="fs-5 py-1" >Precio. unidad</label>
               <input  class="form-control" type="number" name="preuni" >
             </div>
