@@ -34,7 +34,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="../view/login.php">Ingresa</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="../view/login.php">Tu perfil</a></li>
+              <li><a class="dropdown-item" href="../view/cuenta.php">Tu perfil</a></li>
               <li><a class="dropdown-item" href="../view/carrito.php">Tu carrito</a></li>
               <li><hr class="dropdown-divider"></li>
               <li>
