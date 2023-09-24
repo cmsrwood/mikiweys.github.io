@@ -44,7 +44,7 @@
         <button class="btn mx-3"><i class="bi bi-search"></i></button>
    </form>
     </nav>
-
+<div class="table-responsive">
 <table class="table table-bordered border-1 bg-white">
     <thead>
       <tr class="bnaranja" >
@@ -75,7 +75,7 @@
   <?php }?>
     </tbody>
   </table>
-
+  </div>
 <!-- DELETE FROM `inventario` WHERE `inventario`.`id_inv` = 1 -->
 
 <div class="row justify-content-center">
