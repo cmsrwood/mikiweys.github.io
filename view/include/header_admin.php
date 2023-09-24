@@ -37,7 +37,11 @@
               <li><a class="dropdown-item" href="../view/login.php">Tu perfil</a></li>
               <li><a class="dropdown-item" href="../view/carrito.php">Tu carrito</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesión </a></li>
+              <li>
+                <form action="../../controller/logout.php" method="POST">
+                <input type="submit" value="" class="dropdown-item" name="logout">
+                  <i class="bi bi-box-arrow-right"></i> Cerrar sesión
+              </form></li>
             </ul> 
           </li>
           </div>
