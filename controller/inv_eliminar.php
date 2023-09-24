@@ -1,6 +1,6 @@
 <?php
 include ('conexion.php');
-session_start();
+require('verficacion_user_admin.php');
     $id =$_GET['id'];
     $eliminar = "DELETE FROM inventario WHERE id_inv='$id'";
     $resultado = mysqli_query($db,$eliminar); 

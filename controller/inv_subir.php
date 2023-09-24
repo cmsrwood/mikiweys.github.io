@@ -1,6 +1,6 @@
 <?php
 include('conexion.php');
-session_start();
+require('verficacion_user_admin.php');
 if(isset($_POST['agregar'])){
     $imagen = $_FILES['imagen']['name'];
     $producto = $_POST['producto'];
