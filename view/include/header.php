@@ -30,19 +30,19 @@
     <div class="collapse navbar-collapse container text-center justify-content-end lg-justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav px-5 mx-5 ">
         <li class="  col-3 align-self-center text-center">
-            <a class="nav-link  hovernaranja" href="../view/nosotros.php">
+            <a class="nav-link  hovernaranja" href="nosotros.php">
                 <i class="bi bi-people"></i>
                 <span class="off ">Nosotros</span>
             </a>
         </li>
         <li class="  col-3 align-self-center text-center">
-            <a class="nav-link  hovernaranja" href="../view/contacto.php">
+            <a class="nav-link  hovernaranja" href="contacto.php">
                 <i class="bi bi-telephone"></i>
                 <span class="off">Contacto</span> 
             </a>
         </li>
         <li class=" mx-2 col-3 align-self-center text-center">
-          <a class="nav-link hovernaranja" href="../view/productos.php">
+          <a class="nav-link hovernaranja" href="productos.php">
             <i class="bi bi-shop"></i>
               <span class="off">Productos</span> 
           </a>
@@ -54,10 +54,10 @@
               <span class="off">Mi cuenta</span>  
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="../view/login.php">Ingresa</a></li>
+              <li><a class="dropdown-item" href="login.php">Ingresa</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="../view/login.php">Tu perfil</a></li>
-              <li><a class="dropdown-item" href="../view/carrito.php">Tu carrito</a></li>
+              <li><a class="dropdown-item" href="login.php">Tu perfil</a></li>
+              <li><a class="dropdown-item" href="carrito.php">Tu carrito</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesión </a></li>
             </ul> 

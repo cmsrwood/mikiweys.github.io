@@ -23,7 +23,7 @@
                 switch ($usuario['rol_user']){
                     case '1':
                         //administrador
-                        header("location: ../view/admin/empleados.php");
+                        header("location: ../view/admin/inventario.php");
                         break;
                     case '2':
                         //empleado
