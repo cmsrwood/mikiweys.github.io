@@ -26,24 +26,14 @@
               <span class="off">Inventario</span> 
           </a>
       </li>
-        <li class=" dropdown  col-3 align-self-center text-center ">
-            <a class="nav-link dropdown-toggle hovernaranja" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link hovernaranja">
                 <i class="bi bi-person-circle  naranja"></i>
-              <span class="off">Mi cuenta</span>  
+              <span class="off"><?php echo($_SESSION['nom']); ?></span>  
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="../view/login.php">Ingresa</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="../view/cuenta.php">Tu perfil</a></li>
-              <li><a class="dropdown-item" href="../view/carrito.php">Tu carrito</a></li>
-              <li><hr class="dropdown-divider"></li>
               <li>
                 <form action="../../controller/logout.php" method="POST">
-                <input type="submit" value="" class="dropdown-item" name="logout">
-                  <i class="bi bi-box-arrow-right"></i> Cerrar sesión
+                  <input type="submit" value="Cerrar sesión" class=" btn btn-danger" name="logout">
               </form></li>
-            </ul> 
-          </li>
           </div>
       </ul>
     </div>
