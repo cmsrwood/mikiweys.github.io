@@ -2,12 +2,6 @@
   include('../../controller/empleado_subir.php');
   include('../../model/empleados_select_all.php');
 ?>
-<?php
-if($_SESSION['rol']='1'){
-  echo('
-  ');
-  }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,7 +1,6 @@
 <?php 
   include('../../controller/inv_subir.php');
   include('../../model/inventario_select_all.php');
-  echo($_SESSION['nom']);
 ?>
 
 <!DOCTYPE html>

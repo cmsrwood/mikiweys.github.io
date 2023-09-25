@@ -13,7 +13,7 @@
     </a>
    <!-- SEARCH CEL -->
     <div class="collapse navbar-collapse container text-center justify-content-end lg-justify-content-center" id="navbarSupportedContent">
-      <ul class="navbar-nav px-5 mx-5 ">
+      <ul class="navbar-nav row">
         <li class="  col align-self-center text-center">
             <a class="nav-link  hovernaranja" href="empleados.php">
                 <i class="bi bi-people"></i>
@@ -26,15 +26,18 @@
               <span class="off">Inventario</span> 
           </a>
       </li>
-            <a class="nav-link hovernaranja">
-                <i class="bi bi-person-circle  naranja"></i>
+      <li class="col ms-5 row align-items-center">
+          <a class="nav-link hovernaranja">
+              <i class="bi bi-person-circle  naranja"></i>
               <span class="off"><?php echo($_SESSION['nom']); ?></span>  
-            </a>
-              <li>
-                <form action="../../controller/logout.php" method="POST">
-                  <input type="submit" value="Cerrar sesión" class=" btn btn-danger" name="logout">
-              </form></li>
+          </a>
+      </li>
+      <li class="col row align-items-center">
+            <form action="../../controller/logout.php" method="POST">
+                <input type="submit" value="Cerrar sesión" class=" btn btn-danger" name="logout">
+            </form>
           </div>
+      </li>
       </ul>
     </div>
   </div>
