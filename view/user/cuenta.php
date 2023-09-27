@@ -35,30 +35,30 @@
             <img src="../../IMG/index/pan.jpg" class=" mt-4 rounded-circle img-fluid" alt="">
             <p class="fs-1 simoneta">Principal</p>
           
-            <a class="btn btn-warning d-grid gap-3 poppins d-flex align-content-between" data-bs-toggle="collapse" href="#User" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <a class="btn btn-warning d-grid gap-3 poppins d-flex align-content-between" data-bs-toggle="collapse" href="#user" role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="bi bi-person-circle "></i> Información de usuario 
             </a>
 
             
-            <a class="btn btn-warning d-grid gap-3 poppins d-flex align-content-between my-3" data-bs-toggle="collapse" href="#Pedidos" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <a class="btn btn-warning d-grid gap-3 poppins d-flex align-content-between my-3" data-bs-toggle="collapse" href="#pedidos" role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="bi bi-bag "></i> Pedidos
             </a>
 
             <p class="fs-1 simoneta">Detalles</p>
           
-            <a class="btn btn-warning d-grid gap-3 poppins d-flex align-content-between my-3" data-bs-toggle="collapse" href="#Metodos_pago" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <a class="btn btn-warning d-grid gap-3 poppins d-flex align-content-between my-3" data-bs-toggle="collapse" href="#metodos_pago" role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="bi bi-credit-card-2-front "></i> Metodos de pago
             </a>
 
-             <a class="btn btn-warning d-grid gap-3 poppins d-flex align-content-between my-3" data-bs-toggle="collapse" href="#Carrito" role="button" aria-expanded="false" aria-controls="collapseExample">
+             <a class="btn btn-warning d-grid gap-3 poppins d-flex align-content-between my-3" data-bs-toggle="collapse" href="#carrito" role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="bi bi-cart"></i> Carrito
              </a>
             
-             <a class="btn btn-warning d-grid gap-3 poppins d-flex align-content-between my-3" data-bs-toggle="collapse" href="#Direccion" role="button" aria-expanded="false" aria-controls="collapseExample">
+             <a class="btn btn-warning d-grid gap-3 poppins d-flex align-content-between my-3" data-bs-toggle="collapse" href="#direccion" role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="bi bi-geo-alt"></i> Editar direcciones
              </a>
              
-             <a class="btn btn-warning d-grid gap-3 poppins d-flex align-content-between my-3" data-bs-toggle="collapse" href="#Cuenta" role="button" aria-expanded="false" aria-controls="collapseExample">
+             <a class="btn btn-warning d-grid gap-3 poppins d-flex align-content-between my-3" data-bs-toggle="collapse" href="#cuenta" role="button" aria-expanded="false" aria-controls="collapseExample">
               <i class="bi bi-file-earmark-text"></i> Editar cuenta
              </a>
         </div>
@@ -68,7 +68,7 @@
 
 
             <div class="col-9 ">
-                <div class="collapse" id="User">
+                <div class="collapse" id="user">
                 <div class="card card-body">
                   <div class="fs-1 simoneta simoneta">¡Hola Dilan!</div>
 
@@ -87,7 +87,7 @@
                   <div class="fs-5 my-4">Direcciones</div>
                   <input type="text" class="form-control" readonly>
 
-                  <a href="#Cuenta" data-bs-toggle="collapse" href="#Cuenta" role="button" aria-expanded="false" aria-controls="collapseExample">Editar cuenta</a>
+                  <a data-bs-toggle="collapse" href="#cuenta" href="#user" role="button" aria-expanded="false" aria-controls="collapseExample">Editar cuenta</a>
                 </div>
             </div>
     
@@ -97,32 +97,45 @@
                 
               
 
-               <div class="collapse" id="Pedidos">
+               <div class="collapse" id="pedidos">
                  <div class="card card-body">
                   Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                  </div>
                </div>
 
-               <div class="collapse" id="Metodos_pago">
+               <div class="collapse" id="metodos_pago">
                 <div class="card card-body">
                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                 </div>
               </div>
               
-              <div class="collapse" id="Carrito">
+              <div class="collapse" id="carrito">
                 <div class="card card-body">
                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                 </div>
               </div>
 
-              <div class="collapse" id="Direccion">
+              <div class="collapse" id="direccion">
                 <div class="card card-body">
                  Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                 </div>
               </div>
-              <div class="collapse" id="Cuenta">
+              <div class="collapse" id="cuenta">
                 <div class="card card-body">
-                 Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                <div class="fs-5 my-4">Nombres</div>
+                  <input type="text" class="form-control">
+
+                  <div class="fs-5 my-4">Apellidos</div>
+                  <input type="text" class="form-control">
+
+                  <div class="fs-5 my-4">Correo electrónico</div>
+                  <input type="text" class="form-control">
+
+                  <div class="fs-5 my-4">Teléfono</div>
+                  <input type="text" class="form-control">
+
+                  <div class="fs-5 my-4">Direcciones</div>
+                  <input type="text" class="form-control" >
                 </div>
               </div>
          </div>
