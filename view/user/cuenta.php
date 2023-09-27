@@ -87,7 +87,7 @@
                   <div class="fs-5 my-4">Direcciones</div>
                   <input type="text" class="form-control" readonly>
 
-                  <a href="#Cuenta">Editar cuenta</a>
+                  <a href="#Cuenta" data-bs-toggle="collapse" href="#Cuenta" role="button" aria-expanded="false" aria-controls="collapseExample">Editar cuenta</a>
                 </div>
             </div>
     
