@@ -63,8 +63,8 @@ CREATE TABLE `usuarios` (
   `id_user` int(11) NOT NULL,
   `name_user` varchar(50) NOT NULL,
   `apel_user` varchar(50) NOT NULL,
-  `pass_user` varchar(50) NOT NULL,
-  `tel_user` int(13) NOT NULL,
+  `pass_user` varchar(255) NOT NULL,
+  `tel_user` varchar(13) NOT NULL,
   `id_doc` varchar(50) NOT NULL,
   `num_documento_user` varchar(50) NOT NULL,
   `email_user` varchar(50) NOT NULL,
@@ -77,9 +77,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_user`, `name_user`, `apel_user`, `pass_user`, `tel_user`, `id_doc`, `num_documento_user`, `email_user`, `dir_user`, `rol_user`) VALUES
-(1, 'Dilan', 'Lopez', 'contrasena', 2147483647, '1', '1028663948', 'dilanfantas@gmail.com', 'calle 43b surr', '1'),
-(2, 'Brayan', 'Carmona', 'contrasena', 321654987, '1', '10286486358', 'brayan@gmail.com', 'calle 48 sur', '2'),
-(3, 'Fabricio', 'Finol', 'contrasena', 312456789, '1', '10286486358', 'finol@gmail.com', 'soacha', '3');
+(1, 'Dilan', 'Lopez', '$2y$10$0yvxxaiPtIRMe1eTKamNOefJGAWGzIo0YG9an3U7Y1mBlJQe0wyW.', '3138975212', '1', '1028663948', 'dilanfantas@gmail.com', 'calle 43b surr', '1'),
+(2, 'Brayan', 'Carmona', '$2y$10$r5xZfk1NTaX4PiCgNKxV1.Sff16xPBrTjqBLkggkYPAyS2qvozNam', '3114734423', '1', '10286486358', 'brayan@gmail.com', 'calle 48 sur', '2'),
+(3, 'Fabricio', 'Finol', 'contrasena', '3124786512', '1', '10286486358', 'finol@gmail.com', 'soacha', '3');
 
 --
 -- Índices para tablas volcadas
