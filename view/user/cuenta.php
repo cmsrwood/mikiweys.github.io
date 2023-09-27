@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi cuenta | MIKIWEY'S APP</title>
     <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&family=Simonetta&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,18 +19,16 @@
   <link rel="stylesheet" href="../../css/styles.css">
 
   <!-- LOGO ICON -->
-  <link rel="shortcut icon" href="../IMG/todo/logo2.ico">
-  <link rel="icon" sizes="192x192" href="../IMG/todo/logo2.ico">
-  <link rel="favicon" href="../IMG/todo/logo2.ico">
-  <link rel="apple-touch-icon" href="../IMG/todo/logo2.ico">
+  <?php include('../include/logo.php'); ?>
 
   <!-- META  -->
   <meta name="description" content="Panadería Mikiweys">
 
 </head>
 <body>
-    <div class="container-fluid row">
-    
+  <?php include('../include/header.php'); ?>
+<br>
+    <div class="container-fluid row mt-5">
         <div class="col-3 color ">
                 
               
