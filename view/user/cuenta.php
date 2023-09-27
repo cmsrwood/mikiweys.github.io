@@ -89,8 +89,6 @@
 
                   <a href="#Cuenta">Editar cuenta</a>
                 </div>
-                
-
             </div>
     
 
