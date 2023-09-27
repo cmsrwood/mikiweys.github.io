@@ -9,20 +9,21 @@ if (!empty($_POST['name_user']) && !empty($_POST['apel_user']) && !empty($_POST[
     $name = $_POST['name_user'];
     $apel = $_POST['apel_user'];
     $pass = $_POST['pass_user'];
+    $hash = password_hash($pass, PASSWORD_DEFAULT, [50]);
     $tel = $_POST['tel_user'];
     $id_doc = $_POST['id_doc'];
     $num_doc = $_POST['num_documento_user'];
     $email = $_POST['email_user'];
     $dir = $_POST['dir_user'];
 
-    $ssql = "SELECT * FROM usuarios WHERE email_user='$email'";
-    $result = $db->query($ssql);
+    $sql = "SELECT * FROM usuarios WHERE email_user='$email'";
+    $result = $db->query($sql);
 
     if ($result->num_rows > 0) {
         $_SESSION['mailr'] = "El correo electrónico ya ha sido registrado. Intente iniciar sesión";
         header("location: ../view/user/registro.php");
     } else {
-        $insertar = "INSERT INTO usuarios (name_user, apel_user, pass_user, tel_user, id_doc, num_documento_user, email_user, dir_user,rol_user)VALUES ('$name', '$apel', '$pass', '$tel', '$id_doc', '$num_doc', '$email', '$dir','3')";
+        $insertar = "INSERT INTO usuarios (name_user, apel_user, pass_user, tel_user, id_doc, num_documento_user, email_user, dir_user,rol_user)VALUES ('$name', '$apel', '$hash', '$tel', '$id_doc', '$num_doc', '$email', '$dir','3')";
 
         
     }

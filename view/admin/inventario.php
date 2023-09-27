@@ -43,13 +43,14 @@
         <button class="btn mx-3"><i class="bi bi-search"></i></button>
    </form>
     </nav>
-
+<div class="table-responsive">
 <table class="table table-bordered border-1 bg-white">
     <thead>
       <tr class="bnaranja" >
         <th scope="col">id</th>
         <th scope="col" class="" >Imagen</th>
         <th scope="col" class="" >Producto</th>
+        <th scope="col" class="" >Descripción</th>
         <th scope="col">Precio por unidad</th>
         <th scope="col">Tipo</th>
         <th scope="col">Cantidad</th>
@@ -63,6 +64,7 @@
         <th><?php echo $producto['id_inv']; ?></th>
         <td><img src="../../IMG/inventario/<?php echo $producto['imagen']; ?>" width="120" alt="..."></td>
         <td><?php echo $producto['producto']; ?></td>
+        <td><?php echo $producto['descrip']; ?></td>
         <td><?php echo $producto['preuni']; ?></td>
         <td><?php echo $producto['cat']; ?></td>
         <td><?php echo $producto['cantidad']; ?></td>
@@ -72,7 +74,7 @@
   <?php }?>
     </tbody>
   </table>
-
+  </div>
 <!-- DELETE FROM `inventario` WHERE `inventario`.`id_inv` = 1 -->
 
 <div class="row justify-content-center">
@@ -110,6 +112,10 @@
             <div class="">
               <label  class="fs-5 py-1 ">Nombre del producto</label>
               <input class="form-control" type="text" name="producto">
+            </div>
+            <div class="">
+              <label  class="fs-5 py-1 ">Descripción</label>
+              <input class="form-control" type="text" name="descrip">
             </div>
             <div class="">
               <label  class="fs-5 py-1" >Precio. unidad</label>

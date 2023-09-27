@@ -75,9 +75,14 @@ var ltoggle = document.getElementById('logor');
         main.setAttribute("class", "p-5 container color shadow");
       }
     }
+/* BUSCADOR */
+          const buscador= document.querySelector('#buscador');
+          const boton= document.querySelector('#boton');
 
-
-
+          const filtrar =()=>{
+          console.log(buscador.value);
+          }
+          boton.addEventListener('click', filtrar);
     /* CERRAR VENTANA */
 
     function closed() { 

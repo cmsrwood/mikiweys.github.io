@@ -1,9 +1,10 @@
 <?php
 include('conexion.php');
-session_start();
+require('verficacion_admin.php');
 if(isset($_POST['agregar'])){
     $imagen = $_FILES['imagen']['name'];
     $producto = $_POST['producto'];
+    $desc = $_POST['descrip'];
     $preuni = $_POST['preuni'];
     $cat = $_POST['cat'];
     $cant = $_POST['cant'];

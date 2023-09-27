@@ -3,7 +3,7 @@
   <div class="container-fluid d-flex ">
      
     <!-- LOGO -->
-        <a class="navbar-brand containerzoom giroi " href="index.php">
+        <a class="navbar-brand containerzoom giroi " href="../../index.php">
           <img id="logo" src="../../IMG/todo/logo.png" alt="" class="img-fluid " width="100">
         </a>
      <!-- OFFCANVAS BTN -->
@@ -13,7 +13,7 @@
     </a>
    <!-- SEARCH CEL -->
     <div class="collapse navbar-collapse container text-center justify-content-end lg-justify-content-center" id="navbarSupportedContent">
-      <ul class="navbar-nav px-5 mx-5 ">
+      <ul class="navbar-nav row">
         <li class="  col align-self-center text-center">
             <a class="nav-link  hovernaranja" href="empleados.php">
                 <i class="bi bi-people"></i>
@@ -26,21 +26,18 @@
               <span class="off">Inventario</span> 
           </a>
       </li>
-        <li class=" dropdown  col-3 align-self-center text-center ">
-            <a class="nav-link dropdown-toggle hovernaranja" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person-circle  naranja"></i>
-              <span class="off">Mi cuenta</span>  
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="../view/login.php">Ingresa</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="../view/login.php">Tu perfil</a></li>
-              <li><a class="dropdown-item" href="../view/carrito.php">Tu carrito</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesión </a></li>
-            </ul> 
-          </li>
+      <li class="col ms-5 row align-items-center">
+          <a class="nav-link hovernaranja">
+              <i class="bi bi-person-circle  naranja"></i>
+              <span class="off"><?php echo($_SESSION['nom']); ?></span>  
+          </a>
+      </li>
+      <li class="col row align-items-center">
+            <form action="../../controller/logout.php" method="POST">
+                <input type="submit" value="Cerrar sesión" class=" btn btn-danger" name="logout">
+            </form>
           </div>
+      </li>
       </ul>
     </div>
   </div>
