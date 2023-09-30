@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-09-2023 a las 04:37:31
+-- Tiempo de generación: 30-09-2023 a las 03:54:54
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `mikiweys`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `documento`
+--
+
+CREATE TABLE `documento` (
+  `id_doc` int(11) NOT NULL,
+  `documento` varchar(60) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `documento`
+--
+
+INSERT INTO `documento` (`id_doc`, `documento`) VALUES
+(1, 'Cedula de ciudadania'),
+(2, 'Cedula de Extrenjeria'),
+(3, 'Tarjeta de Identidad'),
+(4, 'Pasaporte');
 
 -- --------------------------------------------------------
 
@@ -53,6 +74,33 @@ CREATE TABLE `inventario` (
   `cantidad` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `inventario`
+--
+
+INSERT INTO `inventario` (`id_inv`, `imagen`, `producto`, `descrip`, `preuni`, `cat`, `cantidad`) VALUES
+(9, 'pan.jpg', 'Otro pan', 'mucho mucho ', '400', 'aaa', '344');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `rol`
+--
+
+CREATE TABLE `rol` (
+  `id_rol` varchar(1) NOT NULL,
+  `rol` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `rol`
+--
+
+INSERT INTO `rol` (`id_rol`, `rol`) VALUES
+('1', 'Administrador'),
+('2', 'Empleado'),
+('3', 'Usuario');
+
 -- --------------------------------------------------------
 
 --
@@ -64,8 +112,8 @@ CREATE TABLE `usuarios` (
   `name_user` varchar(50) NOT NULL,
   `apel_user` varchar(50) NOT NULL,
   `pass_user` varchar(255) NOT NULL,
-  `tel_user` varchar(13) NOT NULL,
-  `id_doc` varchar(50) NOT NULL,
+  `tel_user` int(13) NOT NULL,
+  `id_doc` int(50) NOT NULL,
   `num_documento_user` varchar(50) NOT NULL,
   `email_user` varchar(50) NOT NULL,
   `dir_user` varchar(50) NOT NULL,
@@ -73,17 +121,14 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`id_user`, `name_user`, `apel_user`, `pass_user`, `tel_user`, `id_doc`, `num_documento_user`, `email_user`, `dir_user`, `rol_user`) VALUES
-(1, 'Dilan', 'Lopez', '$2y$10$0yvxxaiPtIRMe1eTKamNOefJGAWGzIo0YG9an3U7Y1mBlJQe0wyW.', '3138975212', '1', '1028663948', 'dilanfantas@gmail.com', 'calle 43b surr', '1'),
-(2, 'Brayan', 'Carmona', '$2y$10$r5xZfk1NTaX4PiCgNKxV1.Sff16xPBrTjqBLkggkYPAyS2qvozNam', '3114734423', '1', '10286486358', 'brayan@gmail.com', 'calle 48 sur', '2'),
-(3, 'Fabricio', 'Finol', 'contrasena', '3124786512', '1', '10286486358', 'finol@gmail.com', 'soacha', '3');
-
---
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `documento`
+--
+ALTER TABLE `documento`
+  ADD PRIMARY KEY (`id_doc`);
 
 --
 -- Indices de la tabla `empleados`
@@ -98,10 +143,18 @@ ALTER TABLE `inventario`
   ADD PRIMARY KEY (`id_inv`);
 
 --
+-- Indices de la tabla `rol`
+--
+ALTER TABLE `rol`
+  ADD PRIMARY KEY (`id_rol`);
+
+--
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id_user`),
+  ADD KEY `documento` (`id_doc`),
+  ADD KEY `rol` (`rol_user`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -111,19 +164,30 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `id_emp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_emp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `inventario`
 --
 ALTER TABLE `inventario`
-  MODIFY `id_inv` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_inv` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `documento` FOREIGN KEY (`id_doc`) REFERENCES `documento` (`id_doc`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `rol` FOREIGN KEY (`rol_user`) REFERENCES `rol` (`id_rol`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
