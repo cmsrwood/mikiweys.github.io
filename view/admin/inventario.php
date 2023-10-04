@@ -123,7 +123,13 @@
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Categoria</label>
-              <input  class="form-control" type="text" name="cat">
+              <select name="cat" id="" class="form-select">
+                <option value="" disabled selected>Categoria...</option>
+                <option value="1">Pan</option>
+                <option value="2">Bebida</option>
+                <option value="3">Pastel</option>
+                <option value="4">Varios</option>
+              </select>
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Cantidad</label>
