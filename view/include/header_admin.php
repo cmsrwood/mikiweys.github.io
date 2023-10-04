@@ -21,15 +21,15 @@
             </a>
         </li>
         <li class=" mx-2 col align-self-center text-center">
-          <a class="nav-link hovernaranja" href="inventario.php">
+          <a class="nav-link hovernaranja " href="inventario.php">
             <i class="bi bi-shop"></i>
               <span class="off">Inventario</span> 
           </a>
       </li>
       <li class="col ms-5 row align-items-center">
-          <a class="nav-link hovernaranja">
+          <a class="nav-link hovernaranja ">
               <i class="bi bi-person-circle  naranja"></i>
-              <span class="off"><?php echo($_SESSION['nom']); ?></span>  
+              <span class=""><?php echo($_SESSION['nom']); ?> <?php echo($_SESSION['apel']); ?></span>  
           </a>
       </li>
       <li class="col row align-items-center">
