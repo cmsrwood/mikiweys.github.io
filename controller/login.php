@@ -10,7 +10,6 @@
             $resultado = $query;
             if ($resultado->num_rows == 1) {
             $usuario = mysqli_fetch_assoc($resultado);
-            echo($usuario);
             }
             if (password_verify($pass, $usuario['pass_user'])) {
             /*  */
