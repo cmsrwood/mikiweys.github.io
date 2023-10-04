@@ -90,6 +90,4 @@ var ltoggle = document.getElementById('logor');
       window.close(); 
    } 
    /* CERRAR CUENTA */
-  function close (){
-if ()
-  };
+ 
