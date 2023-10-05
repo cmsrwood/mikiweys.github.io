@@ -28,10 +28,7 @@
     <!-- META  -->
     <meta name="description" content="Panadería Mikiweys">
 
-
-    
-</head>
-    
+</head>  
 <body data-bs-theme="light"> 
 <!-- Father -->
 <div class="padre">  
