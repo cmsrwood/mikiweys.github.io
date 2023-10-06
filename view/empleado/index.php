@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empleado | MIKIWEY'S APP</title>
+    <title>Empleado view\empleado\index.php</title>
     <?php  include ('../include/boostrap.php')?>
 </head>
 <body>
@@ -40,7 +40,7 @@
   <div class="card-body">
     <h5 class="card-title">Tu informacion</h5>
     <p class="card-text">Revisa tu informacion.</p>
-    <a href="ventas.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
+    <a href="informacion.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
 
   </div>
 </div>
