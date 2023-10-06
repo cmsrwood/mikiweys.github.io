@@ -7,6 +7,9 @@
     <?php include('../include/boostrap.php'); ?>
 </head>
 <body>
+    <!-- AQUI VA EL CODIGO ↓ -->
+
     
+
 </body>
 </html>
