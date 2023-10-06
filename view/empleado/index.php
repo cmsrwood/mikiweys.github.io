@@ -8,9 +8,9 @@
     <?php  ?>
 </head>
 <body>
+    <?php include('../include/header.php'); ?>
      <div class="container">
-        <h1> ¡ Hola Jose Rafael !</h1>
-        <p>Bienvenido a tu lugar seguro</p>
+       
 
 
 
