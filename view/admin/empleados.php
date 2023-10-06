@@ -1,6 +1,7 @@
 <?php 
   include('../../controller/empleado_subir.php');
   include('../../model/empleados_select_all.php');
+  require('../../controller/verficacion_admin.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

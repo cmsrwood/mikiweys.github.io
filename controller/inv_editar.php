@@ -1,6 +1,5 @@
 <?php
 include ('conexion.php');
-require('verficacion_admin.php');
 if(isset($_POST['modificar'])){
    $id=$_POST['id']; 
    $producto = $_POST['productom'];
