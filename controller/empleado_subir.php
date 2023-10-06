@@ -1,6 +1,5 @@
 <?php
 include('conexion.php');
-session_start();
 if(isset($_POST['agregar'])){
     $nombre = $_POST['nom'];
     $apellido = $_POST['apel'];

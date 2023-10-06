@@ -1,3 +1,6 @@
+<?php 
+  require('../../controller/verficacion_admin.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
