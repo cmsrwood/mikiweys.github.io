@@ -28,10 +28,8 @@
     <!-- META  -->
     <meta name="description" content="Panadería Mikiweys">
 
-
-    
 </head>
-    
+  
 <body data-bs-theme="light"> 
 <!-- Father -->
 <div class="padre">  
