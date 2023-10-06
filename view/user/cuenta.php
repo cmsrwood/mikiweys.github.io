@@ -47,8 +47,6 @@
       <a class="list-group-item-warning list-group-item-action btn btn-warning  d-grid gap-3 poppins d-flex align-content-between my-3" href="#list-item-3"><i class="bi bi-credit-card-2-front "></i> Metodos de pago</a>
       <a class="list-group-item-warning list-group-item-action btn btn-warning  d-grid gap-3 poppins d-flex align-content-between my-3" href="#list-item-4"><i class="bi bi-cart"></i>Carrito</a>
 
-      <a class="list-group-item-warning list-group-item-action btn btn-warning  d-grid gap-3 poppins d-flex align-content-between my-3" href="#list-item-5"><i class="bi bi-geo-alt"> </i> Editar direcciones</a>
-
       <a class="list-group-item-warning list-group-item-action btn btn-warning  d-grid gap-3 poppins d-flex align-content-between my-3" href="#list-item-6"><i class="bi bi-file-earmark-text"> </i> Editar cuenta</a>
 
     </div>
@@ -56,9 +54,12 @@
   <div class="col-9 justify-content-center row">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0" class="d-flex justify-content-center">
 
-    <p class="fs-1 poppins text-warning border-bottom border-warning ">Información personal</p>
+   
  
-      <div id="list-item-1"> <div class="fs-5 my-4">Nombres</div>
+      <div id="list-item-1"> 
+                  <p class="fs-1 poppins text-warning border-bottom border-warning ">Información personal</p>
+        
+                  <div class="fs-5 my-4">Nombres</div>
                   <input type="text" class="form-control" readonly>
 
                   <div class="fs-5 my-4">Apellidos</div>
@@ -118,7 +119,7 @@
 </table>
       </div>
       
-      <div id="list-item-3 row text-center">
+      <div id="list-item-3">
       <p class="fs-1 poppins text-warning border-bottom border-warning ">Metodos de pago</p>
       <div class="row">
         <div class="card col-2 ">
@@ -141,7 +142,7 @@
       </div>
       
       <h4 id="list-item-4">Item 4</h4>
-      <p>...</p>
+      
       <div id="list-item-5"></div>
       <div id="list-item-6">
       <p class="fs-1 poppins text-warning border-bottom border-warning ">Editar cuenta</p>
