@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empleado | MIKIWEY'S APP</title>
     <?php  include ('../include/boostrap.php')?>
-    <?php  ?>
 </head>
 <body>
      <div class="container">
@@ -25,7 +24,7 @@
   <div class="card-body">
     <h5 class="card-title">Horarios</h5>
     <p class="card-text">Aca puedes ver tus horarios semanales.</p>
-    <a href="ventas.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
+    <a href="horario.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
 
   </div>
 </div>
