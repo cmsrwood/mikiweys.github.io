@@ -15,7 +15,7 @@
 
      <div class="card text-center col-5 mx-auto my-4 bg-warning bg-opacity-10 ">
   <div class="card-body">
-    <h5 class="card-title">¡Ventas!</h5>
+    <h5 class="card-title">Ventas</h5>
     <p class="card-text">En este lugar puedes ver todas las ventas realizadas anteriormente.</p>
     <a href="ventas.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
 
@@ -23,7 +23,7 @@
 </div>
 <div class="card text-center col-5  mx-auto  my-4 bg-warning bg-opacity-10">
   <div class="card-body">
-    <h5 class="card-title">¡Horarios!</h5>
+    <h5 class="card-title">Horarios</h5>
     <p class="card-text">Aca puedes ver tus horarios semanales.</p>
     <a href="ventas.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
 
@@ -31,16 +31,16 @@
 </div>
 <div class="card text-center col-5  mx-auto my-4 bg-warning bg-opacity-10">
   <div class="card-body">
-    <h5 class="card-title">¡xd!</h5>
-    <p class="card-text">En este lugar conseguiras todas las ventas.</p>
+    <h5 class="card-title">Registro de compras</h5>
+    <p class="card-text">Aca veras las compras hechas anteriormente.</p>
     <a href="ventas.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
 
   </div>
 </div>
 <div class="card text-center col-5  mx-auto  my-4 bg-warning bg-opacity-10">
   <div class="card-body">
-    <h5 class="card-title">¡Bienvenido!</h5>
-    <p class="card-text">En este lugar conseguiras todas las ventas.</p>
+    <h5 class="card-title">Tu informacion</h5>
+    <p class="card-text">Revisa tu informacion.</p>
     <a href="ventas.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
 
   </div>
