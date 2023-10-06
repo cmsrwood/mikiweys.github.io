@@ -31,7 +31,7 @@
 </div>
 <div class="card text-center col-5  mx-auto my-4 bg-warning bg-opacity-10">
   <div class="card-body">
-    <h5 class="card-title">¡!</h5>
+    <h5 class="card-title">¡xd!</h5>
     <p class="card-text">En este lugar conseguiras todas las ventas.</p>
     <a href="ventas.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
 
