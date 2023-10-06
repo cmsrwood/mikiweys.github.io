@@ -28,10 +28,12 @@
 <body>
   <?php include('../include/header.php'); ?>
  <br>
-  <div class="container d-flex row mt-5  ">
+  <div class="container-fluid justify-content-center row mt-5 ">
     
-  <div class="row mt-5">
-  <div class="col-5 color ">
+  <div class="row mt-5"> 
+    <div class="col-3"></div>
+  <div class="col-3 color fixed-bottom
+  ">
 
   <img src="../../IMG/index/pan.jpg" class=" mt-4 rounded-circle img-fluid" alt="">
             <p class="fs-1 simoneta">Principal</p>
@@ -45,16 +47,19 @@
       <a class="list-group-item-warning list-group-item-action btn btn-warning  d-grid gap-3 poppins d-flex align-content-between my-3" href="#list-item-3"><i class="bi bi-credit-card-2-front "></i> Metodos de pago</a>
       <a class="list-group-item-warning list-group-item-action btn btn-warning  d-grid gap-3 poppins d-flex align-content-between my-3" href="#list-item-4"><i class="bi bi-cart"></i>Carrito</a>
 
-      <a class="list-group-item-warning list-group-item-action btn btn-warning  d-grid gap-3 poppins d-flex align-content-between my-3" href="#list-item-5"><i class="bi bi-geo-alt"> </i> Editar direcciones</a>
-
-      <a class="list-group-item-warning list-group-item-action btn btn-warning  d-grid gap-3 poppins d-flex align-content-between my-3" href="#list-item-5"><i class="bi bi-file-earmark-text"> </i> Editar cuenta</a>
+      <a class="list-group-item-warning list-group-item-action btn btn-warning  d-grid gap-3 poppins d-flex align-content-between my-3" href="#list-item-6"><i class="bi bi-file-earmark-text"> </i> Editar cuenta</a>
 
     </div>
   </div>
-  <div class="col-7 ">
-    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+  <div class="col-9 justify-content-center row">
+    <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0" class="d-flex justify-content-center">
 
-      <div id="list-item-1"> <div class="fs-5 my-4">Nombres</div>
+   
+ 
+      <div id="list-item-1"> 
+                  <p class="fs-1 poppins text-warning border-bottom border-warning ">Información personal</p>
+        
+                  <div class="fs-5 my-4">Nombres</div>
                   <input type="text" class="form-control" readonly>
 
                   <div class="fs-5 my-4">Apellidos</div>
@@ -68,17 +73,21 @@
 
                   <div class="fs-5 my-4">Direcciones</div>
                   <input type="text" class="form-control" readonly>
+                  <a href="#list-item-5"  type="button" class="btn btn-warning mt-5 poppins"> Editar cuenta</a>
          </div>
 
       
       <div id="list-item-2" class="mt-5">
-      <table class="table">
+      <p class="fs-1 poppins text-warning border-bottom border-warning ">Pedidos</p>
+      <table class="table table-bordered border-1">
   <thead>
     <tr class="bnaranja">
       <th scope="col">#</th>
-      <th scope="col"></th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Usuario</th>
+      <th scope="col">Producto</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Precio por unidad</th>
+      <th scope="col">Total</th>
     </tr>
   </thead>
   <tbody>
@@ -87,28 +96,74 @@
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
+      <td>1200</td>
+      <td>121</td>
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>Jacob</td>
       <td>Thornton</td>
       <td>@fat</td>
+      <td>@mdo</td>
+      <td>dsads</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>larry</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+      <td>@mdo</td>
+      <td>adjkasd</td>
     </tr>
   </tbody>
 </table>
       </div>
-      <p>...</p>
-      <h4 id="list-item-3">Item 3</h4>
-      <p>...</p>
+      
+      <div id="list-item-3">
+      <p class="fs-1 poppins text-warning border-bottom border-warning ">Metodos de pago</p>
+      <div class="row">
+        <div class="card col-2 ">
+          <img src="../../IMG/cuenta/descarga.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="card col-2  mx-3">
+          <img src="../../IMG/cuenta/Nequi.jpg" class="img-fluid" alt="">
+        </div>
+
+        <div class="card col-2 ">
+          <img src="../../IMG/cuenta/BColombia.png" class="img-fluid" alt="">
+        </div>
+
+        <div class="card col-2 ms-3 ">
+          <img src="../../IMG/cuenta/Paypal.png " class="img-fluid" alt="">
+        </div>
+
+        </div>
+      </div>
+      
       <h4 id="list-item-4">Item 4</h4>
-      <p>...</p>
+      
       <div id="list-item-5"></div>
-      <div id="list-item-6"></div>
+      <div id="list-item-6">
+      <p class="fs-1 poppins text-warning border-bottom border-warning ">Editar cuenta</p>
+      <div class="fs-5 my-4">Nombres</div>
+      <input type="text" class="form-control">
+
+      <div class="fs-5 my-4">Apellidos</div>
+      <input type="text" class="form-control">
+
+      <div class="fs-5 my-4">Correo electrónico</div>
+      <input type="text" class="form-control">
+
+      <div class="fs-5 my-4">Teléfono</div>
+      <input type="text" class="form-control">
+
+      <div class="fs-5 my-4">Direcciones</div>
+      <input type="text" class="form-control" >
+
+      <button type="button" class="btn btn-warning mt-5">Guardar</button>
+
+      </div>
     </div>
   </div>
 </div>
