@@ -62,7 +62,6 @@
     </thead>
     <tbody>
     <?php foreach($resultado as $producto){ ?>
-      $
       <tr class="text-center">
         <th><?php echo $producto['id_inv']; ?></th>
         <td><img src="../../IMG/inventario/<?php echo $producto['imagen']; ?>" width="120" alt="..."></td>
@@ -132,10 +131,13 @@
               <label  class="fs-5 py-1 ">Categoria</label>
               <select name="cat" id="" class="form-select">
                 <option value="" disabled selected>Categoria...</option>
-                <option value="1">Pan</option>
-                <option value="2">Bebida</option>
-                <option value="3">Pastel</option>
-                <option value="4">Varios</option>
+                <?php
+                  $cat="SELECT * FROM categorias";
+                  $resul=mysqli_query($db,$cat);
+                  while($valores = mysqli_fetch_array($resul)){
+                    echo '<option value="'.$valores['categoria'].'">'.$valores['categoria']. '</option>';
+                  }
+                ?>
               </select>
             </div>
             <div class="">
