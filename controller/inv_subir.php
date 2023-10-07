@@ -12,7 +12,7 @@ if(isset($_POST['agregar'])){
         $tipo = $_FILES['imagen']['type'];
         $temp  = $_FILES['imagen']['tmp_name'];
 
-       if( !((strpos($tipo,'gif') || strpos($tipo,'jpeg') || strpos($tipo,'jpg') || strpos($tipo,'png') ))){
+       if( !((strpos($tipo,'jpeg') || strpos($tipo,'jpg') || strpos($tipo,'png') ))){
           $_SESSION['mensaje'] = 'Solo se permiten archivos jpeg, jpg, gif, webp y png';
           $_SESSION['tipo'] = 'danger';
           header('location: ../view/admin/inventario.php');
