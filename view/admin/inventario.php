@@ -55,20 +55,26 @@
         <th scope="col">Precio por unidad</th>
         <th scope="col">Tipo</th>
         <th scope="col">Cantidad</th>
+        <th scope="col">Total</th>
         <th scope="col">Editar</th>
         <th scope="col">Eliminar</th>
       </tr>
     </thead>
     <tbody>
     <?php foreach($resultado as $producto){ ?>
+      $
       <tr class="text-center">
         <th><?php echo $producto['id_inv']; ?></th>
         <td><img src="../../IMG/inventario/<?php echo $producto['imagen']; ?>" width="120" alt="..."></td>
         <td><?php echo $producto['producto']; ?></td>
         <td><?php echo $producto['descrip']; ?></td>
-        <td><?php echo $producto['preuni']; ?></td>
+        <td><?php
+         echo number_format ($producto['preuni']); ?></td>
         <td><?php echo $producto['cat']; ?></td>
         <td><?php echo $producto['cantidad']; ?></td>
+        <td><?php $total=$producto['preuni']*$producto['cantidad'];
+         echo number_format($total); 
+         ?></td>
         <td><a href="inventario_modificar.php?id=<?=$producto['id_inv']?>" type="button" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a></td>
         <td><a href="../../controller/inv_eliminar.php?id=<?=$producto['id_inv']?>" type="button" class="btn btn-danger"><i class="bi bi-trash"></i></a></td>
       </tr>

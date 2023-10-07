@@ -55,19 +55,19 @@ if ($producto= mysqli_fetch_array($result)){
           <div class="form-group row">
             <div class="col-6">
               <label  class="fs-5 py-1 ">Id del producto</label>
-              <input class="form-control" type="text" readonly name="id" value="<?php echo $producto['id_inv'] ?>">
+              <input class="form-control" type="text" readonly name="id" value="<?php echo $producto['id_inv']; ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Nombre del producto</label>
-              <input class="form-control" type="text" name="productom" value="<?php echo $producto['producto'] ?>">
+              <input class="form-control" type="text" name="productom" value="<?php echo $producto['producto'];?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Descripción</label>
-              <input class="form-control" type="text" name="descripm" value="<?php echo $producto['descrip'] ?>">
+              <input class="form-control" type="text" name="descripm" value="<?php echo $producto['descrip']; ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1" >Precio. unidad</label>
-              <input  class="form-control" type="number" name="preunim" value="<?php echo $producto['preuni'] ?>">
+              <input  class="form-control" type="number" step="50" name="preunim" value="<?php echo ($producto['preuni']); ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Categoria</label>
