@@ -63,7 +63,7 @@
                   <input type="text" class="form-control" readonly>
 
                   <div class="fs-5 my-4">Apellidos</div>
-                  <input type="text" class="form-control" readonly>
+                  <input type="text" class="form-control" readonly value="<?php echo($_SESSION['apel']); ?>">
 
                   <div class="fs-5 my-4">Correo electrónico</div>
                   <input type="text" class="form-control" readonly>
