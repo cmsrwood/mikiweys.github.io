@@ -58,7 +58,7 @@
  
       <div id="list-item-1"> 
                   <p class="fs-1 poppins text-warning border-bottom border-warning ">Información personal</p>
-        
+      
                   <div class="fs-5 my-4">Nombres</div>
                   <input type="text" class="form-control" readonly>
 
