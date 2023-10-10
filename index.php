@@ -92,7 +92,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="view/login.php">Ingresa</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="view/user/registro.php">Tu perfil</a></li>
+              <li><a class="dropdown-item" href="view/user/cuenta.php">Tu perfil</a></li>
               <li><a class="dropdown-item" href="view/user/carrito.php">Tu carrito</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesión </a></li>
