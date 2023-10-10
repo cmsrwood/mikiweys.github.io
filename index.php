@@ -462,7 +462,6 @@
   </div>
 </div> 
 
-<!-- idk -->
 <!-- FOOTER -->
 
 <footer class="bnaranja text-center text-white container-fluid h-100">
