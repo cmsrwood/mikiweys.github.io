@@ -3,7 +3,7 @@
   <div class="container-fluid d-flex ">
      
     <!-- LOGO -->
-        <a class="navbar-brand containerzoom giroi " href="../../index.php">
+        <a class="navbar-brand containerzoom giroi " href="../admin/index.php">
           <img id="logo" src="../../IMG/todo/logo.png" alt="" class="img-fluid " width="100">
         </a>
      <!-- OFFCANVAS BTN -->
