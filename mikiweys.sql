@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-09-2023 a las 03:54:54
+-- Tiempo de generación: 12-10-2023 a las 01:29:56
 -- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.0.28
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `mikiweys`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `categorias`
+--
+
+CREATE TABLE `categorias` (
+  `id_cat` int(11) NOT NULL,
+  `categoria` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `categorias`
+--
+
+INSERT INTO `categorias` (`id_cat`, `categoria`) VALUES
+(1, 'Bebidas'),
+(2, 'Pan'),
+(3, 'Otros');
 
 -- --------------------------------------------------------
 
@@ -58,6 +78,13 @@ CREATE TABLE `empleados` (
   `sal` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `empleados`
+--
+
+INSERT INTO `empleados` (`id_emp`, `nom`, `apel`, `fecing`, `cont`, `tel`, `sal`) VALUES
+(4, 'Jesucristo', 'De Nazareth', '0011-11-11', 'Jerusalen', '3138975212', '23');
+
 -- --------------------------------------------------------
 
 --
@@ -73,13 +100,6 @@ CREATE TABLE `inventario` (
   `cat` varchar(60) NOT NULL,
   `cantidad` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `inventario`
---
-
-INSERT INTO `inventario` (`id_inv`, `imagen`, `producto`, `descrip`, `preuni`, `cat`, `cantidad`) VALUES
-(9, 'pan.jpg', 'Otro pan', 'mucho mucho ', '400', 'aaa', '344');
 
 -- --------------------------------------------------------
 
@@ -121,8 +141,21 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_user`, `name_user`, `apel_user`, `pass_user`, `tel_user`, `id_doc`, `num_documento_user`, `email_user`, `dir_user`, `rol_user`) VALUES
+(3, 'Dilan Santiago', 'Lopez Romero', '$2y$10$iGwhG7tnjU5DbG3dwk70c.zuZjaVBF2CdspZnfUqhjiFfe4ZlDFCu', 2147483647, 1, '1028663948', 'dilanfantas@gmail.com', 'calle43b sur', '1');
+
+--
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id_cat`);
 
 --
 -- Indices de la tabla `documento`
@@ -161,22 +194,28 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `id_cat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `id_emp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_emp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `inventario`
 --
 ALTER TABLE `inventario`
-  MODIFY `id_inv` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_inv` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
