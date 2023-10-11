@@ -84,8 +84,8 @@
   <thead>
     <tr class="bnaranja">
       <th scope="col">#</th>
-      <th scope="col">Usuario</th>
-      <th scope="col">Producto</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Productos</th>
       <th scope="col">Cantidad</th>
       <th scope="col">Precio por unidad</th>
       <th scope="col">Total</th>
@@ -141,28 +141,27 @@
 
         </div>
       </div>
-      
-      <h4 id="list-item-4">Item 4</h4>
-      
-      <div id="list-item-5"></div>
+      <div id="list-item-5" class=" mt-4"></div>
       <div id="list-item-6">
       <p class="fs-1 poppins text-warning border-bottom border-warning ">Editar cuenta</p>
+      <form action="../../controller/cuenta_editar.php" method="POST">
       <div class="fs-5 my-4">Nombres</div>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" value="<?php echo ($_SESSION['nom']) ?>" name="nomb">
 
       <div class="fs-5 my-4">Apellidos</div>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control"value="<?php echo ($_SESSION['apel']) ?>" name="apel">
 
       <div class="fs-5 my-4">Correo electrónico</div>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" value="<?php echo ($_SESSION['mail']) ?>" name="corr">
 
       <div class="fs-5 my-4">Teléfono</div>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" value="<?php echo ($_SESSION['tel']) ?>" name="tele">
 
       <div class="fs-5 my-4">Direcciones</div>
-      <input type="text" class="form-control" >
+      <input type="text" class="form-control" value="<?php echo ($_SESSION['dir']) ?>" name="dire">
 
-      <button type="button" class="btn btn-warning mt-5">Guardar</button>
+      <button type="submit" class="btn btn-warning mt-5" name="modificar">Guardar</button>
+      </form>
 
       </div>
     </div>
