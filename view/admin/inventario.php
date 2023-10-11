@@ -36,7 +36,7 @@
 <body class="bg-foto">
 <?php include('../include/header_admin.php'); ?>
 
-  <div class="container my-5 p-5 shadow color">
+  <div class=" my-5 p-5 shadow color">
     <nav class="navbar navbar-light d-flex">
       <h1>Inventario</h1>
       <form class="form-inline d-flex">
@@ -61,7 +61,7 @@
       </tr>
     </thead>
     <tbody>
-    <?php foreach($resultado as $producto){ ?>
+    <?php foreach($inventario as $producto){ ?>
       <tr class="text-center">
         <th><?php echo $producto['id_inv']; ?></th>
         <td><img src="../../IMG/inventario/<?php echo $producto['imagen']; ?>" width="120" alt="..."></td>

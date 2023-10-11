@@ -75,8 +75,8 @@
     }
         ?>
         <div class="col-12">
-          <p>No tienes sesion aun</p>
-          <a href="../user/registro.php"></a>
+          <p>¿No tienes sesion aun? <a href="user/registro.php">Registrate aqui</a></p>
+          
         </div>
       </div>
     </div>

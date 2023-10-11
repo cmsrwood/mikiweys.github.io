@@ -58,7 +58,7 @@
       </tr>
     </thead>
     <tbody>
-    <?php foreach($resultado as $empleado){ ?>
+    <?php foreach($empleados as $empleado){ ?>
       <tr class="text-center">
         <th><?php echo $empleado['id_emp']; ?></th>
         <td><?php echo $empleado['nom']; ?></td>

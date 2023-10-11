@@ -54,7 +54,7 @@
                 <span class="off">Mi cuenta</span>  
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="login.php">Ingresa</a></li>
+                <li><a class="dropdown-item" href="../login.php">Ingresa</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="cuenta.php">Tu perfil</a></li>
                 <li><a class="dropdown-item" href="carrito.php">Tu carrito</a></li>
