@@ -18,15 +18,6 @@ if(isset($_POST['modificar'])){
         //MODIFICAR
         $modificar = "UPDATE usuarios SET name_user = '$nombre', apel_user = '$apellido',tel_user = '$telefono', email_user = '$correo', dir_user = '$direccion'  WHERE id_user = '$id'";
         $resultado = mysqli_query($db,$modificar); 
-        $query = $db->query("SELECT * FROM usuarios WHERE email_user='$mail'");
-        $resultado = $query;
-        $usuario = mysqli_fetch_assoc($resultado);
-        $_SESSION['id'] = $usuario['id_user'];
-        $_SESSION['nom'] = $usuario['name_user'];
-        $_SESSION['apel'] = $usuario['apel_user'];
-        $_SESSION['tel'] = $usuario['tel_user'];    
-        $_SESSION['mail'] = $usuario['email_user'];
-        $_SESSION['dir'] = $usuario['dir_user'];
         
         /* SUBIDO */
         if ($resultado){
