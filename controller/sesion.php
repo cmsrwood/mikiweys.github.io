@@ -1,6 +1,7 @@
 <?php 
 require('login.php');
-$sql= "SELECT * FROM usuarios WHERE id_user= '$usuario['rol_user']'";
+$id=$_SESSION['id'];
+$sql= "SELECT * FROM usuarios WHERE id_user= '$id'";
 $query =mysqli_query($db,$sql);
 $resultado = $query;
 $usuario = mysqli_fetch_assoc($resultado);
@@ -12,3 +13,4 @@ $_SESSION['doc'] = $usuario['id_doc'];
 $_SESSION['mail'] = $usuario['email_user'];
 $_SESSION['rol'] = $usuario['rol_user'];
 $_SESSION['dir'] = $usuario['dir_user'];
+?>

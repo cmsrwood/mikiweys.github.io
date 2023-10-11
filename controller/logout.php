@@ -1,5 +1,5 @@
 <?php 
-require('login.php');
+require('sesion.php');
 if(isset($_POST['logout'])){
     session_destroy();
     echo "<script> alert('Sesión cerrada') </script>";

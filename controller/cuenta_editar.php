@@ -1,7 +1,7 @@
 <?php
 include ('conexion.php');
 if(isset($_POST['modificar'])){
-    require('login.php');
+    require('sesion.php');
     $id= $_SESSION['id'];
    $nombre = $_POST['nomb'];
    $apellido = $_POST['apel'];
