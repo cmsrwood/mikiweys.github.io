@@ -60,7 +60,7 @@
                   $doc="SELECT * FROM documento";
                   $resul=mysqli_query($db,$doc);
                   while($valores = mysqli_fetch_array($resul)){
-                    echo '<option value="'.$valores['documento'].'">'.$valores['documento']. '</option>';
+                    echo '<option value="'.$valores['id_doc'].'">'.$valores['documento']. '</option>';
                   }
                 ?>
           </select>
