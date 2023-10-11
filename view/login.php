@@ -40,27 +40,18 @@
     <div class="col p-3 simoneta ">
       <div class="row ">
         <div class="col-12"><h1 class="my-4  fs-2">Inicio de sesión</h1></div>
-        <?php include('../controller/login.php');
-        if (isset($_SESSION['maile'])) {
-          echo '<div class="alert alert-danger text-center my-3">' . $_SESSION['maile'] . '</div>';
-          unset($_SESSION['maile']); 
-      }
-      if (isset($_SESSION['debes'])) {
-        echo '<div class="alert alert-danger text-center my-3">' . $_SESSION['debes'] . '</div>';
-        unset($_SESSION['debes']); 
-    }
-        ?>
+        
       <form action="../controller/login.php" method="POST">
         <div class="mb-2 col-12">
-        <div class="mb-2 col-12">
+        <div class="my-2 col-12">
           <label class="form-label">Correo electrónico</label>
           <input type="email" class="form-control  cafe" name="mail">
         </div>
-        <div class="mb-2 col-12">
+        <div class="my-2 col-12">
           <label class="form-label">Contraseña</label>
           <input type="password" class="form-control  cafe" name="pass" autocomplete="on">
         </div>
-        <div class="mb-2 col-12">
+        <div class="my-5 col-12 pt-5">
           <input type="submit" class="form-control hovercafe bnaranja" value="Iniciar sesión" name="iniciar">
         </div>
       </div>
@@ -73,12 +64,20 @@
         <a class="my-5 col-12 pt-5 w-75" href="../index.php">
           <img src="../IMG/todo/logo.png" alt="" class="img-fluid w-50">
         </a>
-          <div class="facebook my-3">
-            <button class="btn btn-primary w-100"><i class="bi bi-facebook pe-1"></i> Ingresa con facebook</button>
-          </div>
-          <div class="google my-3">
-            <button class="btn btn-danger w-100"><i class="bi bi-google pe-2"></i> Ingresa con Google</button>
-          </div>
+        <?php include('../controller/login.php');
+        if (isset($_SESSION['maile'])) {
+          echo '<div class="alert alert-danger text-center">' . $_SESSION['maile'] . '</div>';
+          unset($_SESSION['maile']); 
+      }
+      if (isset($_SESSION['debes'])) {
+        echo '<div class="alert alert-danger text-center">' . $_SESSION['debes'] . '</div>';
+        unset($_SESSION['debes']); 
+    }
+        ?>
+        <div class="col-12">
+          <p>No tienes sesion aun</p>
+          <a href="../user/registro.php"></a>
+        </div>
       </div>
     </div>
 </div>
