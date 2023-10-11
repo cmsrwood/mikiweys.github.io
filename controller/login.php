@@ -10,6 +10,7 @@
             $resultado = $query;
             if ($resultado->num_rows == 1) {
             $usuario = mysqli_fetch_assoc($resultado);
+            $_SESSION['id'] = $usuario['id_user'];
             }
             if (password_verify($pass, $usuario['pass_user'])) {
             /*  */
@@ -40,15 +41,4 @@
         }
 
 
-        $query = $db->query("SELECT * FROM usuarios WHERE email_user='$mail'");
-        $resultado = $query;
-        $_SESSION['id'] = $usuario['id_user'];
-        $_SESSION['nom'] = $usuario['name_user'];
-        $_SESSION['apel'] = $usuario['apel_user'];
-        $_SESSION['tel'] = $usuario['tel_user'];    
-        $_SESSION['id_doc'] = $usuario['num_documento_user'];
-        $_SESSION['doc'] = $usuario['id_user'];
-        $_SESSION['mail'] = $usuario['email_user'];
-        $_SESSION['rol'] = $usuario['rol_user'];
-        $_SESSION['dir'] = $usuario['dir_user'];
 ?>
