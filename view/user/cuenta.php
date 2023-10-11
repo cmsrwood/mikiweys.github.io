@@ -60,20 +60,20 @@
                   <p class="fs-1 poppins text-warning border-bottom border-warning ">Información personal</p>
       
                   <div class="fs-5 my-4">Nombres</div>
-                  <input type="text" class="form-control" readonly>
+                  <input type="text" class="form-control" readonly value="<?php echo ($_SESSION['nom']) ?>">
 
                   
                   <div class="fs-5 my-4">Apellidos</div>
                   <input type="text" class="form-control" readonly value="<?php echo($_SESSION['apel']); ?>">
 
                   <div class="fs-5 my-4">Correo electrónico</div>
-                  <input type="text" class="form-control" readonly>
+                  <input type="text" class="form-control" readonly value="<?php echo($_SESSION['mail']); ?>">
 
                   <div class="fs-5 my-4">Teléfono</div>
-                  <input type="text" class="form-control" readonly>
+                  <input type="text" class="form-control" readonly value="<?php echo($_SESSION['tel']); ?>">
 
                   <div class="fs-5 my-4">Direcciones</div>
-                  <input type="text" class="form-control" readonly>
+                  <input type="text" class="form-control" readonly value="<?php echo($_SESSION['dir']); ?>">
                   <a href="#list-item-5"  type="button" class="btn btn-warning mt-5 poppins"> Editar cuenta</a>
          </div>
 

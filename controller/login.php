@@ -21,6 +21,7 @@
                 $_SESSION['doc'] = $usuario['id_user'];
                 $_SESSION['mail'] = $usuario['email_user'];
                 $_SESSION['rol'] = $usuario['rol_user'];
+                $_SESSION['rol'] = $usuario['dir_user'];
 
                 switch ($usuario['rol_user']){
                     case '1':
