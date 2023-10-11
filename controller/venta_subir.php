@@ -7,11 +7,11 @@ if(isset($_POST['agregar'])){
     $preuni = $_POST['preuni'];
     $total = $_POST['total'];
 
-    if(!empty($_POST['fecha']) && !empty($_POST['produ']) && !empty($_POST['cant']) && !empty($_POST['preuni']) && !empty($_POST['total']) & !empty($_POST['sal'])){
-        include_once('../model/empleado_nuevo.php');
+    if(!empty($_POST['fecha']) && !empty($_POST['produ']) && !empty($_POST['cant']) && !empty($_POST['preuni']) && !empty($_POST['total']) ){
+       
 
          if($resultado){
-            $_SESSION['mensaje'] = 'Empleado agregado exitosamente!';
+            $_SESSION['mensaje'] = 'Venta agregada exitosamente!';
             $_SESSION['tipo'] = 'success';
             header('location:../view/admin/empleados.php');
          }else{
