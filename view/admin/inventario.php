@@ -135,7 +135,7 @@
                   $cat="SELECT * FROM categorias";
                   $resul=mysqli_query($db,$cat);
                   while($valores = mysqli_fetch_array($resul)){
-                    echo '<option value="'.$valores['categoria'].'">'.$valores['categoria']. '</option>';
+                    echo '<option value="'.$valores['id_cat'].'">'.$valores['categoria']. '</option>';
                   }
                 ?>
               </select>
