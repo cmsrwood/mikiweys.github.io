@@ -41,10 +41,7 @@
       <div class="row ">
         <div class="col-12"><h1 class="my-4  fs-2">Regístrate</h1></div>
         <?php include('../../controller/registrar.php');
-      if (isset($_SESSION['mailr'])) {
-        echo '<div class="alert alert-danger text-center my-3">' . $_SESSION['mailr'] . '</div>';
-        unset($_SESSION['mailr']); 
-      }
+      
         ?>
       <form action="../../controller/registrar.php" method="post">
         <div class="mb-2 col-12">
@@ -59,11 +56,13 @@
           <label class="form-label">Tipo de documento</label>
           <br>
           <select name="id_doc" id="documento" class="form-select">
-            <option disabled selected class="form-select">Tipo de documento...</option>
-            <option value="1" class="form-select">Cédula de ciudadanía</option>
-            <option value="2" class="form-select">Cédula de Extranjería</option>
-            <option value="3" class="form-select">Tarjeta de Identidad</option>
-            <option value="4" class="form-select">Pasaporte</option>
+          <?php
+                  $doc="SELECT * FROM documento";
+                  $resul=mysqli_query($db,$doc);
+                  while($valores = mysqli_fetch_array($resul)){
+                    echo '<option value="'.$valores['documento'].'">'.$valores['documento']. '</option>';
+                  }
+                ?>
           </select>
         </div>
         <div class="mb-2 col-12">
@@ -110,11 +109,14 @@
         <a class="my-5 col-12 pt-5" href="../../index.php">
           <img src="../../IMG/todo/logo.png" alt="" class="img-fluid w-50">
         </a>
-          <div class="facebook my-3">
-            <button class="btn btn-primary w-100"><i class="bi bi-facebook pe-1"></i> Ingresa con facebook</button>
-          </div>
-          <div class="google my-3">
-            <button class="btn btn-danger w-100"><i class="bi bi-google pe-2"></i> Ingresa con Google</button>
+        <?php 
+          if (isset($_SESSION['mailr'])) {
+        echo '<div class="alert alert-danger text-center my-3">' . $_SESSION['mailr'] . '</div>';
+        unset($_SESSION['mailr']); 
+      }
+      ?>
+          <div class=" my-3">
+            <p>¿Ya tienes cuenta? <br> <a href="../login.php" class="btn btn-warning mt-2">Inicia sesion</a></p>
           </div>
       </div>
     </div>

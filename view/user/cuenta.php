@@ -1,3 +1,5 @@
+<?php include('../../controller/verificacion_user.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,9 +33,7 @@
   <div class="container-fluid justify-content-center row mt-5 ">
     
   <div class="row mt-5"> 
-    <div class="col-3"></div>
-  <div class="col-3 color fixed-bottom
-  ">
+  <div class="col-3 color">
 
   <img src="../../IMG/index/pan.jpg" class=" mt-4 rounded-circle img-fluid" alt="">
             <p class="fs-1 simoneta">Principal</p>
@@ -58,12 +58,13 @@
  
       <div id="list-item-1"> 
                   <p class="fs-1 poppins text-warning border-bottom border-warning ">Información personal</p>
-        
+      
                   <div class="fs-5 my-4">Nombres</div>
                   <input type="text" class="form-control" readonly>
 
+                  
                   <div class="fs-5 my-4">Apellidos</div>
-                  <input type="text" class="form-control" readonly>
+                  <input type="text" class="form-control" readonly value="<?php echo($_SESSION['apel']); ?>">
 
                   <div class="fs-5 my-4">Correo electrónico</div>
                   <input type="text" class="form-control" readonly>

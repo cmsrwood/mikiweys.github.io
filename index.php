@@ -92,7 +92,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="view/login.php">Ingresa</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="view/user/registro.php">Tu perfil</a></li>
+              <li><a class="dropdown-item" href="view/user/cuenta.php">Tu perfil</a></li>
               <li><a class="dropdown-item" href="view/user/carrito.php">Tu carrito</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesión </a></li>
@@ -452,6 +452,7 @@
           </div>
         </main>
 <!-- TOAST-->
+
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
   <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header shadow bg-white align-items-center">
@@ -462,7 +463,6 @@
   </div>
 </div> 
 
-<!-- idk -->
 <!-- FOOTER -->
 
 <footer class="bnaranja text-center text-white container-fluid h-100">

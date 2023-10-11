@@ -55,6 +55,7 @@
         <th scope="col">Precio por unidad</th>
         <th scope="col">Tipo</th>
         <th scope="col">Cantidad</th>
+        <th scope="col">Total</th>
         <th scope="col">Editar</th>
         <th scope="col">Eliminar</th>
       </tr>
@@ -66,9 +67,13 @@
         <td><img src="../../IMG/inventario/<?php echo $producto['imagen']; ?>" width="120" alt="..."></td>
         <td><?php echo $producto['producto']; ?></td>
         <td><?php echo $producto['descrip']; ?></td>
-        <td><?php echo $producto['preuni']; ?></td>
+        <td><?php
+         echo number_format ($producto['preuni']); ?></td>
         <td><?php echo $producto['cat']; ?></td>
         <td><?php echo $producto['cantidad']; ?></td>
+        <td><?php $total=$producto['preuni']*$producto['cantidad'];
+         echo number_format($total); 
+         ?></td>
         <td><a href="inventario_modificar.php?id=<?=$producto['id_inv']?>" type="button" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a></td>
         <td><a href="../../controller/inv_eliminar.php?id=<?=$producto['id_inv']?>" type="button" class="btn btn-danger"><i class="bi bi-trash"></i></a></td>
       </tr>
@@ -126,10 +131,13 @@
               <label  class="fs-5 py-1 ">Categoria</label>
               <select name="cat" id="" class="form-select">
                 <option value="" disabled selected>Categoria...</option>
-                <option value="1">Pan</option>
-                <option value="2">Bebida</option>
-                <option value="3">Pastel</option>
-                <option value="4">Varios</option>
+                <?php
+                  $cat="SELECT * FROM categorias";
+                  $resul=mysqli_query($db,$cat);
+                  while($valores = mysqli_fetch_array($resul)){
+                    echo '<option value="'.$valores['categoria'].'">'.$valores['categoria']. '</option>';
+                  }
+                ?>
               </select>
             </div>
             <div class="">

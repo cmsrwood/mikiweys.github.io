@@ -57,7 +57,7 @@
         <div class="card-body">
           <h5 class="card-title"><?php echo $producto['producto']; ?></h5>
           <p class="card-text"><?php echo $producto['preuni']; ?></p>
-          <p class="card-text">Descripción del producto.</p>
+          <p class="card-text"><?php echo $producto['id_inv'];?></p>
           <a href="producto.php?id=<?=$producto['id_inv']?>" class="btn bordenaranja naranja bhovernaranja">Comprar</a>
         </div>
       </div>
