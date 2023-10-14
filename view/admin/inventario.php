@@ -1,5 +1,6 @@
 <?php 
   require('../../controller/verificacion_admin.php');
+  include('../../controller/inv_subir.php');
   
 ?>
 <?php 
@@ -99,14 +100,15 @@ else{
 <div class="row justify-content-center">
 
   <div class="col row p-3"> <button type="button" class="btn btn-success w-25" data-bs-toggle="modal" data-bs-target="#subir"><i class="bi bi-arrow-bar-up pe-2"></i>Subir</button> </div>
-  <?php if(isset($_SESSION['alerta'])){ ?>
+  <?php
+  if(isset($_SESSION['alerta'])){ ?>
     <div class="row justify-content-end fixed-bottom">
           <div class="alert alert-<?php echo $_SESSION['tipo'] ?> alert-dismissible fade show  w-25 " role="alert">
          <strong><?php echo $_SESSION['alerta']; ?></strong> 
          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
      </button>
        </div>
-          <?php  } ?>
+          <?php  unset($_SESSION['alerta']);} ?>
           </div>
 <!-- Modal -->
 <div class="modal fade" id="subir" tabindex="-1" aria-hidden="true">
