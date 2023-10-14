@@ -1,6 +1,6 @@
 <?php 
-  include('../../controller/venta_subir.php');
-  include('../../model/inventario_select_all.php');
+  require('../../controller/verificacion_admin.php');
+  include('../../controller/inventario_buscar.php');
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ventas | MIKIWEY'S APP</title>
+  <title>Inventario | MIKIWEY'S APP</title>
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&family=Simonetta&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,13 +32,15 @@
   <!-- META  -->
   <meta name="description" content="Panadería Mikiweys">
 </head>
-<body class="">
-  <div class="container my-5 p-5 shadow color">
+<body class="bg-foto">
+<?php include('../include/header_admin.php'); ?>
+
+  <div class=" my-5 p-5 shadow color">
     <nav class="navbar navbar-light d-flex">
       <h1>Inventario</h1>
-      <form class="form-inline d-flex">
-        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn mx-3"><i class="bi bi-search"></i></button>
+      <form action="../../controller/inventario_buscar.php" method="POST" class="form-inline d-flex">
+        <input name="buscador" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+        <input class="btn btn-warning" value="Buscar"  type="submit" name="buscar">
    </form>
     </nav>
 <div class="table-responsive">
@@ -46,21 +48,28 @@
     <thead>
       <tr class="bnaranja" >
         <th scope="col">id</th>
-        <th scope="col" class="" >Fecha</th>
+        <th scope="col" class="" >Imagen</th>
         <th scope="col" class="" >Producto</th>
+        <th scope="col" class="" >Descripción</th>
+        <th scope="col">Precio por unidad</th>
+        <th scope="col">Categoria</th>
         <th scope="col">Cantidad</th>
         <th scope="col">Total</th>
-        <th scope="col">Eliminar</th>   
+        <th scope="col">Editar</th>
+        <th scope="col">Eliminar</th>
       </tr>
     </thead>
     <tbody>
-    <?php foreach($resultado as $venta){ ?>
+    <?php foreach($inventario as $producto){ ?>
       <tr class="text-center">
-        <th><?php echo $venta['id_venta']; ?></th>
-        <td><?php echo $venta['fecha']; ?></td>
-        <td><?php echo $producto['productos']; ?></td>
+        <th><?php echo $producto['id_inv']; ?></th>
+        <td><img src="../../IMG/inventario/<?php echo $producto['imagen']; ?>" width="120" alt="..."></td>
+        <td><?php echo $producto['producto']; ?></td>
+        <td><?php echo $producto['descrip']; ?></td>
+        <td><?php
+         echo number_format ($producto['preuni']); ?></td>
+        <td><?php echo $producto['cat']; ?></td>
         <td><?php echo $producto['cantidad']; ?></td>
-        <td><?php echo $producto['preuni']; ?></td>
         <td><?php $total=$producto['preuni']*$producto['cantidad'];
          echo number_format($total); 
          ?></td>
@@ -83,7 +92,7 @@
          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
      </button>
        </div>
-          <?php unset($_SESSION['alerta']); } ?>
+          <?php  } ?>
           </div>
 <!-- Modal -->
 <div class="modal fade" id="subir" tabindex="-1" aria-hidden="true">
@@ -97,7 +106,13 @@
       <div class="container p-5 text-center">
     <div class="row">
        <div class="col row">
-         <form action="../../controller/venta_subir.php" method="post" enctype="multipart/form-data">
+         <form action="../../controller/inv_subir.php" method="post" enctype="multipart/form-data">
+          <div class="form-group">
+              <label  class="fs-5 pb-2">Selecciona una Imagen</label>
+              <div class="input-group">
+                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagen">
+              </div>
+          </div>
           <div class="form-group row">
             <div class="">
               <label  class="fs-5 py-1 ">Nombre del producto</label>
@@ -109,7 +124,7 @@
             </div>
             <div class="">
               <label  class="fs-5 py-1" >Precio. unidad</label>
-              <input  class="form-control" type="number" name="preuni" >
+              <input  class="form-control" type="number" name="preuni" step="50">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Categoria</label>
@@ -138,7 +153,7 @@
       </div>
       <div class="modal-footer align-items-center justify-content-around">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <input type="submit" value="Guardar" class="btn btn-danger my-5" name="agregar">
+        <input type="submit" value="Guardar" class="btn btn-warning my-5" name="agregar">
       </div>
       </form>
     </div>
