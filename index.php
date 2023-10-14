@@ -242,11 +242,11 @@
                     <img src="IMG/inventario/<?php echo $producto['imagen']; ?>" class="card-img-top " alt="...">
                   </div>
                   <div class="card-body row align-items-center ">
-                    <div class="w-50">
+                    <div class="w-75">
                       <h5 class="card-title"><?php echo $producto['producto']; ?></h5>
                       <p class="card-text">$<?php echo $producto['preuni']; ?></p>
                     </div>
-                    <div class="w-50 text-end">
+                    <div class="w-25 text-end">
                       <a href="#inicio" id="liveToastBtn" class="btn bordenaranja naranja bhovernaranja">
                         <i class="bi bi-cart"></i>
                       </a>
@@ -256,6 +256,10 @@
               </div>
           <?php  } ?>
             <!-- CATEGORÍAS -->
+            <?php $i = 0;
+                foreach ($inventario as $producto){
+                    if(++$i > 8) break;
+                ?>
             <div class="row align-items-start mb-5 pb-5">
                 <h2 class="naranja simoneta border-bottom border-warning border-2 mb-4 text-center">Categorías</h2>   
                 <!--  -->
@@ -263,7 +267,7 @@
                   <div class="card m-auto shadow" id="card">
                     <div class="position-relative">
                       <a href="">
-                        <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
+                        <img src="IMG/categorias/pan.jpg" class="card-img-top " alt="...">
                       </a>
                     </div>
                     <div class="card-body row align-items-center">
@@ -273,6 +277,7 @@
                     </div>
                   </div>
                 </div>
+                <?php  } ?>
                 <!--  -->
                 <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
                   <div class="card m-auto shadow" id="card">
