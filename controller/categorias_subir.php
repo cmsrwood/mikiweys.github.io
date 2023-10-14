@@ -1,5 +1,5 @@
 <?php
-include('conexion.php');
+include('login.php');
 if(isset($_POST['agregar'])){
     $imagen = $_FILES['imagen']['name'];
     $categoria = $_POST['categoria'];

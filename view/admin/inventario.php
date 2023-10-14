@@ -1,7 +1,5 @@
 <?php 
-  require('../../controller/verificacion_admin.php');
-  include('../../controller/inv_subir.php');
-  
+  require('../../controller/verificacion_admin.php');  
 ?>
 <?php 
 require('../../controller/conexion.php');
@@ -103,12 +101,12 @@ else{
   <?php
   if(isset($_SESSION['alerta'])){ ?>
     <div class="row justify-content-end fixed-bottom">
-          <div class="alert alert-<?php echo $_SESSION['tipo'] ?> alert-dismissible fade show  w-25 " role="alert">
+          <div class="alert alert-<?php echo $_SESSION['tipo']?> alert-dismissible fade show  w-25 " role="alert">
          <strong><?php echo $_SESSION['alerta']; ?></strong> 
          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
      </button>
        </div>
-          <?php  unset($_SESSION['alerta']);} ?>
+          <?php unset($_SESSION['alerta']);} ?>
           </div>
 <!-- Modal -->
 <div class="modal fade" id="subir" tabindex="-1" aria-hidden="true">

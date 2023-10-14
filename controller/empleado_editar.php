@@ -1,5 +1,5 @@
 <?php
-include ('conexion.php');
+include('login.php');
 if(isset($_POST['modificar'])){
    $id=$_POST['id']; 
    $nombre = $_POST['nom'];

@@ -1,5 +1,5 @@
 <?php
-include ('conexion.php');
+include('login.php');
     $id =$_GET['id'];
     $eliminar = "DELETE FROM empleados WHERE id_emp='$id'";
     $resultado = mysqli_query($db,$eliminar); 

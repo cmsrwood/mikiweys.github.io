@@ -1,5 +1,5 @@
 <?php
-include ('conexion.php');
+include('login.php');
     $id =$_GET['id'];
     $eliminar = "DELETE FROM inventario WHERE id_inv='$id'";
     $resultado = mysqli_query($db,$eliminar); 
