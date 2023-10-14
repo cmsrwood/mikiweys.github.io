@@ -31,20 +31,28 @@
 <?php include('../include/header_admin.php'); ?>
   <div class="container my-5 p-5 shadow color">
     <nav class="navbar navbar-light d-flex">
-      <h1>Empleados</h1>
+      <h1>Categorias</h1>
       <form class="form-inline d-flex">
         <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
         <button class="btn mx-3"><i class="bi bi-search"></i></button>
    </form>
     </nav>
 
-
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+    <!--  -->
     <?php foreach($categorias as $categoria){ ?>
-
+      <div class="col mb-3">
+      <div class="card m-auto">
+        <img src="../../IMG/categorias/<?php echo $categoria['imagen']; ?>" class="img-fluid">
+        <div class="card-body">
+          <h5 class="card-title"><?php echo $categoria['categoria']; ?></h5>
+        </div>
+      </div>
+    </div>
   <?php }?>
+</div>  
 
 
-<!-- DELETE FROM `inventario` WHERE `inventario`.`id_emp` = 1 -->
 
 <div class="row justify-content-center">
 
@@ -56,21 +64,20 @@
          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
      </button>
        </div>
-          <?php session_unset(); } ?>
+       <?php unset($_SESSION['alerta']);} ?>
           </div>
 <!-- Modal -->
 <div class="modal fade" id="subir" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Subir producto</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar categoria</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <div class="container p-5 text-center">
-    <div class="row">
        <div class="col row">
-         <form action="../../controller/empleado_subir.php" method="POST">
+         <form action="../../controller/categorias_subir.php" method="POST">
             <div class="form-group">
               <label  class="fs-5 pb-2">Selecciona una Imagen</label>
               <div class="input-group">
@@ -80,7 +87,6 @@
               <label  class="fs-5 py-1 ">Nombre de categoria</label>
               <input  class="form-control" type="text" name="categoria">
             </div>
-          </div>
        </div>
        
   </div>
@@ -94,10 +100,7 @@
     </div>
   </div>
 </div>
-</div>
-</div>
 
-</div>
 
   <!-- scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
