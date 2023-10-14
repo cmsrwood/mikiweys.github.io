@@ -1,7 +1,6 @@
 <?php 
-  include('../../controller/empleado_subir.php');
-  include('../../model/empleados_select_all.php');
   require('../../controller/verificacion_admin.php');
+  include('../../model/categorias_select_all.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,36 +38,11 @@
    </form>
     </nav>
 
-<table class="table table-bordered border-1 bg-white">
-    <thead>
-      <tr class="bnaranja" >
-        <th scope="col">id</th>
-        <th scope="col" class="" >Nombres</th>
-        <th scope="col" class="" >Apellidos</th>
-        <th scope="col">Fecha de ingreso</th>
-        <th scope="col">Contracto</th>
-        <th scope="col">Teléfono</th>
-        <th scope="col">Salario</th>
-        <th scope="col">Editar</th>
-        <th scope="col">Eliminar</th>
-      </tr>
-    </thead>
-    <tbody>
-    <?php foreach($empleados as $empleado){ ?>
-      <tr class="text-center">
-        <th><?php echo $empleado['id_emp']; ?></th>
-        <td><?php echo $empleado['nom']; ?></td>
-        <td><?php echo $empleado['apel']; ?></td>
-        <td><?php echo $empleado['fecing']; ?></td>
-        <td><?php echo $empleado['cont']; ?></td>
-        <td><?php echo $empleado['tel']; ?></td>
-        <td><?php echo $empleado['sal']; ?></td>
-        <td><a href="empleado_modificar.php?id=<?=$empleado['id_emp']?>" type="button" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a></td>
-        <td><a href="../../controller/empleado_eliminar.php?id=<?=$empleado['id_emp']?>" type="button" class="btn btn-danger"><i class="bi bi-trash"></i></a></td>
-      </tr>
+
+    <?php foreach($categorias as $categoria){ ?>
+
   <?php }?>
-    </tbody>
-  </table>
+
 
 <!-- DELETE FROM `inventario` WHERE `inventario`.`id_emp` = 1 -->
 
@@ -97,34 +71,16 @@
     <div class="row">
        <div class="col row">
          <form action="../../controller/empleado_subir.php" method="POST">
-          <div class="form-group row">
-            <div class="">
-              <label  class="fs-5 py-1 ">Nombre</label>
-              <input class="form-control" type="text" name="nom">
-            </div>
-            <div class="">
-              <label  class="fs-5 py-1" >Apellidos</label>
-              <input  class="form-control" type="text" name="apel" >
-            </div>
-            <div class="">
-              <label  class="fs-5 py-1 ">Fecha de Ingreso</label>
-              <input  class="form-control" type="date" name="fecing">
-            </div>
-            <div class="">
-              <label  class="fs-5 py-1 ">Contrato</label>
-              <input  class="form-control" type="text" name="cont">
-            </div>
-            <div class="">
-              <label  class="fs-5 py-1 ">Teléfono</label>
-              <input  class="form-control" type="text" name="tel" maxlength="10">
-            </div>
-            <div class="">
-              <label  class="fs-5 py-1 ">Salario</label>
-              <input  class="form-control" type="number" name="sal">
-            </div>
-
+            <div class="form-group">
+              <label  class="fs-5 pb-2">Selecciona una Imagen</label>
+              <div class="input-group">
+                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="imagen">
+              </div>
           </div>
-          
+              <label  class="fs-5 py-1 ">Nombre de categoria</label>
+              <input  class="form-control" type="text" name="categoria">
+            </div>
+          </div>
        </div>
        
   </div>

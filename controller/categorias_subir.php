@@ -11,25 +11,25 @@ if(isset($_POST['agregar'])){
        if( !((strpos($tipo,'jpeg') || strpos($tipo,'jpg') || strpos($tipo,'png') ))){
           $_SESSION['alerta'] = 'Solo se permiten archivos jpeg, jpg, gif, webp y png';
           $_SESSION['tipo'] = 'danger';
-          header('location: ../view/admin/inventario.php');
+          header('location: ../view/admin/categorias.php');
        }else{
         include_once('../model/categoria_insertar.php');
          if($resultado){
             move_uploaded_file($temp,'../IMG/categoria/'.$imagen);   
             $_SESSION['alerta'] = 'Categoria creada exitosamente!';
             $_SESSION['tipo'] = 'success';
-            header('location:../view/admin/inventario.php');
+            header('location:../view/admin/categorias.php');
          }else{
             $_SESSION['alerta'] = 'ocurrio un error en el servidor';
             $_SESSION['tipo'] = 'danger';
-            header('location:../view/admin/inventario.php');
+            header('location:../view/admin/categorias.php');
          }
        }
     }
       else {
          $_SESSION['alerta'] = 'Debes llenar todos los campos';
          $_SESSION['tipo'] = 'danger';
-         header('location:../view/admin/inventario.php');
+         header('location:../view/admin/categorias.php');
 
       }
 }
