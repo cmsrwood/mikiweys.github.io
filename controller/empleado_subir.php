@@ -12,16 +12,16 @@ if(isset($_POST['agregar'])){
         include_once('../model/empleado_nuevo.php');
 
          if($resultado){
-            $_SESSION['mensaje'] = 'Empleado agregado exitosamente!';
+            $_SESSION['alerta'] = 'Empleado agregado exitosamente!';
             $_SESSION['tipo'] = 'success';
             header('location:../view/admin/empleados.php');
          }else{
-            $_SESSION['mensaje'] = 'ocurrio un error en el servidor';
+            $_SESSION['alerta'] = 'ocurrio un error en el servidor';
             $_SESSION['tipo'] = 'danger';
             header('location:../view/admin/empleados.php');
          }
       }else {
-         $_SESSION['mensaje'] = 'Debes llenar todos los campos';
+         $_SESSION['alerta'] = 'Debes llenar todos los campos';
          $_SESSION['tipo'] = 'danger';
          header('location:../view/admin/empleados.php');
       }

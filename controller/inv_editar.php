@@ -10,7 +10,7 @@ if(isset($_POST['modificar'])){
 
     //VALIDAR QUE EL USUARIO REGISTRE TODOS LOS CAMPOS QUE SEAN OBLIGATORIOS
     if($producto== "" OR $preuni=="" OR  $cat=="" OR $cant==""){
-        $_SESSION['mensaje'] = 'Debes llenar todos los campos';
+        $_SESSION['alerta'] = 'Debes llenar todos los campos';
         $_SESSION['tipo'] = 'danger';
         header('location:../view/admin/inventario.php');
     }else{
@@ -20,13 +20,13 @@ if(isset($_POST['modificar'])){
         $resultado = mysqli_query($db,$modificar); 
         /* SUBIDO */
         if ($resultado){
-        $_SESSION['mensaje'] = 'Producto modificado exitosamente!';
+        $_SESSION['alerta'] = 'Producto modificado exitosamente!';
         $_SESSION['tipo'] = 'success';
         header('location:../view/admin/inventario.php');
     }
     /* ERROR */
     else{
-        $_SESSION['mensaje'] = 'ocurrio un error en el servidor';
+        $_SESSION['alerta'] = 'ocurrio un error en el servidor';
             $_SESSION['tipo'] = 'danger';
             header('location:../view/admin/inventario.php');
     }

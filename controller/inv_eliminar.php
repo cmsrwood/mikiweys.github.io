@@ -5,7 +5,7 @@ include ('conexion.php');
     $resultado = mysqli_query($db,$eliminar); 
     /* ELIMINADO */
     if ($resultado){
-    $_SESSION['mensaje'] = 'Producto eliminado';
+    $_SESSION['alerta'] = 'Producto eliminado';
     $_SESSION['tipo'] = 'danger';
     header('location:../view/admin/inventario.php');
 }

@@ -6,11 +6,11 @@ if(isset($_POST['buscar'])){
         include_once('../model/inventario_buscar.php');
 
          if($buscar){
-            $_SESSION['mensaje'] = 'Producto buscado';
+            $_SESSION['alerta'] = 'Producto buscado';
             $_SESSION['tipo'] = 'success';
             header('location:../view/admin/inventario.php');
          }else{
-            $_SESSION['mensaje'] = 'ocurrio un error en el servidor';
+            $_SESSION['alerta'] = 'ocurrio un error en el servidor';
             $_SESSION['tipo'] = 'danger';
             header('location:../view/admin/inventario.php');
          }
