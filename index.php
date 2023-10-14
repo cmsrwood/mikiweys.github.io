@@ -1,3 +1,9 @@
+<?php 
+  include('controller/login.php');
+  include('model/inventario_select_all_random.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -225,18 +231,20 @@
           <!-- PROMOCIONES -->
             <div class="row align-items-start mb-5">
             <h1 class="text-center mb-3 pb-3 " >Nuestros productos</h1>
-              <h2 class="naranja simoneta border-bottom border-warning border-2 mb-3" id="promociones">Promociones</h2>   
               <!--  -->
+              <?php $i = 0;
+                foreach ($inventario as $producto){
+                    if(++$i > 8) break;
+                ?>
               <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover ">
                 <div class="card m-auto shadow">
                   <div class="position-relative">
-                    <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">99%</span>
+                    <img src="IMG/inventario/<?php echo $producto['imagen']; ?>" class="card-img-top " alt="...">
                   </div>
                   <div class="card-body row align-items-center ">
                     <div class="w-50">
-                      <h5 class="card-title">Pan</h5>
-                      <p class="card-text">precio</p>
+                      <h5 class="card-title"><?php echo $producto['producto']; ?></h5>
+                      <p class="card-text">$<?php echo $producto['preuni']; ?></p>
                     </div>
                     <div class="w-50 text-end">
                       <a href="#inicio" id="liveToastBtn" class="btn bordenaranja naranja bhovernaranja">
@@ -246,69 +254,7 @@
                   </div>
                 </div>
               </div>
-     
-              <!--  -->
-              <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
-                <div class="card m-auto shadow">
-                  <div class="position-relative">
-                    <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">99%</span>
-                  </div>
-                  <div class="card-body row align-items-center ">
-                    <div class="w-50">
-                      <h5 class="card-title">Pan</h5>
-                      <p class="card-text">precio</p>
-                    </div>
-                    <div class="w-50 text-end">
-                      <a href="#inicio" id="liveToastBtn" class="btn bordenaranja naranja bhovernaranja">
-                        <i class="bi bi-cart"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--  -->
-              <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
-                <div class="card m-auto shadow">
-                  <div class="position-relative">
-                    <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">99%</span>
-                  </div>
-                  <div class="card-body row align-items-center ">
-                    <div class="w-50">
-                      <h5 class="card-title">Pan</h5>
-                      <p class="card-text">precio</p>
-                    </div>
-                    <div class="w-50 text-end">
-                      <a href="#inicio" id="liveToastBtn" class="btn bordenaranja naranja bhovernaranja">
-                        <i class="bi bi-cart"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!--  -->
-              <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
-                <div class="card m-auto shadow">
-                  <div class="position-relative">
-                    <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger ">99%</span>
-                  </div>
-                  <div class="card-body row align-items-center ">
-                    <div class="w-50">
-                      <h5 class="card-title">Pan</h5>
-                      <p class="card-text">precio</p>
-                    </div>
-                    <div class="w-50 text-end">
-                      <a href="#inicio" id="liveToastBtn" class="btn bordenaranja naranja bhovernaranja">
-                        <i class="bi bi-cart"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-
+          <?php  } ?>
             <!-- CATEGORÍAS -->
             <div class="row align-items-start mb-5 pb-5">
                 <h2 class="naranja simoneta border-bottom border-warning border-2 mb-4 text-center">Categorías</h2>   

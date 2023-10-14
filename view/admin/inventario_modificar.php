@@ -71,7 +71,16 @@ if ($producto= mysqli_fetch_array($result)){
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Categoria</label>
-              <input  class="form-control" type="text" name="catm" value="<?php echo $producto['cat'] ?>">
+              <select class="form-select" name="catm" id="">
+                <option value="0" selected disabled>Seleccione la categoria</option>
+                <?php
+                  $cat="SELECT * FROM categorias";
+                  $resul=mysqli_query($db,$cat);
+                  while($valores = mysqli_fetch_array($resul)){
+                    echo '<option value="'.$valores['categoria'].'" >'.$valores['categoria']. '</option>';
+                  }
+                ?>
+              </select>
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Cantidad</label>

@@ -53,7 +53,7 @@
         <th scope="col" class="" >Producto</th>
         <th scope="col" class="" >Descripción</th>
         <th scope="col">Precio por unidad</th>
-        <th scope="col">Tipo</th>
+        <th scope="col">Categoria</th>
         <th scope="col">Cantidad</th>
         <th scope="col">Total</th>
         <th scope="col">Editar</th>
@@ -125,7 +125,7 @@
             </div>
             <div class="">
               <label  class="fs-5 py-1" >Precio. unidad</label>
-              <input  class="form-control" type="number" name="preuni" >
+              <input  class="form-control" type="number" name="preuni" step="50">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Categoria</label>
@@ -135,7 +135,7 @@
                   $cat="SELECT * FROM categorias";
                   $resul=mysqli_query($db,$cat);
                   while($valores = mysqli_fetch_array($resul)){
-                    echo '<option value="'.$valores['id_cat'].'">'.$valores['categoria']. '</option>';
+                    echo '<option value="'.$valores['categoria'].'">'.$valores['categoria']. '</option>';
                   }
                 ?>
               </select>
@@ -154,7 +154,7 @@
       </div>
       <div class="modal-footer align-items-center justify-content-around">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <input type="submit" value="Guardar" class="btn btn-danger my-5" name="agregar">
+        <input type="submit" value="Guardar" class="btn btn-warning my-5" name="agregar">
       </div>
       </form>
     </div>
