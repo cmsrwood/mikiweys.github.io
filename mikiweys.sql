@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-10-2023 a las 01:29:56
+-- Tiempo de generación: 14-10-2023 a las 10:33:53
 -- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Versión de PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,17 +29,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `categorias` (
   `id_cat` int(11) NOT NULL,
-  `categoria` varchar(50) DEFAULT NULL
+  `categoria` varchar(50) DEFAULT NULL,
+  `imagen` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `categorias`
 --
 
-INSERT INTO `categorias` (`id_cat`, `categoria`) VALUES
-(1, 'Bebidas'),
-(2, 'Pan'),
-(3, 'Otros');
+INSERT INTO `categorias` (`id_cat`, `categoria`, `imagen`) VALUES
+(1, 'Bebidas', ''),
+(2, 'Pan', ''),
+(3, 'Otros', ''),
+(4, 'Desayunos', ''),
+(5, 'Almuerzos', ''),
+(6, 'Bebidas calientes', ''),
+(7, 'Bebidas frias', '');
 
 -- --------------------------------------------------------
 
@@ -83,7 +88,7 @@ CREATE TABLE `empleados` (
 --
 
 INSERT INTO `empleados` (`id_emp`, `nom`, `apel`, `fecing`, `cont`, `tel`, `sal`) VALUES
-(4, 'Jesucristo', 'De Nazareth', '0011-11-11', 'Jerusalen', '3138975212', '23');
+(4, 'Jesucristo', 'De Nazareth', '0011-11-11', 'Jerusalen', '3138975212', '22');
 
 -- --------------------------------------------------------
 
@@ -100,6 +105,21 @@ CREATE TABLE `inventario` (
   `cat` varchar(60) NOT NULL,
   `cantidad` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `inventario`
+--
+
+INSERT INTO `inventario` (`id_inv`, `imagen`, `producto`, `descrip`, `preuni`, `cat`, `cantidad`) VALUES
+(1, 'bebida.jpg', 'Bebida', 'jugo natural', '4000', 'Pan', '4'),
+(2, 'pan.jpg', 'Pan', 'pan bueno', '1200', 'Pan', '24'),
+(3, 'jugo.jpg', 'Jugo', 'Jugo casero', '15000', 'Bebidas', '2'),
+(4, 'baguete.jpg', 'Baguette', 'Pan largo', '1200', 'Pan', '15'),
+(5, 'cafe.jpg', 'Café', 'Café con mucho café', '1200', 'Bebidas calientes', '1'),
+(6, 'desayuno2.jpg', 'Desayuno', 'Café con pan', '3000', 'Desayunos', '3'),
+(7, 'desayuno.jpg', 'Huevos con pan', 'Huevos exquisitos con una deliciosa bebida', '6000', 'Pan', '2'),
+(8, 'sandwich.jpg', 'Sandwich', 'Sanfwich', '3000', 'Bebidas', '6'),
+(14, 'desayuno.jpg', 'otro desayuno', 'pan pan pan', '2550', 'Pan', '32');
 
 -- --------------------------------------------------------
 
@@ -197,7 +217,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id_cat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_cat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `empleados`
@@ -209,7 +229,7 @@ ALTER TABLE `empleados`
 -- AUTO_INCREMENT de la tabla `inventario`
 --
 ALTER TABLE `inventario`
-  MODIFY `id_inv` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_inv` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

@@ -50,14 +50,14 @@
 <div class="container p-5 shadow d-flex color" id="main">
   <div class="row row-cols-1 row-cols-md-4 g-4">
     <!--  -->
-    <?php foreach($resultado as $producto){ ?>
+    <?php foreach($inventario as $producto){ ?>
       <div class="col mb-3">
       <div class="card m-auto">
         <img src="../../IMG/inventario/<?php echo $producto['imagen']; ?>" class="img-fluid">
         <div class="card-body">
           <h5 class="card-title"><?php echo $producto['producto']; ?></h5>
-          <p class="card-text"><?php echo $producto['preuni']; ?></p>
-          <p class="card-text"><?php echo $producto['id_inv'];?></p>
+          <p class="card-text ">$<?php echo $producto['preuni']; ?></p>
+          <p class="card-text"><?php echo $producto['cat'];?></p>
           <a href="producto.php?id=<?=$producto['id_inv']?>" class="btn bordenaranja naranja bhovernaranja">Comprar</a>
         </div>
       </div>

@@ -56,6 +56,7 @@
           <label class="form-label">Tipo de documento</label>
           <br>
           <select name="id_doc" id="documento" class="form-select">
+            <option value="0" selected disabled>Seleecione el tipo de documento...</option>
           <?php
                   $doc="SELECT * FROM documento";
                   $resul=mysqli_query($db,$doc);

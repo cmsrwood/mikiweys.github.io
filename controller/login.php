@@ -3,6 +3,7 @@
     include('conexion.php');
     //
     session_start();
+if(isset($_POST['iniciar'])){
         if(!empty($_POST['mail']) && !empty($_POST['pass'])){
             $mail = $_POST['mail'];
             $pass = $_POST['pass'];
@@ -35,10 +36,12 @@
             $_SESSION['maile'] = 'Correo electrónico o contraseña incorrectos.';
             header('location: ../view/login.php');
         }
-    }
+}
         else {
         $_SESSION['debes'] = 'Debes completar todos los campos.';
+        header('location: ../view/login.php');
         }
+    }
 
 
 ?>

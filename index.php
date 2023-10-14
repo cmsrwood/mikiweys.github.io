@@ -256,12 +256,11 @@
               </div>
           <?php  } ?>
             <!-- CATEGORÍAS -->
+            <h2 class="naranja simoneta border-bottom border-warning border-2 mb-4 text-center">Categorías</h2>   
             <?php $i = 0;
-                foreach ($inventario as $producto){
+                foreach ($categorias as $categoria){
                     if(++$i > 8) break;
                 ?>
-            <div class="row align-items-start mb-5 pb-5">
-                <h2 class="naranja simoneta border-bottom border-warning border-2 mb-4 text-center">Categorías</h2>   
                 <!--  -->
                 <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
                   <div class="card m-auto shadow" id="card">
@@ -278,113 +277,6 @@
                   </div>
                 </div>
                 <?php  } ?>
-                <!--  -->
-                <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
-                  <div class="card m-auto shadow" id="card">
-                    <div class="position-relative">
-                      <a href="">
-                        <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
-                      </a>
-                    </div>
-                    <div class="card-body row align-items-center">
-                      <div class="w-100 text-center">
-                        <h5 class="card-title">Pan rico</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
-                  <div class="card m-auto shadow" id="card">
-                    <div class="position-relative">
-                      <a href="">
-                        <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
-                      </a>
-                    </div>
-                    <div class="card-body row align-items-center">
-                      <div class="w-100 text-center">
-                        <h5 class="card-title">Pan rico</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
-                  <div class="card m-auto shadow" id="card">
-                    <div class="position-relative">
-                      <a href="">
-                        <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
-                      </a>
-                    </div>
-                    <div class="card-body row align-items-center">
-                      <div class="w-100 text-center">
-                        <h5 class="card-title">Pan rico</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
-                  <div class="card m-auto shadow" id="card">
-                    <div class="position-relative">
-                      <a href="">
-                        <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
-                      </a>
-                    </div>
-                    <div class="card-body row align-items-center">
-                      <div class="w-100 text-center">
-                        <h5 class="card-title">Pan rico</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
-                  <div class="card m-auto shadow" id="card">
-                    <div class="position-relative">
-                      <a href="">
-                        <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
-                      </a>
-                    </div>
-                    <div class="card-body row align-items-center">
-                      <div class="w-100 text-center">
-                        <h5 class="card-title">Pan rico</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
-                  <div class="card m-auto shadow" id="card">
-                    <div class="position-relative">
-                      <a href="">
-                        <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
-                      </a>
-                    </div>
-                    <div class="card-body row align-items-center">
-                      <div class="w-100 text-center">
-                        <h5 class="card-title">Pan rico</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!--  -->
-                <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
-                  <div class="card m-auto shadow" id="card">
-                    <div class="position-relative">
-                      <a href="">
-                        <img src="IMG/index/pan.jpg" class="card-img-top " alt="...">
-                      </a>
-                    </div>
-                    <div class="card-body row align-items-center">
-                      <div class="w-100 text-center">
-                        <h5 class="card-title">Pan rico</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-<!--  -->
                 <!-- MAPA  -->
                 <div class=" row align-content-center justify-content-center align-items-center my-5 ">
                   <div class=" text-center col-12 col-xl-5">

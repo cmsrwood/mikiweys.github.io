@@ -21,7 +21,7 @@ if(isset($_POST['modificar'])){
         /* SUBIDO */
         if ($resultado){
         $_SESSION['alerta'] = 'Producto modificado exitosamente!';
-        $_SESSION['tipo'] = 'success';
+        $_SESSION['tipo'] = 'warning';
         header('location:../view/admin/inventario.php');
     }
     /* ERROR */
