@@ -1,7 +1,6 @@
 <?php 
-  include('../../controller/inv_subir.php');
+  require('../../controller/verificacion_admin.php');
   include('../../model/inventario_select_all.php');
-  require('../../controller/verficacion_admin.php');
 ?>
 
 <!DOCTYPE html>
@@ -39,9 +38,9 @@
   <div class=" my-5 p-5 shadow color">
     <nav class="navbar navbar-light d-flex">
       <h1>Inventario</h1>
-      <form class="form-inline d-flex">
-        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn mx-3"><i class="bi bi-search"></i></button>
+      <form action="../../controller/inventario_buscar.php" method="POST" class="form-inline d-flex">
+        <input name="buscador" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+        <input class="btn btn-warning" value="Buscar"  type="submit" name="buscar">
    </form>
     </nav>
 <div class="table-responsive">
@@ -93,7 +92,7 @@
          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
      </button>
        </div>
-          <?php session_unset(); } ?>
+          <?php  } ?>
           </div>
 <!-- Modal -->
 <div class="modal fade" id="subir" tabindex="-1" aria-hidden="true">

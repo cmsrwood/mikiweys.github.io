@@ -1,5 +1,5 @@
 <?php 
-  require('../../controller/verficacion_admin.php');
+  require('../../controller/verificacion_admin.php');
 ?>
 
 <!DOCTYPE html>
