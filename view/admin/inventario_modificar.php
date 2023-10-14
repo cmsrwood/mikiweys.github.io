@@ -67,7 +67,8 @@ if ($producto= mysqli_fetch_array($result)){
             </div>
             <div class="">
               <label  class="fs-5 py-1" >Precio. unidad</label>
-              <input  class="form-control" type="number" step="50" name="preunim" value="<?php echo ($producto['preuni']); ?>">
+              <input  class="form-control" type="number" step="50" name="preunim" value="<?php echo ($producto['preuni']);
+               ?>">
             </div>
             <div class="">
               <label  class="fs-5 py-1 ">Categoria</label>
@@ -75,9 +76,14 @@ if ($producto= mysqli_fetch_array($result)){
                 <option value="0" selected disabled>Seleccione la categoria</option>
                 <?php
                   $cat="SELECT * FROM categorias";
+                  
                   $resul=mysqli_query($db,$cat);
                   while($valores = mysqli_fetch_array($resul)){
-                    echo '<option value="'.$valores['categoria'].'" >'.$valores['categoria']. '</option>';
+                    echo '<option value="' . $valores['categoria'] . '"';
+                      if ($producto['cat'] == $valores['categoria']) {
+                          echo ' selected';
+                      }
+                      echo '>' . $valores['categoria'] . '</option>';
                   }
                 ?>
               </select>

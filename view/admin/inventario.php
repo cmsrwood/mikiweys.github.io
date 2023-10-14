@@ -1,8 +1,22 @@
 <?php 
   require('../../controller/verificacion_admin.php');
-  include('../../model/inventario_select_all.php');
+  
 ?>
+<?php 
+require('../../controller/conexion.php');
 
+if(isset($_GET['search'])) {
+  $busqueda=$_GET["search"];
+  $mostrarArticulos = "SELECT * from inventario WHERE producto LIKE '%$busqueda%'";
+  $query = $db->query($mostrarArticulos);
+  $inventario = $query;
+}
+else{
+  include('../../model/inventario_select_all.php');
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
