@@ -1,6 +1,19 @@
 <?php
   include ('../../controller/conexion.php');
+?>
+<?php 
+require('../../controller/conexion.php');
+
+if(isset($_GET['search'])) {
+  $busqueda=$_GET["search"];
+  $mostrarArticulos = "SELECT * from inventario WHERE producto LIKE '%$busqueda%'";
+  $query = $db->query($mostrarArticulos);
+  $inventario = $query;
+}
+else{
   include('../../model/inventario_select_all.php');
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -23,11 +36,13 @@
 
 <div class="container justify-content-center mt-5 pt-5" id="main">
   <div class="row align-items-center pt-5">
+  <form action="../../controller/productos_buscar.php" method="POST" class="form-inline d-flex">
     <div class="col-8">
-      <input type="search" placeholder="Busca tu producto" class="form-control my-5" id="buscador">
+    <input name="buscador" placeholder="Busca tu producto" class="form-control mr-sm-2" type="search" aria-label="Search">
     </div>
+
     <div class="col">
-      <button class="btn btn-warning text-white" id="boton">Buscar</button>
+      <input class="btn btn-warning text-white" value="Buscar"  type="submit" name="buscar">
     </div>
     <div class="col ">
       <div class="dropdown">
@@ -42,6 +57,9 @@
         </ul>
       </div>
     </div>
+   </form>
+
+
   </div>
 </div>
 

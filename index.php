@@ -1,7 +1,8 @@
 <?php 
   include('controller/login.php');
   include('model/inventario_select_all_random.php');
-
+  include('model/categorias_select_all.php');
+  
 ?>
 
 <!DOCTYPE html>
@@ -265,8 +266,8 @@
                 <div class="col-6 col-xl-3 mb-3 containerzoom zoomhover">
                   <div class="card m-auto shadow" id="card">
                     <div class="position-relative">
-                      <a href="">
-                        <img src="IMG/categorias/pan.jpg" class="card-img-top " alt="...">
+                      <a href="view/user/categoria.php?categoria=<?php echo $categoria['categoria'] ?>">
+                        <img src="IMG/categorias/<?php echo $categoria['imagen'] ?>" class="card-img-top " alt="...">
                       </a>
                     </div>
                     <div class="card-body row align-items-center">
