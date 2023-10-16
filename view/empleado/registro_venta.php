@@ -34,9 +34,10 @@
 </head>
 <body class="">
 <div class="container  shadow">
+<form id="formulario">
     <div class="row justify-content-center">
         <h1 class=" simoneta text-center my-5 border-bottom border-warning pb-2 px-5">Registro de venta</h1>
-        <div class="row col-5 text-center justify-content-center">
+        <div class="row col-5 ">
           <div class="col-5 mx-auto">
               <label for="">Fecha y hora</label>
               <?php
@@ -59,42 +60,24 @@
           </div>
           <div class="col-5 mx-auto">
             <label for="">Cantidad</label>
-            <input type="number" min="1" class="form-control" name="" id="">
+            <input type="number" min="1" class="form-control" name="" id="cantidad">
           </div>
-          <div class="col-5 mx-auto">
-            <label for="">Cantidad</label>
-            <input type="number"  class="form-control" name="" id="" readonly>
-          </div>
+          <button class=" col-12 btn btn-warning mt-2" type="submit">MOSTRAR FACTURA</button>
+
         </div>
+        
         <div class="row col-5 border-start mx-auto">
           <h2 class="text-center">Factura</h2>
           <h5>Producto(s)</h5>
-          <p>nombre producto</p>
+          <p id="respuesta"></p>
           <h5>Precio unidad</h5>
           <p>precio producto</p>
     </div>
+
+</form>
 </div>
-<div class="container mt-5">
-       
-        <div class="row">
-            <div class="col-8 offset-2">
-                <form id="formulario" class="p-3 mt-5 shadow border">
-                    <h2 class="text-center text-primary">Formulario</h2>
 
-                <input id="nombre" class="form-control my-2" type="text" placeholder="ingrese su nombre">
-
-                <input id="edad" class="form-control my-2" type="text" placeholder="ingrese su edad">
-
-                <button class="btn btn-primary mt-2" type="submit">MOSTRAR DATOS</button>
-                </form>
-                <hr>
-
-                <h3 id="respuesta" class="text-center fw-light">
-                    
-                </h3>
-            </div>
-        </div>
-    </div>
+</div>
   <!-- scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- WOW -->
@@ -102,7 +85,7 @@
     <script>
       new WOW().init();
     </script>
-    <script src="../../js/script.js"></script>
+    <script src="../../js/scripts.js"></script>
 
 </body>
   </html>

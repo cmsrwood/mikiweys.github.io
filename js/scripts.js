@@ -75,20 +75,6 @@ var ltoggle = document.getElementById('logor');
         main.setAttribute("class", "p-5 container color shadow");
       }
     }
-/* BUSCADOR */
-          const buscador= document.querySelector('#buscador');
-          const boton= document.querySelector('#boton');
-
-          const filtrar =()=>{
-          console.log(buscador.value);
-          }
-          boton.addEventListener('click', filtrar);
-    /* CERRAR VENTANA */
-
-    function closed() { 
-      window.open('','_parent',''); 
-      window.close(); 
-   } 
  
    const formulario = document.querySelector("#formulario");
 
@@ -98,10 +84,9 @@ var ltoggle = document.getElementById('logor');
    
    function validarFormulario(e){
        e.preventDefault();
-       const nombre = document.querySelector("#nombre").value
-       const edad = document.querySelector("#edad").value
+       const cantidad = document.querySelector("#cantidad").value
    
        const respuesta = document.getElementById("respuesta");
-       respuesta.textContent = `Hola ${nombre} tienes la edad de ${edad}`
+       respuesta.textContent = `Hola ${cantidad}`
    }
    

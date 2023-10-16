@@ -185,7 +185,7 @@ else{
     <script>
       new WOW().init();
     </script>
-    <script src="../../js/script.js"></script>
+    <script src="../../js/scripts.js"></script>
 
 </body>
   </html>
