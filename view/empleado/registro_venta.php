@@ -38,7 +38,7 @@
         <h1 class=" simoneta text-center my-5 border-bottom border-warning pb-2 px-5">Registro de venta</h1>
         <div class="row col-5 text-center justify-content-center">
           <div class="col-5 mx-auto">
-              <label for="">Fecha</label>
+              <label for="">Fecha y hora</label>
               <?php
                 $fechaActual = date('d-m-Y H:i');
               ?>
@@ -63,7 +63,7 @@
           </div>
           <div class="col-5 mx-auto">
             <label for="">Cantidad</label>
-            <input type="number"  class="form-control" name="" id="">
+            <input type="number"  class="form-control" name="" id="" readonly>
           </div>
         </div>
         <div class="row col-5 border-start mx-auto">
