@@ -74,7 +74,27 @@
           <p>precio producto</p>
     </div>
 </div>
+<div class="container mt-5">
+       
+        <div class="row">
+            <div class="col-8 offset-2">
+                <form id="formulario" class="p-3 mt-5 shadow border">
+                    <h2 class="text-center text-primary">Formulario</h2>
 
+                <input id="nombre" class="form-control my-2" type="text" placeholder="ingrese su nombre">
+
+                <input id="edad" class="form-control my-2" type="text" placeholder="ingrese su edad">
+
+                <button class="btn btn-primary mt-2" type="submit">MOSTRAR DATOS</button>
+                </form>
+                <hr>
+
+                <h3 id="respuesta" class="text-center fw-light">
+                    
+                </h3>
+            </div>
+        </div>
+    </div>
   <!-- scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- WOW -->

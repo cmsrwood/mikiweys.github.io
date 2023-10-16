@@ -89,7 +89,6 @@ var ltoggle = document.getElementById('logor');
       window.open('','_parent',''); 
       window.close(); 
    } 
-   /* CERRAR CUENTA */
  
    const formulario = document.querySelector("#formulario");
 
@@ -97,7 +96,6 @@ var ltoggle = document.getElementById('logor');
    formulario.addEventListener( "submit", validarFormulario )
    
    
-   //mis funciones
    function validarFormulario(e){
        e.preventDefault();
        const nombre = document.querySelector("#nombre").value
@@ -107,6 +105,3 @@ var ltoggle = document.getElementById('logor');
        respuesta.textContent = `Hola ${nombre} tienes la edad de ${edad}`
    }
    
-   //numero entre 1 y 6
-   let dado = Number((Math.random() * 6).toFixed(0));
-   console.log(dado)
