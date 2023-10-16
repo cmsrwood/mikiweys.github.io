@@ -47,7 +47,7 @@
           </div>
           <div class="col-5 mx-auto">
               <label for="">Producto</label>
-              <select name="producto" id="" class="form-select">
+              <select name="producto" id="producto" class="form-select">
                 <option value="" selected disabled>Escoja el producto</option>
               <?php
                     $inv="SELECT * FROM inventario";
@@ -66,10 +66,16 @@
 
         </div>
         
-        <div class="row col-5 border-start mx-auto">
+        <div class="row col-5 border-start mx-auto justify-content-between">
           <h2 class="text-center">Factura</h2>
-          <h5>Producto(s)</h5>
-          <p id="respuesta"></p>
+          <div class="col">
+            <h5>Producto(s)</h5>
+            <p id="producto_res"></p>
+          </div>
+          <div class="col text-end">
+            <h5>Fecha</h5>
+            <p ><?php echo $fechaActual;?></p>
+          </div>
           <h5>Precio unidad</h5>
           <p>precio producto</p>
     </div>

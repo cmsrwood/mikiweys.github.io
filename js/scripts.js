@@ -85,8 +85,9 @@ var ltoggle = document.getElementById('logor');
    function validarFormulario(e){
        e.preventDefault();
        const cantidad = document.querySelector("#cantidad").value
-   
-       const respuesta = document.getElementById("respuesta");
-       respuesta.textContent = `Hola ${cantidad}`
+       const producto = document.querySelector("#producto").options[document.querySelector("#producto").options.selectedIndex].text;
+  
+       const prodcto_res = document.getElementById("producto_res");
+       prodcto_res.textContent = `${producto}`
    }
    
