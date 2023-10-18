@@ -29,8 +29,8 @@
 </head>
 <body>
   <?php include('../include/header.php'); ?>
- <br id="informacioncuenta">
-  <div class="container-fluid justify-content-center row mt-5 " >
+ 
+  <div class="container-fluid justify-content-center row  " >
     
   <div class="row mt-5"> 
   <div class="col-3 color">
