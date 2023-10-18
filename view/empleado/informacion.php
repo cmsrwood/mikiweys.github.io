@@ -22,13 +22,13 @@ $empleado = mysqli_fetch_assoc($resultadoemp);
 
 
 
-<?php echo ($empleado['nom']); ?>
-<?php echo ($empleado['apel']); ?>
-<?php echo ($empleado['fecing']); ?>
-<?php echo ($empleado['cont']); ?>
-<?php echo ($empleado['tel']); ?>
-<?php echo ($empleado['hor']); ?>
-<?php echo ($empleado['sal']); ?>
+
+
+
+
+
+
+
 
     <div class="container">
     <h1 class="text-center bg-warning bg-opacity-50">¡Hola <?php echo ($empleado['nom']); ?>!</h1>
@@ -39,46 +39,46 @@ $empleado = mysqli_fetch_assoc($resultadoemp);
 <div class="col-5  mx-auto  my-4" >
 <h1 ><i class="bi bi-person-circle"></i>Nombres</h1>
 <ul><li>
-<p class="fs-3 ">Brayan Alexander</p> </li></ul>
+<p class="fs-3 "><?php echo ($empleado['nom']); ?></p> </li></ul>
 </div>
 <!-- col -->
 <div  class="col-5  mx-auto  my-4">
 <h1  >Apellidos</h1>
 <ul><li>
-<p class="fs-3">Carmona Rojas</p> </li></ul>
+<p class="fs-3"><?php echo ($empleado['apel']); ?></p> </li></ul>
 </div>
 <!-- col -->
 <div class="col-5  mx-auto  my-4"> 
 <h1 ><i class="bi bi-envelope-fill"></i>Correo electronico</h1>
 <ul><li>
-<p class="fs-3">bcarmona@gmail.com</p> </li></ul>
+<p class="fs-3"></p> <?php echo ($empleado['email']); ?></li></ul>
 </div>
 <!-- col -->
 <div class="col-5  mx-auto  my-4">
 <h1><i class="bi bi-telephone-fill"></i>Telefono</h1>
 <ul><li>
-<p class="fs-3">3218584440</p> </li></ul>
+<p class="fs-3"><?php echo ($empleado['tel']); ?></p> </li></ul>
 </div>
 <!-- col -->
 <div class="col-5  mx-auto  my-4">
 <h1><i class="bi bi-geo-alt-fill"></i>Contrato</h1>
 <ul><li>
-<p class="fs-3"></p> Contrato</li></ul>
+<p class="fs-3"></p> <?php echo ($empleado['cont']); ?></li></ul>
 </div>
 <!-- col -->
 <div class="col-5  mx-auto  my-4" >
 <h1><i class="bi bi-cash-coin"></i>Sueldo</h1>
-<p class="fs-3">1.300.000</p> </li></ul>
+<p class="fs-3"><?php echo ($empleado['sal']); ?></p> </li></ul>
 </div>
 <!-- col -->
 <div class="col-5  mx-auto  my-4" >
-<h1><i class="bi bi-cash-coin"></i>Fecha de ingreso</h1>
-<p class="fs-3">10/12/2022</p> </li></ul>
+<h1><i class="bi bi-calendar"></i></i>Fecha de ingreso</h1>
+<p class="fs-3"><?php echo ($empleado['fecing']); ?></p> </li></ul>
 </div>
 <!-- col -->
 <div class="col-5  mx-auto  my-4" >
-<h1><i class="bi bi-cash-coin"></i>Horario</h1>
-<p class="fs-3">Mañana</p> </li></ul>
+<h1><i class="bi bi-calendar"></i></i>Horario</h1>
+<p class="fs-3"><?php echo ($empleado['hor']); ?></p> </li></ul>
 </div>
 </body>
 </html>
