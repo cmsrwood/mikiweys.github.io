@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horario | MIKIWEY'S APP</title>
     <?php  include ('../include/boostrap.php')?>
+    <?php  include ('../../controller/sesion.php')?>
 </head>
 
 <body>
     <div class="container">
-    <h1 class="text-center">¡Hola Brayan Carmona!</h1>
+    <h1 class="text-center ">Hola <?php echo ($_SESSION['nom']) ?></h1>
 <p class="text-center">¡Este es tu horario de esta semana!</p>
 <h1 class="text-center">Horario mañana</h1>
     <table class="table table-bordered border-1 bg-white">
