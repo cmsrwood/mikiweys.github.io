@@ -80,6 +80,7 @@ CREATE TABLE `empleados` (
   `fecing` date NOT NULL,
   `cont` varchar(50) NOT NULL,
   `tel` varchar(50) NOT NULL,
+  `hor` INT (2) NOT NULL,
   `sal` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
