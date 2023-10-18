@@ -10,7 +10,8 @@
 
 <body>
 <?php  include ('../include/header_emp.php')?>
-    <div class="container">
+<br>
+    <div class="container mt-5 pt-5">
     <h1 class="text-center ">Hola <?php echo ($_SESSION['nom']) ?></h1>
 <p class="text-center">¡Este es tu horario de esta semana!</p>
 <h1 class="text-center">Horario mañana</h1>
