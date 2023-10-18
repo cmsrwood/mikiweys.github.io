@@ -9,11 +9,34 @@
 </head>
 
 <body>
-<?php  include ('../include/header_emp.php')?>
+<?php  include ('../include/header_emp.php');
+
+
+
+$emailemp= $_SESSION['mail'];
+$consulta= "SELECT * FROM empleados WHERE email= '$emailemp'";
+$sqlquery =mysqli_query($db,$consulta);
+$resultadoemp = $sqlquery;
+$empleado = mysqli_fetch_assoc($resultadoemp);
+
+
+?>
 <br>
+
+<?php
+echo ($empleado['email']);
+?>
     <div class="container mt-5 pt-5">
-    <h1 class="text-center ">Hola <?php echo ($_SESSION['nom']) ?></h1>
+    <h1 class="text-center ">Hola <?php echo ($empleado['nom']); ?></h1>
 <p class="text-center">¡Este es tu horario de esta semana!</p>
+
+
+<?php 
+  if ($empleado['hor']==1){
+
+?> 
+
+<!-- HORARIO MAÑANA -->
 <h1 class="text-center">Horario mañana</h1>
     <table class="table table-bordered border-1 bg-white">
       <tr class=" bg-warning" >
@@ -57,6 +80,16 @@
         <th>2:00pm - 10:00pm</th>
        </tr>
     </table>
+ <?php }
+?>
+
+<!-- HORARIO TARDE-->
+<?php 
+  if ($empleado['hor']==2){
+
+?> 
+
+
     <h1 class="text-center">Horario Tarde</h1>
     <table class="table table-bordered border-1 bg-white">
     <thead>
@@ -103,6 +136,7 @@
     </thead>
     <tbody>
     </div>
-   
+    <?php }
+?>
 </body>
 </html>
