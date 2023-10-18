@@ -7,6 +7,7 @@
     <?php  include ('../include/boostrap.php')?>
 </head>
 <body>
+<?php  include ('../include/header_emp.php'); ?>
      <div class="container">
 <h1 class="text-center">¡Hola Brayan Carmona!</h1>
 <p class="text-center">¡Bienvenido a tu lugar de trabajo!</p>
