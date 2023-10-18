@@ -21,7 +21,7 @@ $empleado = mysqli_fetch_assoc($resultadoemp);
 
 
 ?>
-<br>
+
 
 <?php
 echo ($empleado['email']);
