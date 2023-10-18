@@ -78,7 +78,7 @@ var ltoggle = document.getElementById('logor');
  
    const formulario = document.querySelector("#formulario");
 
-   //crear el evento
+   //CREAR VENTA
    formulario.addEventListener( "submit", validarFormulario )
    
    
