@@ -25,21 +25,21 @@
       <div class="collapse navbar-collapse container text-center justify-content-end lg-justify-content-center" id="navbarSupportedContent">
         <ul class="navbar-nav px-5 mx-5 ">
           <li class="  col-3 align-self-center text-center">
-              <a class="nav-link  hovernaranja" href="nosotros.php">
-                  <i class="bi bi-people"></i>
-                  <span class="off ">Nosotros</span>
+              <a class="nav-link  hovernaranja" href="horario.php">
+              <i class="bi bi-calendar"></i>
+                  <span class="off ">Horario</span>
               </a>
           </li>
           <li class="  col-3 align-self-center text-center">
-              <a class="nav-link  hovernaranja" href="contacto.php">
-                  <i class="bi bi-telephone"></i>
-                  <span class="off">Contacto</span> 
+              <a class="nav-link  hovernaranja" href="informacion.php">
+                  <i class="bi bi-info"></i>
+                  <span class="off">Tu información</span> 
               </a>
           </li>
           <li class=" mx-2 col-3 align-self-center text-center">
-            <a class="nav-link hovernaranja" href="productos.php">
-              <i class="bi bi-shop"></i>
-                <span class="off">Productos</span> 
+            <a class="nav-link hovernaranja" href="registro_venta.php">
+            <i class="bi bi-file-earmark"></i>
+                <span class="off"></span> 
             </a>
         </li>
   
