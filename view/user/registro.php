@@ -64,6 +64,7 @@
                     echo '<option value="'.$valores['id_doc'].'">'.$valores['documento']. '</option>';
                   }
                 ?>
+                
           </select>
         </div>
         <div class="mb-2 col-12">
