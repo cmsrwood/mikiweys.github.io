@@ -29,8 +29,8 @@
 </head>
 <body>
   <?php include('../include/header.php'); ?>
- <br>
-  <div class="container-fluid justify-content-center row mt-5 ">
+ <br id="informacioncuenta">
+  <div class="container-fluid justify-content-center row mt-5 " >
     
   <div class="row mt-5"> 
   <div class="col-3 color">
@@ -119,6 +119,7 @@
   </tbody>
 </table>
       </div>
+      <a href="#informacioncuenta" class="fixed-bottom btn btn-warning rounded w-25"><i class="bi bi-arrow-up"></i></a>
       
       <div id="list-item-3">
       <p class="fs-1 poppins text-warning border-bottom border-warning ">Metodos de pago</p>
@@ -141,6 +142,7 @@
 
         </div>
       </div>
+
       <div id="list-item-5" class=" mt-4"></div>
       <div id="list-item-6">
       <p class="fs-1 poppins text-warning border-bottom border-warning ">Editar cuenta</p>
