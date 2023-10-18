@@ -39,7 +39,7 @@
           <li class=" mx-2 col-3 align-self-center text-center">
             <a class="nav-link hovernaranja" href="registro_venta.php">
             <i class="bi bi-file-earmark"></i>
-                <span class="off"></span> 
+                <span class="off">Registrar compra</span> 
             </a>
         </li>
   
