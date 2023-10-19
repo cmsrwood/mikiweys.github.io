@@ -38,7 +38,7 @@ var ltoggle = document.getElementById('logor');
    const formulario = document.querySelector("#formulario");
 
    //CREAR VENTA
-   
+    
   function insertarFila(){
     let tablaDatos= document.getElementById('tablaDatos').insertRow(0);
     let col1= tablaDatos.insertCell(0);
@@ -48,6 +48,5 @@ var ltoggle = document.getElementById('logor');
     const cantidad = document.querySelector("#cantidad").value;
     col1.textContent = `${producto}`
     col2.textContent = `${cantidad}`
-    col3.textContent = `${suma}`
   }
    

@@ -80,5 +80,6 @@ $empleado = mysqli_fetch_assoc($resultadoemp);
 <h1><i class="bi bi-calendar"></i></i>Horario</h1>
 <p class="fs-3"><?php echo ($empleado['hor']); ?></p> </li></ul>
 </div>
+<?php  include ('../include/footer.php')?>
 </body>
 </html>

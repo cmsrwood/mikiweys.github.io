@@ -138,5 +138,6 @@ echo ($empleado['email']);
     </div>
     <?php }
 ?>
+  <?php  include ('../include/footer.php')?>
 </body>
 </html>

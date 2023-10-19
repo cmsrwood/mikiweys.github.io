@@ -72,7 +72,6 @@
         var fecha = now.getDate() + "-" + (now.getMonth()+1) + "-" + now.getFullYear();
         var hora = " "+(now.getHours()) + ":" + now.getMinutes();
         document.getElementById('hora').setAttribute("value",fecha + hora);
-        document.getElementById('hora2').innerHTML = fecha + hora;
     }
     setInterval(formato, 1000);
 </script>
@@ -90,6 +89,6 @@
       new WOW().init();
     </script>
     <script src="../../js/scripts.js"></script>
-
+   
 </body>
   </html>
