@@ -57,15 +57,16 @@ var ltoggle = document.getElementById('logor');
    const formulario = document.querySelector("#formulario");
 
    //CREAR VENTA
-   formulario.addEventListener( "submit", validarFormulario )
    
-   
-   function validarFormulario(e){
-       e.preventDefault();
-       const cantidad = document.querySelector("#cantidad").value
-       const producto = document.querySelector("#producto").options[document.querySelector("#producto").options.selectedIndex].text;
-  
-       const prodcto_res = document.getElementById("producto_res");
-       prodcto_res.textContent = `${producto}`
-   }
+  function insertarFila(){
+    let tablaDatos= document.getElementById('tablaDatos').insertRow(0);
+    let col1= tablaDatos.insertCell(0);
+    let col2= tablaDatos.insertCell(1);
+    let col3= tablaDatos.insertCell(2);
+    const producto = document.querySelector("#producto").options[document.querySelector("#producto").options.selectedIndex].text;
+    const cantidad = document.querySelector("#cantidad").value;
+    col1.textContent = `${producto}`
+    col2.textContent = `${cantidad}`
+    col3.textContent = `${suma}`
+  }
    

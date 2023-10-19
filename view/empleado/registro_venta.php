@@ -40,8 +40,9 @@
         <div class="row col-5 ">
           <div class="col-5 mx-auto">
               <label for="">Fecha y hora</label>
-              <input type="datetime" id="hora" class="form-control" name="fecha">
+              <input type="datetime" id="hora" class="form-control" name="fecha" readonly>
           </div>
+          
           <div class="col-5 mx-auto">
               <label for="">Producto</label>
               <select name="producto" id="producto" class="form-select">
@@ -59,40 +60,28 @@
             <label for="">Cantidad</label>
             <input type="number" min="1" class="form-control" name="" id="cantidad">
           </div>
-          <button class=" col-12 btn btn-warning mt-2" type="submit">MOSTRAR FACTURA</button>
-
+          <a href="#" class="btn btn-warning my-5" onclick=insertarFila()>Agregar producto</a>
         </div>
-        
-        <div class="row col-5 border-start mx-auto justify-content-between">
-          <h2 class="text-center">Factura</h2>
-          <div class="col">
-            <h5>Producto(s)</h5>
-            <p id="producto_res"></p>
-          </div>
-          <div class="col text-end">
-            <h5>Fecha</h5>
-            <p id="display-time">
+        <table id="tablaDatos" class="table table-bordered m-5 col-6">
+          <thead>
+          </tbody>
+</table>
 <script>
     function formato()  {
         var now = new Date();
         var fecha = now.getDate() + "-" + (now.getMonth()+1) + "-" + now.getFullYear();
         var hora = " "+(now.getHours()) + ":" + now.getMinutes();
         document.getElementById('hora').setAttribute("value",fecha + hora);
-        document.getElementById('hora2').setAttribute("value",fecha + hora);
+        document.getElementById('hora2').innerHTML = fecha + hora;
     }
     setInterval(formato, 1000);
 </script>
-</p>
-          </div>
-          
-          <h5>Precio unidad</h5>
-          <p>precio producto</p>
     </div>
 
 </form>
 </div>
 
-</div>
+
   <!-- scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- WOW -->
