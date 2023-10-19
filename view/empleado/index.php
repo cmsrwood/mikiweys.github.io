@@ -45,9 +45,9 @@ $empleado = mysqli_fetch_assoc($resultadoemp);
 </div>
 <div class="card text-center col-5  mx-auto my-4 bg-warning bg-opacity-10">
   <div class="card-body">
-    <h5 class="card-title">Registro de compras</h5>
+    <h5 class="card-title">Registrar Ventas</h5>
     <p class="card-text">Aca veras las compras hechas anteriormente.</p>
-    <a href="ventas.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
+    <a href="registro_venta.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
 
   </div>
 </div>
@@ -62,5 +62,6 @@ $empleado = mysqli_fetch_assoc($resultadoemp);
 </div>
 
      </div>
+     <?php  include ('../include/footer.php')?>
 </body>
 </html>
