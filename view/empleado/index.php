@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empleado view\empleado\index.php</title>
     <?php  include ('../include/boostrap.php')?>
+    <?php  include ('../../controller/sesion.php')?>
 </head>
 <body>
-<?php  include ('../include/header_emp.php'); ?>
+<?php  include ('../include/header_emp.php'); 
+
+
+$emailemp= $_SESSION['mail'];
+$consulta= "SELECT * FROM empleados WHERE email= '$emailemp'";
+$sqlquery =mysqli_query($db,$consulta);
+$resultadoemp = $sqlquery;
+$empleado = mysqli_fetch_assoc($resultadoemp);
+
+
+
+?>
+<br>
+<br>
      <div class="container">
-<h1 class="text-center">¡Hola Brayan Carmona!</h1>
+<h1 class="text-center">  Hola  <?php echo ($empleado['nom']); ?> </h1>
 <p class="text-center">¡Bienvenido a tu lugar de trabajo!</p>
        <div class="row">
 
