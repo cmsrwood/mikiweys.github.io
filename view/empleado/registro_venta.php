@@ -40,10 +40,7 @@
         <div class="row col-5 ">
           <div class="col-5 mx-auto">
               <label for="">Fecha y hora</label>
-              <?php
-                $fechaActual = date('d-m-Y H:i');
-              ?>
-              <input type="datetime" class="form-control" value="<?php echo $fechaActual;?>" name="fecha">
+              <input type="datetime" id="hora" class="form-control" name="fecha">
           </div>
           <div class="col-5 mx-auto">
               <label for="">Producto</label>
@@ -74,8 +71,20 @@
           </div>
           <div class="col text-end">
             <h5>Fecha</h5>
-            <p ><?php echo $fechaActual;?></p>
+            <p id="display-time">
+<script>
+    function formato()  {
+        var now = new Date();
+        var fecha = now.getDate() + "-" + (now.getMonth()+1) + "-" + now.getFullYear();
+        var hora = " "+(now.getHours()) + ":" + now.getMinutes();
+        document.getElementById('hora').setAttribute("value",fecha + hora);
+        document.getElementById('hora2').setAttribute("value",fecha + hora);
+    }
+    setInterval(formato, 1000);
+</script>
+</p>
           </div>
+          
           <h5>Precio unidad</h5>
           <p>precio producto</p>
     </div>
