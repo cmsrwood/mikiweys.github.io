@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2023 a las 10:33:53
+-- Tiempo de generación: 19-10-2023 a las 04:04:45
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -39,12 +39,26 @@ CREATE TABLE `categorias` (
 
 INSERT INTO `categorias` (`id_cat`, `categoria`, `imagen`) VALUES
 (1, 'Bebidas', ''),
-(2, 'Pan', ''),
+(2, 'Pan', 'pan.jpg\r\n'),
 (3, 'Otros', ''),
 (4, 'Desayunos', ''),
 (5, 'Almuerzos', ''),
 (6, 'Bebidas calientes', ''),
 (7, 'Bebidas frias', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `detalle_venta`
+--
+
+CREATE TABLE `detalle_venta` (
+  `id_detalle_venta` int(11) NOT NULL,
+  `id_venta` int(11) DEFAULT NULL,
+  `productos` varchar(255) DEFAULT NULL,
+  `pago` int(11) DEFAULT NULL,
+  `total` int(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -77,19 +91,20 @@ CREATE TABLE `empleados` (
   `id_emp` int(11) NOT NULL,
   `nom` varchar(50) NOT NULL,
   `apel` varchar(50) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `fecing` date NOT NULL,
   `cont` varchar(50) NOT NULL,
   `tel` varchar(50) NOT NULL,
-  `hor` INT (2) NOT NULL,
-  `sal` varchar(50) NOT NULL
+  `sal` varchar(50) NOT NULL,
+  `hor` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `empleados`
 --
 
-INSERT INTO `empleados` (`id_emp`, `nom`, `apel`, `fecing`, `cont`, `tel`, `sal`) VALUES
-(4, 'Jesucristo', 'De Nazareth', '0011-11-11', 'Jerusalen', '3138975212', '22');
+INSERT INTO `empleados` (`id_emp`, `nom`, `apel`, `email`, `fecing`, `cont`, `tel`, `sal`, `hor`) VALUES
+(4, 'Jesucristo', 'De Nazareth', 'dilanfantas@gmail.com', '0011-11-11', 'Jerusalen', '3138975212', '1200000', 1);
 
 -- --------------------------------------------------------
 
@@ -119,7 +134,7 @@ INSERT INTO `inventario` (`id_inv`, `imagen`, `producto`, `descrip`, `preuni`, `
 (5, 'cafe.jpg', 'Café', 'Café con mucho café', '1200', 'Bebidas calientes', '1'),
 (6, 'desayuno2.jpg', 'Desayuno', 'Café con pan', '3000', 'Desayunos', '3'),
 (7, 'desayuno.jpg', 'Huevos con pan', 'Huevos exquisitos con una deliciosa bebida', '6000', 'Pan', '2'),
-(8, 'sandwich.jpg', 'Sandwich', 'Sanfwich', '3000', 'Bebidas', '6'),
+(8, 'sandwich.jpg', 'Sandwich', 'Sanfwich', '3000', 'Bebidas', '4'),
 (14, 'desayuno.jpg', 'otro desayuno', 'pan pan pan', '2550', 'Pan', '32');
 
 -- --------------------------------------------------------
@@ -166,7 +181,21 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_user`, `name_user`, `apel_user`, `pass_user`, `tel_user`, `id_doc`, `num_documento_user`, `email_user`, `dir_user`, `rol_user`) VALUES
-(3, 'Dilan Santiago', 'Lopez Romero', '$2y$10$iGwhG7tnjU5DbG3dwk70c.zuZjaVBF2CdspZnfUqhjiFfe4ZlDFCu', 2147483647, 1, '1028663948', 'dilanfantas@gmail.com', 'calle43b sur', '1');
+(3, 'Dilan Santiago', 'Lopez Romero', '$2y$10$iGwhG7tnjU5DbG3dwk70c.zuZjaVBF2CdspZnfUqhjiFfe4ZlDFCu', 2147483647, 1, '1028663948', 'dilanfantas@gmail.com', 'calle43b sur', '3');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ventas`
+--
+
+CREATE TABLE `ventas` (
+  `id_venta` int(11) NOT NULL,
+  `fecha` date DEFAULT NULL,
+  `id_emp` int(11) DEFAULT NULL,
+  `id_detalle_venta` int(11) DEFAULT NULL,
+  `total` int(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tablas volcadas
@@ -177,6 +206,12 @@ INSERT INTO `usuarios` (`id_user`, `name_user`, `apel_user`, `pass_user`, `tel_u
 --
 ALTER TABLE `categorias`
   ADD PRIMARY KEY (`id_cat`);
+
+--
+-- Indices de la tabla `detalle_venta`
+--
+ALTER TABLE `detalle_venta`
+  ADD PRIMARY KEY (`id_detalle_venta`);
 
 --
 -- Indices de la tabla `documento`
@@ -211,6 +246,12 @@ ALTER TABLE `usuarios`
   ADD KEY `rol` (`rol_user`);
 
 --
+-- Indices de la tabla `ventas`
+--
+ALTER TABLE `ventas`
+  ADD PRIMARY KEY (`id_venta`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -219,6 +260,12 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `categorias`
   MODIFY `id_cat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `detalle_venta`
+--
+ALTER TABLE `detalle_venta`
+  MODIFY `id_detalle_venta` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `empleados`
@@ -237,6 +284,12 @@ ALTER TABLE `inventario`
 --
 ALTER TABLE `usuarios`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `ventas`
+--
+ALTER TABLE `ventas`
+  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas

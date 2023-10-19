@@ -12,7 +12,9 @@ if(isset($_POST['agregar'])){
     if(!empty($_POST['nom']) && !empty($_POST['apel']) && !empty($_POST['fecing']) && !empty($_POST['cont']) && !empty($_POST['tel']) && !empty($_POST['sal'])){
         include_once('../model/empleado_nuevo.php');
 
+
          if($resultado){
+            
             $_SESSION['alerta'] = 'Empleado agregado exitosamente!';
             $_SESSION['tipo'] = 'success';
             header('location:../view/admin/empleados.php');

@@ -32,29 +32,7 @@ var btoggle = document.getElementById('btnrtema');
 var ltoggle = document.getElementById('logor');
 
 
-/* FUNCIONES TEMAS */
-    function dark(){
-      body.setAttribute("data-bs-theme", "dark");
-      main.setAttribute("class", "container p-5 shadow d-flex color");
-      btndark.setAttribute("class","btn text-white");
-      btnlight.setAttribute("class","btn text-white");
-      itoggle.setAttribute("class","bi bi-moon text-white");
-      navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-dark bg-dark text-center align-items-center shadow text-white");
-      logo.setAttribute("src","../../IMG/todo/logodark.png");
-    }
-    function light(){
-      body.setAttribute("data-bs-theme", "light");
-      btnlight.setAttribute("class","btn");
-      btndark.setAttribute("class","btn");
-      itoggle.setAttribute("class","bi bi-sun");
-      navbar.setAttribute("class","navbar navbar-expand-xl fixed-top navbar-light bg-white text-center align-items-center shadow");
-      logo.setAttribute("src","../../IMG/todo/logo.png");
-      main.setAttribute("class", "container p-5 shadow d-flex color");
-
-
-
-/* RESPONSIVE */
-    }
+// TEMA
     function tema(){
       if (body.getAttribute("data-bs-theme") == "light") {
         body.setAttribute("data-bs-theme", "dark");
