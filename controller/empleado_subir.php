@@ -8,6 +8,7 @@ if(isset($_POST['agregar'])){
     $contrato = $_POST['cont'];
     $tel = $_POST['tel'];
     $salario = $_POST['sal'];
+    $mail = $_POST['mail'];
 
     if(!empty($_POST['nom']) && !empty($_POST['apel']) && !empty($_POST['fecing']) && !empty($_POST['cont']) && !empty($_POST['tel']) && !empty($_POST['sal'])){
         include_once('../model/empleado_nuevo.php');
