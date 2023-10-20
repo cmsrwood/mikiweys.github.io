@@ -1,3 +1,5 @@
+<?php include('../../controller/verificacion_general.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
