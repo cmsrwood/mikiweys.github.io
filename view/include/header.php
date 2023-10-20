@@ -59,7 +59,9 @@
                 <li><a class="dropdown-item" href="cuenta.php">Tu perfil</a></li>
                 <li><a class="dropdown-item" href="carrito.php">Tu carrito</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesión </a></li>
+                <li><form action="../../controller/logout.php" method="POST">
+                <input type="submit" value="Cerrar sesión" class=" btn btn-danger w-100" name="logout">
+            </form></li>
               </ul> 
             </li>
             <div class="btn-group">
@@ -136,10 +138,9 @@
             <li><hr class="dropdown-divider"></li>
             <li>
                <?php include('../../controller/logout.php'); ?>
-                <form action="../../controller/logout.php" method="POST">
-                <input type="submit" value="" class="dropdown-item" name="logout">
-                  <i class="bi bi-box-arrow-right"></i> Cerrar sesión
-              </form></li>
+               <form action="../../controller/logout.php" method="POST">
+                <input type="submit" value="Cerrar sesión" class=" btn btn-danger" name="logout">
+            </form></li>
           </ul>
         </div>
       </div>
