@@ -19,15 +19,7 @@
 <!-- HEADER -->
 <?php include('../include/header.php'); ?>
 <!-- IMAGEN -->
-<div class="container-fluid text-center text-light position-relative mt-5 pt-5">
-    <div class="row"> 
-    <img src="../../IMG/index/1 carrusel.jpg" alt="" class="">
-        <div class="col-12 position-absolute top-50 start-50 translate-middle">
-          <h1 class="display-5">CONTACTANOS</h1>
-          <p class="simoneta fs-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, perferendis!</p>
-        </div>
-    </div>
-</div>
+
 <!-- CONTAINER -->
 <div class="container-fluid d-flex">
     <!-- imputs -->
@@ -71,7 +63,7 @@
         <div class="col-12 mx-5 mt-5">
             <p class="fs-3 simoneta text-dark">Correo electronico</p>
             <a href="" class="naranja">correopanaderia@gmail.com</a>
-            <p>Lorem ipsum dolor sit amet.</p>
+            
         </div>
     </div>
 </div>
