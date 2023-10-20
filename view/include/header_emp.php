@@ -42,38 +42,6 @@
                 <span class="off">Registrar compra</span> 
             </a>
         </li>
-  
-          <li class=" dropdown  col-3 align-self-center text-center ">
-              <a class="nav-link dropdown-toggle hovernaranja" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-person-circle  naranja"></i>
-                <span class="off">Mi cuenta</span>  
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="../login.php">Ingresa</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="cuenta.php">Tu perfil</a></li>
-                <li><a class="dropdown-item" href="carrito.php">Tu carrito</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesión </a></li>
-              </ul> 
-            </li>
-            <div class="btn-group">
-              <button type="button" class="btn dropdown-toggle " data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                <small id="itoggle" class="bi bi-sun "> Tema</small>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-end">
-                <li>
-                  <button id="btnlight" onclick="light()" class="btn">
-                    <i id="ilight" class="bi bi-sun"> Claro</i>
-                  </button>
-                </li>
-                <li>
-                  <button id="btndark" onclick="dark()" class="btn">
-                    <i id="idark" class="bi bi-moon "> Oscuro</i>
-                  </button>
-                </li>
-              </ul>
-            </div>
             </div>
         </ul>
       </div>
@@ -100,21 +68,27 @@
             </a>
           </li>
           <li>
-            <a class="nav-link" href="view/user/nosotros.php">
+          <a class="nav-link  hovernaranja" href="horario.php">
               <i class="bi bi-people"></i>
               <span class="">Nosotros</span>
           </a>
           </li>
           <li>
-            <a class="nav-link " href="view/user/contacto.php">
+          <a class="nav-link  hovernaranja" href="informacion.php">
               <i class="bi bi-telephone"></i>
               <span class="off">Contacto</span> 
           </a>
           </li>
           <li>
-            <a class="nav-link" href="view/user/productos.php">
+          <a class="nav-link  hovernaranja" href="ventas.php">
               <i class="bi bi-shop"></i>
                 <span class="off">Productos</span> 
+            </a>
+          </li> 
+          <li>
+          <a class="nav-link  hovernaranja" href="registro_venta.php">
+              <i class="bi bi-shop"></i>
+                <span class="off">registrar</span> 
             </a>
           </li> 
         </ul>

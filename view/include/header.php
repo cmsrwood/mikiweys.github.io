@@ -80,7 +80,7 @@
   <!-- OFFCANVAS -->
   <div class="offcanvas offcanvas-start w-75 " tabindex="-1" id="offcanvasExample">
     <div class="offcanvas-header border border-bottom ">
-      <a class="navbar-brand containerzoom giroi " href="index.php">
+      <a class="navbar-brand containerzoom giroi " href="../../index.php">
         <img id="logor"  src="../../IMG/todo/logo.png" alt="" class="img-fluid " width="65">
       </a>
       <h5 class="offcanvas-title">
@@ -118,7 +118,7 @@
         <div class="dropdown">
           <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="" alt="" width="32" height="32" class="rounded-circle me-2">
-            <strong>Cliente</strong>
+            <strong><?php echo ($_SESSION['nom']);; ?></strong>
           </a>
           <button id="btnrtema" onclick="tema()" class="btn" ><i id="irtema" class="bi bi-sun"></i></button>
           <ul class="dropdown-menu dropdown-menu-white text-small shadow">

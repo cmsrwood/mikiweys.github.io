@@ -1,3 +1,5 @@
+<?php include('../../controller/sesion.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
