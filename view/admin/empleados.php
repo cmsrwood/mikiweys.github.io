@@ -48,10 +48,12 @@
         <th scope="col">id</th>
         <th scope="col" class="" >Nombres</th>
         <th scope="col" class="" >Apellidos</th>
+        <th scope="col">Correo</th>
         <th scope="col">Fecha de ingreso</th>
         <th scope="col">Contracto</th>
         <th scope="col">Teléfono</th>
         <th scope="col">Salario</th>
+        <th scope="col">Horario</th>
         <th scope="col">Editar</th>
         <th scope="col">Eliminar</th>
       </tr>
@@ -62,10 +64,12 @@
         <th><?php echo $empleado['id_emp']; ?></th>
         <td><?php echo $empleado['nom']; ?></td>
         <td><?php echo $empleado['apel']; ?></td>
+        <td><?php echo $empleado['email']; ?></td>
         <td><?php echo $empleado['fecing']; ?></td>
         <td><?php echo $empleado['cont']; ?></td>
         <td><?php echo $empleado['tel']; ?></td>
         <td><?php echo $empleado['sal']; ?></td>
+        <td><?php echo $empleado['hor']; ?></td>
         <td><a href="empleado_modificar.php?id=<?=$empleado['id_emp']?>" type="button" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a></td>
         <td><a href="../../controller/empleado_eliminar.php?id=<?=$empleado['id_emp']?>" type="button" class="btn btn-danger"><i class="bi bi-trash"></i></a></td>
       </tr>
