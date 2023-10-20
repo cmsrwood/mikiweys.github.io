@@ -1,3 +1,6 @@
+<!-- VERIFICACIÓN -->
+<?php include('../../controller/verificacion_emp.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

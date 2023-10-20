@@ -1,3 +1,6 @@
+<!-- VERIFICACIÓN -->
+<?php include('../../controller/verificacion_emp.php'); ?>
+
 <?php 
   include('../../controller/venta_subir.php');
   include('../../model/inventario_select_all.php');
