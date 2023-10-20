@@ -1,3 +1,6 @@
+<!-- VERIFICACIÓN -->
+<?php include('../../controller/verificacion_user.php'); ?>
+
 <?php
   include ('../../controller/conexion.php');
 ?>

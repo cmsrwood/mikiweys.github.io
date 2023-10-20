@@ -1,3 +1,6 @@
+<!-- VERIFICACIÓN -->
+<?php include('../../controller/verificacion_user.php'); ?>
+
 <?php 
 require('../../controller/conexion.php');
 $id=$_GET["id"];
