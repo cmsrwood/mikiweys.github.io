@@ -28,7 +28,7 @@
 
     <!-- LOGO ICON -->
     <link rel="shortcut icon" href="IMG/todo/logo2.ico">
-    <link rel="icon" sizes="192x192" href="IMG/todo/logo2.ico">
+    <link rel="icon" sizes="192x192" href="IMG/todo/logo2.ico" sizes="16x16">
     <link rel="favicon" href="IMG/todo/logo2.ico">
     <link rel="apple-touch-icon" href="IMG/todo/logo2.ico">
 
