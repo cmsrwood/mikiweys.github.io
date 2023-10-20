@@ -32,10 +32,35 @@
  
   <div class="container-fluid justify-content-center row  " >
     
-  <div class="row mt-5"> 
+  <div class="row mt-5">
+
   <div class="col-3 color">
 
-  <img src="../../IMG/index/pan.jpg" class=" mt-4 rounded-circle img-fluid" alt="">
+  <img src="../../IMG/index/pan.jpg " class=" mt-4 rounded-circle img-fluid" alt="">
+
+  <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#foto">
+    <i class="bi bi-camera"></i>
+</button>
+
+<div class="modal fade" id="foto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="foto" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="foto">Cambia tu foto de perfil</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="#" method="POST" enctype="multipart/form-data">
+        <input type="file" name="imagen">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-warning">Cambiar foto</button>
+      </div>
+    </div>
+  </div>
+</div>
             <p class="fs-1 simoneta">Principal</p>
             
     <div id="list-example" class="list-group">
@@ -54,8 +79,7 @@
   <div class="col-9 justify-content-center row">
     <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0" class="d-flex justify-content-center">
 
-   
- 
+       
       <div id="list-item-1"> 
                   <p class="fs-1 poppins text-warning border-bottom border-warning ">Información personal</p>
       
@@ -79,7 +103,9 @@
 
       
       <div id="list-item-2" class="mt-5">
+        <!-- 
       <p class="fs-1 poppins text-warning border-bottom border-warning ">Pedidos</p>
+      
       <table class="table table-bordered border-1">
   <thead>
     <tr class="bnaranja">
@@ -118,6 +144,7 @@
     </tr>
   </tbody>
 </table>
+ -->
       </div>
       <a href="#informacioncuenta" class="fixed-bottom btn btn-warning rounded w-25"><i class="bi bi-arrow-up"></i></a>
       
@@ -181,6 +208,7 @@
     </script>
     <!-- MY JS -->
     <script src="../../js/index.js"></script>
+    
   
 </body>
 </html>
