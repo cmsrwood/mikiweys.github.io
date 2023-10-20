@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empleado view\empleado\index.php</title>
     <?php  include ('../include/boostrap.php')?>
-    <?php  include ('../../controller/sesion.php')?>
 </head>
 <body>
 <?php  include ('../include/header_emp.php'); 
