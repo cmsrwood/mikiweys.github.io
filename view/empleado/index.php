@@ -34,7 +34,7 @@ $empleado = mysqli_fetch_assoc($resultadoemp);
   <div class="card-body">
     <h5 class="card-title">Ventas</h5>
     <p class="card-text">En este lugar puedes ver todas las ventas realizadas anteriormente.</p>
-    <a href="ventas.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
+    <a href="ventas.php" class="btn btn-warning ">Ir <i class="bi bi-car-front"></i></a>
 
   </div>
 </div>
@@ -42,7 +42,7 @@ $empleado = mysqli_fetch_assoc($resultadoemp);
   <div class="card-body">
     <h5 class="card-title">Horarios</h5>
     <p class="card-text">Aca puedes ver tus horarios semanales.</p>
-    <a href="horario.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
+    <a href="horario.php" class="btn btn-warning">Ir <i class="bi bi-car-front"></i></a>
 
   </div>
 </div>
@@ -50,7 +50,7 @@ $empleado = mysqli_fetch_assoc($resultadoemp);
   <div class="card-body">
     <h5 class="card-title">Registrar Ventas</h5>
     <p class="card-text">Aca veras las compras hechas anteriormente.</p>
-    <a href="registro_venta.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
+    <a href="registro_venta.php" class="btn btn-warning ">Ir <i class="bi bi-car-front"></i></a>
 
   </div>
 </div>
@@ -58,7 +58,7 @@ $empleado = mysqli_fetch_assoc($resultadoemp);
   <div class="card-body">
     <h5 class="card-title">Tu informacion</h5>
     <p class="card-text">Revisa tu informacion.</p>
-    <a href="informacion.php" class="btn btn-outline-warning bg-white">Ir <i class="bi bi-car-front"></i></a>
+    <a href="informacion.php" class="btn btn-warning ">Ir <i class="bi bi-car-front"></i></a>
 
   </div>
 </div>
