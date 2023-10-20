@@ -63,19 +63,13 @@
           </a>
         </li>
         <li>
-          <a class="nav-link" href="view/nosotros.php">
+          <a class="nav-link" href="../admin/empleados.php">
             <i class="bi bi-people"></i>
             <span class="">Nosotros</span>
         </a>
         </li>
         <li>
-          <a class="nav-link " href="view/contacto.php">
-            <i class="bi bi-telephone"></i>
-            <span class="off">Contacto</span> 
-        </a>
-        </li>
-        <li>
-          <a class="nav-link" href="view/productos.php">
+          <a class="nav-link" href="../admin/empleados.php">
             <i class="bi bi-shop"></i>
               <span class="off">Productos</span> 
           </a>

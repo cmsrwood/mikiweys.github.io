@@ -41,7 +41,7 @@
         <button class="btn mx-3"><i class="bi bi-search"></i></button>
    </form>
     </nav>
-
+<div class="table-responsive">
 <table class="table table-bordered border-1 bg-white">
     <thead>
       <tr class="bnaranja" >
@@ -72,7 +72,7 @@
   <?php }?>
     </tbody>
   </table>
-
+  </div>
 <!-- DELETE FROM `inventario` WHERE `inventario`.`id_emp` = 1 -->
 
 <div class="row justify-content-center">
@@ -85,7 +85,7 @@
          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
      </button>
        </div>
-          <?php session_unset(); } ?>
+       <?php unset($_SESSION['alerta']);} ?>
           </div>
 <!-- Modal -->
 <div class="modal fade" id="subir" tabindex="-1" aria-hidden="true">

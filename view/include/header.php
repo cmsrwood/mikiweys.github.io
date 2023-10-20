@@ -57,30 +57,18 @@
                 <li><a class="dropdown-item" href="../login.php">Ingresa</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="cuenta.php">Tu perfil</a></li>
-                <li><a class="dropdown-item" href="carrito.php">Tu carrito</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><form action="../../controller/logout.php" method="POST">
+                <li>
+<?php  if (isset($_SESSION['rol'])){ ?>
+  <form action="../../controller/logout.php" method="POST">
                 <input type="submit" value="Cerrar sesión" class=" btn btn-danger w-100" name="logout">
-            </form></li>
+            </form></li>  
+            <?php    } else { ?>
+                
+              <?php    } ?>
               </ul> 
             </li>
-            <div class="btn-group">
-              <button type="button" class="btn dropdown-toggle " data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-                <small id="itoggle" class="bi bi-sun "> Tema</small>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-end">
-                <li>
-                  <button id="btnlight" onclick="light()" class="btn">
-                    <i id="ilight" class="bi bi-sun"> Claro</i>
-                  </button>
-                </li>
-                <li>
-                  <button id="btndark" onclick="dark()" class="btn">
-                    <i id="idark" class="bi bi-moon "> Oscuro</i>
-                  </button>
-                </li>
-              </ul>
-            </div>
+
             </div>
         </ul>
       </div>
@@ -107,19 +95,19 @@
             </a>
           </li>
           <li>
-            <a class="nav-link" href="view/user/nosotros.php">
+            <a class="nav-link" href="../user/nosotros.php">
               <i class="bi bi-people"></i>
               <span class="">Nosotros</span>
           </a>
           </li>
           <li>
-            <a class="nav-link " href="view/user/contacto.php">
+            <a class="nav-link " href="../user/contacto.php">
               <i class="bi bi-telephone"></i>
               <span class="off">Contacto</span> 
           </a>
           </li>
           <li>
-            <a class="nav-link" href="view/user/productos.php">
+            <a class="nav-link" href="../user/productos.php">
               <i class="bi bi-shop"></i>
                 <span class="off">Productos</span> 
             </a>
@@ -134,10 +122,9 @@
           <button id="btnrtema" onclick="tema()" class="btn" ><i id="irtema" class="bi bi-sun"></i></button>
           <ul class="dropdown-menu dropdown-menu-white text-small shadow">
             <li><a class="dropdown-item" href="#">Configuración</a></li>
-            <li><a class="dropdown-item" href="#">Mi cuenta</a></li>
+            <li><a class="dropdown-item" href="../user/cuenta.php">Mi cuenta</a></li>
             <li><hr class="dropdown-divider"></li>
             <li>
-               <?php include('../../controller/logout.php'); ?>
                <form action="../../controller/logout.php" method="POST">
                 <input type="submit" value="Cerrar sesión" class=" btn btn-danger" name="logout">
             </form></li>

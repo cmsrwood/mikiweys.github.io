@@ -24,7 +24,7 @@ if(isset($_POST['iniciar'])){
                         break;
                     case '2':
                         //empleado
-                        header("location: ../view/empleado/ventas.php");
+                        header("location: ../view/empleado/index.php");
                         break;
                     case '3':
                         //clientes
