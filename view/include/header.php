@@ -1,3 +1,4 @@
+
 <header>
   <nav id="navbar" class="navbar navbar-expand-xl bg-white fixed-top text-center align-items-center shadow">
     <div class="container-fluid d-flex ">
@@ -60,11 +61,11 @@
                 <li><hr class="dropdown-divider"></li>
                 <li>
 <?php  if (isset($_SESSION['rol'])){ ?>
-  <form action="../../controller/logout.php" method="POST">
-                <input type="submit" value="Cerrar sesión" class=" btn btn-danger w-100" name="logout">
-            </form></li>  
+   
             <?php    } else { ?>
-                
+              <form action="../../controller/logout.php" method="POST">
+                <input type="submit" value="Cerrar sesión" class=" btn btn-danger w-100" name="logout">
+            </form></li> 
               <?php    } ?>
               </ul> 
             </li>

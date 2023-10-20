@@ -105,23 +105,6 @@
               <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesión </a></li>
             </ul> 
           </li>
-          <div class="btn-group">
-            <button type="button" class="btn dropdown-toggle " data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
-              <small id="itoggle" class="bi bi-sun "> Tema</small>
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-end">
-              <li>
-                <button id="btnlight" onclick="light()" class="btn">
-                  <i id="ilight" class="bi bi-sun"> Claro</i>
-                </button>
-              </li>
-              <li>
-                <button id="btndark" onclick="dark()" class="btn">
-                  <i id="idark" class="bi bi-moon "> Oscuro</i>
-                </button>
-              </li>
-            </ul>
-          </div>
           </div>
       </ul>
     </div>
@@ -198,22 +181,22 @@
                       <div class="carousel-item active">
                         <img src="IMG/index/1carrusel.jpg" class="d-block w-100 img-fluid" alt="..." height="" width="">
                         <div class="carousel-caption d-none d-md-block">
-                          <h5 class="simoneta display-5 text-white">First slide label</h5>
-                          <p class="text-white">Some representative placeholder for the first slide.</p>
+                          <h5 class="simoneta display-5 text-white">Nuestra calidad nos representa</h5>
+                          <p class="text-white">Busca los mejores productos en nuestra tienda.</p>
                         </div>
                       </div>
                       <div class="carousel-item">
                         <img src="IMG/index/2carrusel.jpg" class="d-block w-100 img-fluid" alt="..." height="">
                         <div class="carousel-caption d-none d-md-block">
-                          <h5 class="simoneta display-5 text-white">Second slide label</h5>
-                          <p class="text-white">Some representative placeholder content for the second slide.</p>
+                          <h5 class="simoneta display-5 text-white">Los mejores productos de la ciudad</h5>
+                          <p class="text-white">Tenemos una gran variedad de productos para ti.</p>
                         </div>
                       </div>
                       <div class="carousel-item">
                         <img src="IMG/index/3carrusel.jpg" class="d-block w-100 img-fluid" alt="..." height="">
                         <div class="carousel-caption d-none d-md-block">
-                          <h5 class="simoneta display-5 text-white">Third slide label</h5>
-                          <p class="text-white">Some representative placeholder content for the third slide.</p>
+                          <h5 class="simoneta display-5 text-white">Hecho con mucho amor</h5>
+                          <p class="text-white">Nos preocupamos por hacerte feliz a ti y a tu familia.</p>
                         </div>
                       </div>
                     </div>
@@ -267,12 +250,12 @@
                   <div class="card m-auto shadow" id="card">
                     <div class="position-relative">
                       <a href="view/user/categoria.php?categoria=<?php echo $categoria['categoria'] ?>">
-                        <img src="IMG/categorias/<?php echo $categoria['imagen'] ?>" class="card-img-top " alt="...">
+                        <img src="IMG/categorias/pan.jpg" class="card-img-top " alt="...">
                       </a>
                     </div>
                     <div class="card-body row align-items-center">
                       <div class="w-100 text-center">
-                        <h5 class="card-title">Pan rico</h5>
+                        <h5 class="card-title"><?php echo $categoria['categoria'] ?></h5>
                       </div>
                     </div>
                   </div>
