@@ -8,6 +8,10 @@
 </head>
 <body>
     <!-- AQUI VA EL CODIGO ↓ -->
-
+<div class="container color">
+    <div class="row">
+        
+    </div>
+</div>
 </body>
 </html>
