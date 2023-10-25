@@ -13,7 +13,7 @@ $sql=$conexion->query(" select * from persona where id_persona=$id ");
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="..//../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
      <!-- css only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -69,7 +69,7 @@ $sql=$conexion->query(" select * from persona where id_persona=$id ");
          while($datos = $sql->fetch_object()) { ?>
               <div class="mb-3">
          <label for="exampleInputEmail1" class="form-label">nombre de la persona</label>
-         <input type="text" class="form-control"  name="nombre" value="<?= $datos->Nombre ?>">
+         <input type="text" class="form-control"  name="nombre" value="<?= $datos->nombre ?>">
      </div>
      <div class="mb-3">
          <label for="exampleInputEmail1" class="form-label">apellido de la persona</label>
