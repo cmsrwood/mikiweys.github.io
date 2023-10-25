@@ -30,7 +30,7 @@ if(!empty($_POST['registrar'])){
 
 
     if($stmt->execute()){
-        header("location: index.html");
+        header("location: ../index.html");
     } else print ("Error en la consulta");
 } else {
     echo('<div class="alert alert-danger">Completa todos los campos </div>');
