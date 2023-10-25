@@ -113,7 +113,8 @@
      <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok">registrar</button>
       </form>
       <div class="col-8 p-4 ">
-      <table class="table">
+        <div class="table-responsive">
+      <table class="table table-hover">
   <thead class="bg-info">
     <tr class="">
       <th scope="col">ID</th>
@@ -156,6 +157,7 @@
    
   </tbody>
 </table>
+</div>
       </div>
     </div>
     
