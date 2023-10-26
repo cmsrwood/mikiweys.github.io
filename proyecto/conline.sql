@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-10-2023 a las 06:15:21
+-- Tiempo de generación: 27-10-2023 a las 01:51:39
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -20,6 +20,18 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `conline`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `crudphp`
+--
+
+CREATE TABLE `crudphp` (
+  `id_circular` int(11) NOT NULL,
+  `fecha` date DEFAULT NULL,
+  `descripcion` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -61,7 +73,7 @@ CREATE TABLE `persona` (
 --
 
 INSERT INTO `persona` (`id_persona`, `nombre`, `apellido`, `curso`, `fecha`, `asistio`) VALUES
-(2, 'Laura Valentina', 'Romero Diaz', '1102', '2007-07-02', 0),
+(2, 'Laura Valentinaa', 'Romero Diaz', '1102', '2007-07-02', 2),
 (3, 'Laura Valentina', 'Romero Diaz', '1102', '2007-07-02', 0);
 
 -- --------------------------------------------------------
@@ -88,7 +100,7 @@ CREATE TABLE `registro` (
 --
 
 INSERT INTO `registro` (`id_registro`, `nombre`, `apellido`, `correo`, `contrasena`, `fecha_nac`, `num_doc`, `rol_id`, `telefono`, `tip_doc_id`) VALUES
-(5, 'Laura Valentina', 'Ramirez Diaz', 'laura@gmail.com', 'contrasena', '2007-05-04', '10558685875', 0, '3156859575', 0);
+(5, 'Laura Valentina', 'Ramirez Diaz', 'laura@gmail.com', 'contrasena', '2007-05-04', '10558685875', 1, '3156859575', 2);
 
 -- --------------------------------------------------------
 
@@ -115,6 +127,12 @@ CREATE TABLE `tip_doc` (
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `crudphp`
+--
+ALTER TABLE `crudphp`
+  ADD PRIMARY KEY (`id_circular`);
 
 --
 -- Indices de la tabla `notas`
@@ -151,10 +169,16 @@ ALTER TABLE `tip_doc`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `crudphp`
+--
+ALTER TABLE `crudphp`
+  MODIFY `id_circular` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de la tabla `notas`
 --
 ALTER TABLE `notas`
-  MODIFY `id_notas` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_notas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `persona`

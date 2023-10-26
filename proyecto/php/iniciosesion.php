@@ -62,15 +62,15 @@
                         
     <div class="col-md-16">
       <form action="iniciarsesion.php" method="POST">
-              <label for="nom" class="form-label">Número de identidad</label>
-              <input type="text" class="form-control" name="usuario" value="" required>
+              <label for="usuario" class="form-label">Número de identidad</label>
+              <input type="text" class="form-control" name="usuario" required>
               <div class="valid-feedback">
                 ¡Se ve bien!
               </div>
             </div>
             <div class="col-md-16">
               <label for="nom" class="form-label">Contraseña</label>
-              <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" name="contraseña" >
+              <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" name="pass" >
              
               <br>
                   <input type="submit" value="Ingresar" name="iniciar"></input>
@@ -81,7 +81,8 @@
 
               </div>
             </div>
-
+            </div>
+        </div>
  
                 
 
