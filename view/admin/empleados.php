@@ -129,6 +129,14 @@
               <label  class="fs-5 py-1 ">Salario</label>
               <input  class="form-control" type="number" name="sal">
             </div>
+            <div class="">
+              <label  class="fs-5 py-1 ">Horario</label>
+              <input  class="form-control" type="number" name="hor">
+            </div>
+            <div class="">
+              <label  class="fs-5 py-1" >Correo electronico*</label>
+              <input  class="form-control" type="text" name="mail" >
+            </div>
 
           </div>
           

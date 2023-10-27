@@ -1,4 +1,7 @@
 <?php 
-$query = "INSERT INTO empleados(nom,apel,fecing,cont,tel,sal) values('$nombre','$apellido','$fecing','$contrato','$tel','$salario')";
+$query = "INSERT INTO empleados(nom,apel,fecing,cont,tel,sal,hor,email) values('$nombre','$apellido','$fecing','$contrato','$tel','$salario','$hor','$mail')
+SELECT * FROM `usuarios` WHERE email_user= '$mail'
+
+";
 $resultado = mysqli_query($db,$query);
 ?>
