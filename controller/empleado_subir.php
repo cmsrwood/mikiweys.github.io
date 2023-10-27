@@ -16,7 +16,8 @@ if(isset($_POST['agregar'])){
 
 
          if($resultado){
-            
+            $sql = "UPDATE usuarios SET rol_user = '2' WHERE email_user ='$mail'";
+            $empu = mysqli_query($db,$sql);  
             $_SESSION['alerta'] = 'Empleado agregado exitosamente!';
             $_SESSION['tipo'] = 'success';
             header('location:../view/admin/empleados.php');
