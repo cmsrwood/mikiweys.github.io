@@ -103,48 +103,7 @@
 
       
       <div id="list-item-2" class="mt-5">
-        <!-- 
-      <p class="fs-1 poppins text-warning border-bottom border-warning ">Pedidos</p>
-      
-      <table class="table table-bordered border-1">
-  <thead>
-    <tr class="bnaranja">
-      <th scope="col">#</th>
-      <th scope="col">Fecha</th>
-      <th scope="col">Productos</th>
-      <th scope="col">Cantidad</th>
-      <th scope="col">Precio por unidad</th>
-      <th scope="col">Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>1200</td>
-      <td>121</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>@mdo</td>
-      <td>dsads</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>larry</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>@mdo</td>
-      <td>adjkasd</td>
-    </tr>
-  </tbody>
-</table>
- -->
+
       </div>
       <a href="#informacioncuenta" class="fixed-bottom btn btn-warning rounded w-25"><i class="bi bi-arrow-up"></i></a>
       

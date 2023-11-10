@@ -2,6 +2,7 @@
   include('controller/conexion.php');
   include('model/inventario_select_all_random.php');
   include('model/categorias_select_all.php');
+  include('controller/sesion.php');
  ?>
 
 
@@ -95,7 +96,15 @@
           <li class=" dropdown  col-3 align-self-center text-center ">
               <a class="nav-link dropdown-toggle hovernaranja" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="bi bi-person-circle  naranja"></i>
-                <span class="off">Mi cuenta</span>  
+                <span class="off">
+                  
+                <?php  if (isset($_SESSION['rol'])){ echo($_SESSION['nom']); ?>
+
+          <?php    } else { echo('Mi cuenta') ;  } ?>
+
+
+                
+                </span>  
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="view/login.php">Ingresa</a></li>
@@ -104,12 +113,12 @@
                 <li><hr class="dropdown-divider"></li>
                 <li>
 <?php  if (isset($_SESSION['rol'])){ ?>
-   
-            <?php    } else { ?>
-              <form action="controller/logout.php" method="POST">
+
+  <form action="controller/logout.php" method="POST">
                 <input type="submit" value="Cerrar sesión" class=" btn btn-danger w-100" name="logout">
             </form></li> 
-              <?php    } ?>
+
+            <?php    } else { echo('no has iniciado sesion') ;  } ?>
               </ul> 
             </li>
 
