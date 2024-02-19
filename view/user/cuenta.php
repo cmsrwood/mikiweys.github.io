@@ -1,5 +1,4 @@
 <?php include('../../controller/verificacion_user.php'); ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
